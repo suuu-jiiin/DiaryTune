@@ -1,0 +1,85 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href={% static "DiaryTune/css/recommendation/recommendation_styleguide.css"%}  />
+    <link rel="stylesheet" href={% static "DiaryTune/css/recommendation/recommendation_style.css"%} />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body style="margin: 0;">
+    <div class="screen">
+      <div class="div">
+
+        <!--상단바-->
+        <div class="bar">
+            <div class="date">10월 1일 (화)</div>
+            <img class="modify" src={% static "DiaryTune/images/modify.png" %} />
+            <img class="trash" src={% static "DiaryTune/images/trash.png" %} />
+            <img class="back" src={% static "DiaryTune/images/back.png" %} />
+            <div class="line1"></div>
+            <div class="line2"></div>
+          </div>
+
+        <!--Overview-->
+        <div class="summ">
+            <div class="hashtags">#감정1</div>
+            <div class="musics">#가수 - 노래</div>
+        </div>
+        <div class="weather_activity ">
+          <div class="weather1"></div>
+          <div class="weather2"></div>
+          <div class="activity1"></div>
+          <div class="activity2"></div>
+        </div>
+
+        <!--일기 부분-->
+        <div class="diary">
+            <div class="diarybox"><div class="text-diary-content">오늘은 아침부터 비가 왔다. 그래서 엄마한테 학교로 데려달라고 했는데 거절당했다. 우울한 기분에 깜빡하고 숙제를 챙기지 않았다. 근데 선생님한테 숙제를 안 해왔다고 혼났다. 기분전환하러 엄마랑 쇼핑하러 갔다. 근데 내가 원하는 옷들이 없어서 너무 너무 슬펐다. 오늘은 되는 게 하나도 없는 날인가보다ㅠㅠ 오늘은 아침부터 비가 왔다. 그래서 엄마한테 학교로 데려달라고 했는데 거절당했다. 우울한 기분에 깜빡하고 숙제를 챙기지 않았다. 근데 선생님한테 숙제를 안 해왔다고 혼났다. 기분전환하러 엄마랑 쇼핑하러 갔다. 근데 내가 원하는 옷들이 없어서 너무 너무 슬펐다. 오늘은 되는 게 하나도 없는 날인가보다ㅠㅠ </div></div>
+        </div>
+
+        <div class="today-diary">
+            <div class="blackbox"><div class="text-diary">오늘의 일기</div></div>
+        </div>
+
+        <!--감정 부분-->
+        <div class="today-emotion">
+          <div class="blackbox"><div class="text-emotion">오늘의 감정</div></div>
+        </div>
+
+        <div class="emotion">
+            <div class="emotionbox">
+              <div class="emotions">
+                <div class="hashtag1">#감정1</div>
+                <div class="hashtag2">#감정2</div>
+                <div class="hashtag3">#감정3</div>
+              </div>
+              <div class="musical-note"></div>
+            </div>
+        </div>
+
+        <!--음악 부분-->
+        <div class="today-music">
+            <div class="blackbox"><div class="text-music">오늘의 노래</div></div>
+        </div>
+        <div class="music">
+          <div class="musicbox">
+            <img id="heart" class="heart" src={% static "DiaryTune/images/heart-1.png" %} />
+            <div class="music_description">노래 설명</div>
+            <div class="music_title">🎵가수 - 노래</div>
+            <div class="PLAY">
+              <div id = 'play-btn' class="PLAY-btn">
+                <img class="polygon" src={% static "DiaryTune/images/play.png" %} />
+                <div class="text-play">PLAY</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src={% static "DiaryTune/js/recommendation/music_recommendation.js" %}></script>
+  </body>
+</html>

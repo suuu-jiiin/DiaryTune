@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href={% static "DiaryTune/css/diary/diary_styleguide.css" %} />
+    <link rel="stylesheet" href={% static "DiaryTune/css/diary/diary_style.css" %} />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+
+  <body style="margin: 0;">
+    <div class="div-wrapper">
+      <div class="div">
+        <div class="div-2">
+          <!-- 오늘의 활동 -->
+          <div class="activity_div">
+            <div class="item_rectangle">
+              <div class="item_text">오늘의 활동</div>
+            </div>
+            <div class="today_activity">
+              <div class="activity_item">
+                <label for="rest">
+                  <input type="checkbox" name="rating" class="activity" id="rest" value="rest" />
+                  <img class="rest_img" src={% static "DiaryTune/images/휴식.png" %} />
+                  <div class="rest_text">휴식</div>
+                </label>
+              </div>
+              
+              <div class="activity_item">
+                <label for="health">
+                  <input type="checkbox" name="rating" class="activity" id="health" value="health" />
+                  <img class="health_img" src={% static "DiaryTune/images/운동.png" %} />
+                  <div class="health_text">운동</div>
+                </label>
+              </div>
+            
+              <div class="activity_item">
+                <label for="study">
+                  <input type="checkbox" name="rating" class="activity" id="study" value="study" />
+                  <img class="study_img" src={% static "DiaryTune/images/공부.png" %} />
+                  <div class="study_text">공부</div>
+                </label>
+              </div>
+            
+              <div class="activity_item">
+                <label for="work">
+                  <input type="checkbox" name="rating" class="activity" id="work" value="work" />
+                  <img class="work_img" src={% static "DiaryTune/images/일.png" %} />
+                  <div class="work_text">일</div>
+                </label>
+              </div>
+            
+              <div class="activity_item">
+                <label for="shopping">
+                  <input type="checkbox" name="rating" class="activity" id="shopping" value="shopping" />
+                  <img class="shopping_img" src={% static "DiaryTune/images/쇼핑.png" %} />
+                  <div class="shopping_text">쇼핑</div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오늘의 날씨 -->
+          <div class="weather_div">
+            <div class="item_rectangle">
+              <div class="item_text">오늘의 날씨</div>
+            </div>
+            <div class="today_weather">
+              <!-- First Row -->
+              <div class="weather_row">
+                <div class="weather_item">
+                  <label for="sunny">
+                    <input type="checkbox" name="weather" class="weather" id="sunny" value="sunny" />
+                    <img class="sunny_img" src={% static "DiaryTune/images/맑음.png" %} />
+                  </label>
+                  <div class="weather_text">맑음</div>
+                </div>
+                <div class="weather_item">
+                  <label for="흐림">
+                    <input type="checkbox" name="weather" class="weather" id="흐림" value="흐림" />
+                    <img class="cloudy_img" src={% static "DiaryTune/images/흐림.png" %} />
+                  </label>
+                  <div class="weather_text">흐림</div>
+                </div>
+                <div class="weather_item">
+                  <label for="비">
+                    <input type="checkbox" name="weather" class="weather" id="비" value="비" />
+                    <img class="rainy_img" src={% static "DiaryTune/images/비.png" %} />
+                  </label>
+                  <div class="weather_text">비</div>
+                </div>
+                <div class="weather_item">
+                  <label for="눈">
+                    <input type="checkbox" name="weather" class="weather" id="눈" value="눈" />
+                    <img class="snow_img" src={% static "DiaryTune/images/눈.png" %} />
+                  </label>
+                  <div class="weather_text">눈</div>
+                </div>
+              </div>
+          
+              <!-- Second Row -->
+              <div class="weather_row">
+                <div class="weather_item">
+                  <label for="폭풍">
+                    <input type="checkbox" name="weather" class="weather" id="폭풍" value="폭풍" />
+                    <img class="stormy_img" src={% static "DiaryTune/images/폭풍.png" %} />
+                  </label>
+                  <div class="weather_text">폭풍</div>
+                </div>
+                <div class="weather_item">
+                  <label for="바람">
+                    <input type="checkbox" name="weather" class="weather" id="바람" value="바람" />
+                    <img class="windy_img" src={% static "DiaryTune/images/바람.png" %} />
+                  </label>
+                  <div class="weather_text">바람</div>
+                </div>
+                <div class="weather_item">
+                  <label for="더움">
+                    <input type="checkbox" name="weather" class="weather" id="더움" value="더움" />
+                    <img class="hot_img" src={% static "DiaryTune/images/더움.png" %} />
+                  </label>
+                  <div class="weather_text">더움</div>
+                </div>
+                <div class="weather_item">
+                  <label for="추움">
+                    <input type="checkbox" name="weather" class="weather" id="추움" value="추움" />
+                    <img class="cold_img" src={% static "DiaryTune/images/추움.png" %} />
+                  </label>
+                  <div class="weather_text">추움</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 오늘의 일기 -->
+          <div class="diary_div">
+            <div class="item_rectangle">
+              <div class="item_text">오늘의 일기</div>
+            </div>
+            <div class="today_diary">
+              <div class="diary_text" contenteditable="true" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
+                내용 입력해주세요</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 완료 버튼 -->
+        <div class="Done_group">
+          <div class="Done_rectangle" id="saveButton" style="cursor: pointer;">
+            <div class="Done_text">완&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 료</div>
+          </div>
+        </div>
+
+        <!-- 뒤로가기 버튼 -->
+        <div class="upper_icon">
+          <div class="diary_date" data-month="{{ month }}" data-day="{{ day }}" data-dayofweek="{{ dayofweek }}"> </div>
+          <div id="exit-url" data-url="{% url 'main_with_params' year=year month=month day=day %}"></div>
+          <img class="back_img" src={% static "DiaryTune/images/뒤로가기 버튼.png" %} style="cursor: pointer;" onclick="confirmExit()" />
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+    <script src={% static "DiaryTune/js/diary/diary.js" %}></script>
+  </body>
+</html>

@@ -1,0 +1,960 @@
+.screen {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .screen .div {
+    background-color: #f2f2f2;
+    width: 375px;
+    height: 812px;
+    position: relative;
+  }
+
+  .screen .blackbox {
+    position: relative;
+    width: 92px;
+    height: 35px;
+    background-color: #000000;
+    border-radius: 15px;
+  }
+
+  /*상단바*/
+  .screen .bar {
+    position: absolute;
+    width: 373px;
+    height: 39px;
+    top: 49px;
+    left: 0;
+  }
+  .screen .date {
+    width: 177px;
+    top: 0;
+    left: 101px;
+    font-family: "Manrope-Bold";
+    font-weight: 700;
+    color: #000000;
+    font-size: 26px;
+    letter-spacing: 0.10px;
+    line-height: 40px;
+    white-space: nowrap;
+    position: absolute;
+    text-align: center;
+  }
+  .screen .modify {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 334px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .screen .trash {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 298px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  } 
+  .screen .back {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 18px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .screen .line1 {
+    position: absolute;
+    width: 371px;
+    height: 1px;
+    top: 45px;
+    left: 0;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  .screen .line2 {
+    position: absolute;
+    width: 350px;
+    height: 1px;
+    top: 180px;
+    left: 12px;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  
+  /*Overview*/
+  .screen .summ {
+    width: 124px;
+    left: 236px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    position: absolute;
+    height: 105px;
+    top: 111px;
+    background-color: #ffffff;
+    border-radius: 7px;
+  }
+  .screen .hashtags, .screen .musics {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    font-size: 18px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    color: #000000; /* 텍스트 색상 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+  }
+  .screen .hashtags {
+    top: 9px;
+    left: 12px;
+  }
+  .screen .musics {
+    top: 57px;
+    left: 12px;
+  }
+  
+  .screen .weather_activity {
+    width: 105px;
+    left: 107px;
+    box-shadow: var(--drop-shadow-100);
+    position: absolute;
+    height: 105px;
+    top: 111px;
+    background-color: #ffffff;
+    border-radius: 7px;
+  }
+  .screen .weather1 {
+    top: 7px;
+    left: 7px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 21px;
+    border: 1px solid;
+    border-color: #dedede80;
+  }
+  .screen .weather2 {
+    top: 56px;
+    left: 56px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 21px;
+    border: 1px solid;
+    border-color: #dedede80;
+  }
+  .screen .activity1 {
+    top: 7px;
+    left: 56px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 21px;
+    border: 1px solid;
+    border-color: #dedede80;
+  }
+  .screen .activity2 {
+    top: 56px;
+    left: 7px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 21px;
+    border: 1px solid;
+    border-color: #dedede80;
+  }
+
+    /*일기 부분*/
+  .screen .diary {
+    position: absolute;
+    width: 352px;
+    height: 151px;
+    top: 288px;
+    left: 14px;
+  }
+  
+  .screen .diarybox {
+    position: relative;
+    width: 354px;
+    height: 160px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    overflow-y: auto;
+  }
+  .screen .today-diary {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 250px;
+    left: 14px;
+  }
+  .screen .text-diary {
+    width: 71px;
+    height: 20px;
+    top: 9px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .text-diary-content {
+    top: 6px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 1.0px;
+    line-height: 20.0px;
+    white-space: normal;
+    position: absolute;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  /*음악 부분*/
+  .screen .music {
+    position: absolute;
+    width: 354px;
+    height: 93px;
+    top: 698px;
+    left: 14px;
+  }
+  
+  .screen .musicbox {
+    position: relative;
+    width: 354px;
+    height: 93px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+  }
+
+  .screen .today-music {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 660px;
+    left: 14px;
+  }
+  .screen .text-music {
+    width: 71px;
+    height: 20px;
+    top: 8px;
+    left: 9px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .music_title {
+    top: 8px;
+    left: 124px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    line-height: 21.6px;
+    white-space: nowrap;
+    position: absolute;
+    text-align: center;
+  }
+  .screen .music_description {
+    width: 266px;
+    top: 38px;
+    left: 47px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    letter-spacing: 0.20px;
+    line-height: 12.0px;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .PLAY {
+    position: absolute;
+    width: 72px;
+    height: 25px;
+    top: 68px;
+    left: 151px;
+    cursor: pointer;
+  }
+  .screen .PLAY-btn{
+    position: relative;
+    width: 65px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 15px;
+  }
+  .screen .polygon {
+    position: absolute;
+    width: 9px;
+    height: 11px;
+    top: 5px;
+    left: 8px;
+  }
+  .screen .text-play {
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 0.30px;
+    line-height: 18.0px;
+    white-space: nowrap;
+  }
+
+  .screen .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 6px;
+    left: 325px;
+    object-fit: cover;
+    cursor:pointer;
+  }
+
+  /*감정 부분*/
+  .screen .emotion{
+    position: absolute;
+    width: 350px;
+    height: 159px;
+    top: 491px;
+    left: 14px;
+    
+  }
+  .screen .emotionbox {
+    position: relative;
+    width: 354px;
+    height: 165px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+  }
+  .screen .today-emotion {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 453px;
+    left: 14px;
+  } 
+  .screen .text-emotion {
+    width: 71px;
+    height: 20px;
+    top: 8px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .emotions {
+    position: absolute;
+    width: 160px;
+    height: 151px;
+    top: 12px;
+    left: 194px;
+  }
+  .screen .hashtag1, .screen .hashtag2, .screen .hashtag3 {
+    position: absolute;
+    width: 145px;
+    height: 45px;
+    font-size: 18px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    color: #000000; /* 텍스트 색상 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+  }
+  .screen .hashtag1 {
+    top: 0px;
+    left: 0;
+  }
+  .screen .hashtag2 {
+    top: 49px;
+    left: 0;
+  }
+  .screen .hashtag3 {
+    top: 98px;
+    left: 0;
+  }
+  
+  .screen .musical-note {
+    position: absolute;
+    width: 85px;
+    height: 105px;
+    top: 39px;
+    left: 52px;
+    background-color: #ffffff;
+  }
+/* 팝업 전체 배경색 */
+.swal-modal {
+    background-color: #FCDDEC !important; /* 원하는 배경색 */
+    border-radius: 15px; /* 팝업의 모서리를 둥글게 */
+}
+
+/* 팝업 제목 스타일 */
+.swal-title {
+    color: #333; /* 제목 텍스트 색상 */
+    font-size: 22px; /* 제목 글자 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    margin-bottom: 10px; /* 아래 여백 */
+}
+
+/* 팝업 본문 텍스트 스타일 */
+.swal-text {
+    color: #555; /* 본문 텍스트 색상 */
+    font-size: 16px; /* 본문 글자 크기 */
+    line-height: 1.5; /* 줄 간격 */
+}
+
+/* 버튼 스타일 */
+.swal-button {
+    background-color: #f2f2f2; /* 버튼 배경색 */
+    font-size: 14px; /* 버튼 글자 크기 */
+    color: #333; /* 버튼 텍스트 색상 */
+    border-radius: 5px; /* 버튼 모서리를 둥글게 */
+    padding: 8px 16px; /* 버튼 패딩 */
+}
+
+/* 삭제 버튼의 스타일 (위험한 작업을 강조) */
+.swal-button--danger {
+    background-color: #ff4d4f; /* 빨간색 계열 */
+    color: #fff; /* 버튼 텍스트 흰색 */
+}
+
+/* 버튼에 마우스를 올렸을 때 스타일 */
+.swal-button:hover {
+    background-color: #e0e0e0; /* hover 효과 */
+}
+
+.swal-button--danger:hover {
+    background-color: #d9383e; /* hover 시 위험 버튼 색상 */
+}
+
+
+@media (max-width: 800px){
+  .screen {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height:100vh
+  }
+  
+  .screen .div {
+    background-color: #f2f2f2;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .screen .blackbox {
+    position: relative;
+    width: 92px;
+    height: 35px;
+    background-color: #000000;
+    border-radius: 15px;
+  }
+
+  /*상단바*/
+  .screen .bar {
+    position: absolute;
+    width: 373px;
+    height: 39px;
+    top: 49px;
+    left: 0;
+  }
+  .screen .date {
+    width: 177px;
+    top: 0;
+    left: 101px;
+    font-family: "Manrope-Bold";
+    font-weight: 700;
+    color: #000000;
+    font-size: 26px;
+    letter-spacing: 0.10px;
+    line-height: 40px;
+    white-space: nowrap;
+    position: absolute;
+    text-align: center;
+  }
+  .screen .modify {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 334px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .screen .trash {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 298px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  } 
+  .screen .back {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 18px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .screen .line1 {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    top: 45px;
+    left: 0;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  .screen .line2 {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    top: 180px;
+    left: 12px;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  
+  /*Overview*/
+  .screen .summ {
+    width: 124px;
+    left: 236px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    position: absolute;
+    height: 105px;
+    top: 111px;
+    background-color: #ffffff;
+    border-radius: 7px;
+  }
+  .screen .hashtags, .screen .musics {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    font-size: 18px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    color: #000000; /* 텍스트 색상 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+  }
+  .screen .hashtags {
+    top: 9px;
+    left: 12px;
+  }
+  .screen .musics {
+    top: 57px;
+    left: 12px;
+  }
+  
+  .screen .weather_activity {
+    width: 105px;
+    left: 107px;
+    box-shadow: var(--drop-shadow-100);
+    position: absolute;
+    height: 105px;
+    top: 111px;
+    background-color: #ffffff;
+    border-radius: 7px;
+  }
+  .screen .weather1 {
+    top: 7px;
+    left: 7px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 21px;
+    border: 1px solid;
+    border-color: #dedede80;
+  }
+  .screen .weather2 {
+    top: 56px;
+    left: 56px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 21px;
+    border: 1px solid;
+    border-color: #dedede80;
+  }
+  .screen .activity1 {
+    top: 7px;
+    left: 56px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 21px;
+    border: 1px solid;
+    border-color: #dedede80;
+  }
+  .screen .activity2 {
+    top: 56px;
+    left: 7px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 21px;
+    border: 1px solid;
+    border-color: #dedede80;
+  }
+
+    /*일기 부분*/
+  .screen .diary {
+    position: absolute;
+    width: 352px;
+    height: 151px;
+    top: 288px;
+    left: 14px;
+  }
+  
+  .screen .diarybox {
+    position: relative;
+    width: 354px;
+    height: 160px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    overflow-y: auto;
+  }
+  .screen .today-diary {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 250px;
+    left: 14px;
+  }
+  .screen .text-diary {
+    width: 71px;
+    height: 20px;
+    top: 9px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .text-diary-content {
+    top: 6px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 1.0px;
+    line-height: 20.0px;
+    white-space: normal;
+    position: absolute;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  /*음악 부분*/
+  .screen .music {
+    position: absolute;
+    width: 354px;
+    height: 93px;
+    top: 698px;
+    left: 14px;
+  }
+  
+  .screen .musicbox {
+    position: relative;
+    width: 354px;
+    height: 93px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+  }
+
+  .screen .today-music {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 660px;
+    left: 14px;
+  }
+  .screen .text-music {
+    width: 71px;
+    height: 20px;
+    top: 8px;
+    left: 9px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .music_title {
+    top: 8px;
+    left: 124px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    line-height: 21.6px;
+    white-space: nowrap;
+    position: absolute;
+    text-align: center;
+  }
+  .screen .music_description {
+    width: 266px;
+    top: 38px;
+    left: 47px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    letter-spacing: 0.20px;
+    line-height: 12.0px;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .PLAY {
+    position: absolute;
+    width: 72px;
+    height: 25px;
+    top: 68px;
+    left: 151px;
+    cursor: pointer;
+  }
+  .screen .PLAY-btn{
+    position: relative;
+    width: 65px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 15px;
+  }
+  .screen .polygon {
+    position: absolute;
+    width: 9px;
+    height: 11px;
+    top: 5px;
+    left: 8px;
+  }
+  .screen .text-play {
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 0.30px;
+    line-height: 18.0px;
+    white-space: nowrap;
+  }
+
+  .screen .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 6px;
+    left: 325px;
+    object-fit: cover;
+    cursor:pointer;
+  }
+
+  /*감정 부분*/
+  .screen .emotion{
+    position: absolute;
+    width: 350px;
+    height: 159px;
+    top: 491px;
+    left: 14px;
+    
+  }
+  .screen .emotionbox {
+    position: relative;
+    width: 354px;
+    height: 165px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+  }
+  .screen .today-emotion {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 453px;
+    left: 14px;
+  } 
+  .screen .text-emotion {
+    width: 71px;
+    height: 20px;
+    top: 8px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .emotions {
+    position: absolute;
+    width: 160px;
+    height: 151px;
+    top: 12px;
+    left: 194px;
+  }
+  .screen .hashtag1, .screen .hashtag2, .screen .hashtag3 {
+    position: absolute;
+    width: 145px;
+    height: 45px;
+    font-size: 18px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    color: #000000; /* 텍스트 색상 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+  }
+  .screen .hashtag1 {
+    top: 0px;
+    left: 0;
+  }
+  .screen .hashtag2 {
+    top: 49px;
+    left: 0;
+  }
+  .screen .hashtag3 {
+    top: 98px;
+    left: 0;
+  }
+  
+  .screen .musical-note {
+    position: absolute;
+    width: 85px;
+    height: 105px;
+    top: 39px;
+    left: 52px;
+    background-color: #ffffff;
+  }
+  /* 팝업 전체 배경색 */
+  .swal-modal {
+      background-color: #FCDDEC !important; /* 원하는 배경색 */
+      border-radius: 15px; /* 팝업의 모서리를 둥글게 */
+  }
+
+  /* 팝업 제목 스타일 */
+  .swal-title {
+      color: #333; /* 제목 텍스트 색상 */
+      font-size: 22px; /* 제목 글자 크기 */
+      font-weight: bold; /* 텍스트 굵기 */
+      margin-bottom: 10px; /* 아래 여백 */
+  }
+
+  /* 팝업 본문 텍스트 스타일 */
+  .swal-text {
+      color: #555; /* 본문 텍스트 색상 */
+      font-size: 16px; /* 본문 글자 크기 */
+      line-height: 1.5; /* 줄 간격 */
+  }
+
+  /* 버튼 스타일 */
+  .swal-button {
+      background-color: #f2f2f2; /* 버튼 배경색 */
+      font-size: 14px; /* 버튼 글자 크기 */
+      color: #333; /* 버튼 텍스트 색상 */
+      border-radius: 5px; /* 버튼 모서리를 둥글게 */
+      padding: 8px 16px; /* 버튼 패딩 */
+  }
+
+  /* 삭제 버튼의 스타일 (위험한 작업을 강조) */
+  .swal-button--danger {
+      background-color: #ff4d4f; /* 빨간색 계열 */
+      color: #fff; /* 버튼 텍스트 흰색 */
+  }
+
+  /* 버튼에 마우스를 올렸을 때 스타일 */
+  .swal-button:hover {
+      background-color: #e0e0e0; /* hover 효과 */
+  }
+
+  .swal-button--danger:hover {
+      background-color: #d9383e; /* hover 시 위험 버튼 색상 */
+  }
+
+}

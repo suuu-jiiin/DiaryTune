@@ -1,0 +1,105 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href={% static "DiaryTune/css/tutorial/tutorial_styleguide.css" %} />
+    <link rel="stylesheet" href={% static "DiaryTune/css/tutorial/tutorial_style_7.css" %} />
+  </head>
+  <body style="margin: 0;">
+    <div class="tutorial_7">
+      <div class="div">
+        <div class="overlap">
+          <div class="view">
+            <div class="overlap-group">
+              <div class="button-wrapper">
+                <div class="button">
+                  <div class="symbol"><img src={% static "DiaryTune/images/symbol.png" %} alt="symbol icon"></div>
+                  <div class="label">Play</div>
+                </div>
+              </div>
+              <img class="heart" src={% static "DiaryTune/images/heart_1.png" %} />
+              <div class="text-wrapper">🎵ROSÉ - APT.</div>
+              <p class="p">간단하면서 재미있고 분위기를 띄우는 데 최적화된 노래</p>
+            </div>
+            <div class="overlap-group-wrapper">
+              <div class="div-wrapper"><div class="text-wrapper-2">오늘의 노래</div></div>
+            </div>
+          </div>
+          <div class="overlap-wrapper">
+            <div class="overlap-2">
+              <img class="rectangle" src={% static "DiaryTune/images/Rectangle_오늘의감정.png" %} />
+              <div class="view-2">
+                <div class="div-wrapper"><div class="text-wrapper-2">오늘의 감정</div></div>
+              </div>
+              <img class="image" src={% static "DiaryTune/images/행복한.png" %} />
+              <img class="img" src={% static "DiaryTune/images/신나는.png" %} />
+              <img class="image-2" src={% static "DiaryTune/images/감사한.png" %} />
+              <div class="view-3">
+                <div class="overlap-3">
+                  <div class="group"><img class="group-2" src={% static "DiaryTune/images/sentiment_표정_5.png" %} /></div>
+                  <img class="group-3" src={% static "DiaryTune/images/음표머리.png" %} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="view-4">
+            <div class="overlap-4">
+              <div class="rectangle-2"></div>
+              <div class="text-wrapper-3">7/7</div>
+              <p class="text-wrapper-4">추천된 음악이 적절하다면 하트를 눌러주세요</p>
+              <img class="arrow-right-circle" src={% static "DiaryTune/images/end.png" %} onclick="location.href='{% url 'main' %}'" style="cursor: pointer;" />
+            </div>
+          </div>
+        </div>
+        <div class="view-5">
+          <div class="overlap-5">
+            <img class="rectangle-3" src={% static "DiaryTune/images/Rectangle_오늘의일기.png" %} />
+            <p class="text-wrapper-5">
+              날 위한 파티가 있었다. 그건 바로? 나의 생일파티~~~ 오랜만에 친구들을 많이 봐서 좋았다 <br />다들 일하느라
+              바쁜데 날 위해 시간을 내주다니.. 감동이야~~
+            </p>
+            <div class="view-2">
+              <div class="div-wrapper"><div class="text-wrapper-2">오늘의 일기</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="rectangle-4"></div>
+        <div class="div-2">
+          <div class="view-6">
+            <div class="overlap-group-2"><div class="text-wrapper-6">🎵ROSÉ - APT.</div></div>
+          </div>
+          <div class="view-7">
+            <div class="overlap-group-2"><div class="text-wrapper-7"># 행복한</div></div>
+          </div>
+        </div>
+        <div class="div-3">
+          <img class="image-3" src={% static "DiaryTune/images/쇼핑.png" %} />
+          <img class="image-4" src={% static "DiaryTune/images/비.png" %} />
+          <img class="image-5" src={% static "DiaryTune/images/폭풍.png" %} />
+        </div>
+        <div class="view-8">
+          <div class="overlap-3">
+            <div class="group"><img class="group-2" src={% static "DiaryTune/images/sentiment_표정_5.png" %} /></div>
+            <img class="group-3" src={% static "DiaryTune/images/음표머리.png" %} />
+          </div>
+        </div>
+        <div class="overlap-6">
+          <img class="image-6" src={% static "DiaryTune/images/삭제 버튼.png" %} />
+          <img class="image-7" src={% static "DiaryTune/images/수정 버튼.png" %} />
+          <img class="image-8" src={% static "DiaryTune/images/뒤로가기 버튼.png" %} onclick="location.href='{% url 'tutorial_6' %}'" style="cursor: pointer;"/>
+          <div class="view-9">
+            <div class="rectangle-5"></div>
+            <div class="text-wrapper-8">10월 15일 (화)</div>
+          </div>
+          <div class="overlap-wrapper-2">
+            <div class="overlap-7"><div class="text-wrapper-9">Tutorial</div></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

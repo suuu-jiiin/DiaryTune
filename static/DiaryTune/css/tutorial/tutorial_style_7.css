@@ -1,0 +1,1317 @@
+.tutorial_7 {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .tutorial_7 .div {
+    background-color: #f2f2f2;
+    width: 375px;
+    height: 812px;
+    position: relative;
+  }
+  
+  .tutorial_7 .overlap {
+    position: absolute;
+    width: 354px;
+    height: 345px;
+    top: 446px;
+    left: 14px;
+  }
+  
+  .tutorial_7 .view {
+    position: absolute;
+    width: 354px;
+    height: 134px;
+    top: 211px;
+    left: 0;
+  }
+  
+  .tutorial_7 .overlap-group {
+    position: absolute;
+    width: 350px;
+    height: 93px;
+    top: 41px;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+  }
+  
+  .tutorial_7 .button-wrapper {
+    position: absolute;
+    width: 62px;
+    height: 18px;
+    top: 72px;
+    left: 144px;
+  }
+  
+  .tutorial_7 .button {
+    display: flex;
+    width: 54px;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 4px 10px;
+    position: relative;
+    background-color: #aeaeb2;
+    border-radius: 40px;
+    bottom: 51%;
+  }
+  
+  .tutorial_7 .symbol {
+    position: absolute;
+    left: 8px;
+  }
+  
+  .tutorial_7 .symbol img {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .tutorial_7 .label {
+    position: relative;
+    width: fit-content;
+    margin-top: -6.00px;
+    margin-bottom: -4.00px;
+    margin-right: -14px;
+    font-family: var(--subheadline-regular-font-family);
+    font-weight: var(--subheadline-regular-font-weight);
+    color: var(--system-colors-grays-white);
+    font-size: var(--subheadline-regular-font-size);
+    letter-spacing: var(--subheadline-regular-letter-spacing);
+    line-height: var(--subheadline-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--subheadline-regular-font-style);
+  }
+  
+  .tutorial_7 .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 6px;
+    left: 325px;
+    object-fit: cover;
+  }
+  
+  .tutorial_7 .text-wrapper {
+    position: absolute;
+    top: 8px;
+    left: 105px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    line-height: 21.6px;
+    white-space: nowrap;
+  }
+  
+  .tutorial_7 .p {
+    position: absolute;
+    width: 266px;
+    top: 35%;
+    left: 57px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    letter-spacing: 0.20px;
+    line-height: 12.0px;
+  }
+  
+  .tutorial_7 .overlap-group-wrapper {
+    position: absolute;
+    width: 95px;
+    height: 37px;
+    top: 0;
+    left: 0;
+  }
+  
+  .tutorial_7 .div-wrapper {
+    position: relative;
+    width: 93px;
+    height: 37px;
+    background-color: #333333;
+    border-radius: 16px;
+  }
+  
+  .tutorial_7 .text-wrapper-2 {
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    top: 9px;
+    left: 5px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .tutorial_7 .overlap-wrapper {
+    position: absolute;
+    width: 350px;
+    height: 204px;
+    top: 0;
+    left: 0;
+    box-shadow: var(--drop-shadow-300);
+  }
+  
+  .tutorial_7 .overlap-2 {
+    position: relative;
+    width: 375px;
+    height: 232px;
+    left: -14px;
+  }
+  
+  .tutorial_7 .rectangle {
+    position: absolute;
+    width: 375px;
+    height: 199px;
+    top: 33px;
+    left: 0;
+  }
+  
+  .tutorial_7 .view-2 {
+    position: absolute;
+    width: 95px;
+    height: 37px;
+    top: 0;
+    left: 14px;
+  }
+  
+  .tutorial_7 .image {
+    position: absolute;
+    width: 160px;
+    height: 53px;
+    top: 150px;
+    left: 194px;
+  }
+  
+  .tutorial_7 .img {
+    position: absolute;
+    width: 160px;
+    height: 53px;
+    top: 101px;
+    left: 194px;
+  }
+  
+  .tutorial_7 .image-2 {
+    position: absolute;
+    width: 160px;
+    height: 53px;
+    top: 52px;
+    left: 194px;
+  }
+  
+  .tutorial_7 .view-3 {
+    position: absolute;
+    width: 70px;
+    height: 82px;
+    top: 80px;
+    left: 53px;
+  }
+  
+  .tutorial_7 .overlap-3 {
+    width: 71px;
+    height: 84px;
+    position: relative;
+    top: -2px;
+  }
+  
+  .tutorial_7 .group {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    top: 22px;
+    left: 0;
+    background-color: #030000;
+    border-radius: 31.13px / 30.85px;
+  }
+  
+  .tutorial_7 .group-2 {
+    position: absolute;
+    width: 31px;
+    height: 26px;
+    top: 20px;
+    left: 15px;
+  }
+  
+  .tutorial_7 .group-3 {
+    position: absolute;
+    width: 21px;
+    height: 35px;
+    top: 0;
+    left: 50px;
+  }
+  
+  .tutorial_7 .view-4 {
+    position: absolute;
+    width: 284px;
+    height: 70px;
+    top: 189px;
+    left: 64px;
+  }
+  
+  .tutorial_7 .overlap-4 {
+    position: relative;
+    width: 280px;
+    height: 66px;
+    top: -28%;
+  }
+  
+  .tutorial_7 .rectangle-2 {
+    position: absolute;
+    width: 310px;
+    height: 49px;
+    top: 0;
+    left: 0;
+    background-color: #ffd8e4;
+    border-radius: 7px;
+    transform: rotate(179.87deg);
+  }
+  
+  .tutorial_7 .text-wrapper-3 {
+    position: absolute;
+    width: 28px;
+    height: 30px;
+    top: 8%;
+    left: 6px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #5f5f5f;
+    font-size: 10px;
+    letter-spacing: 0.70px;
+    line-height: 14px;
+  }
+  
+  .tutorial_7 .polygon {
+    position: absolute;
+    width: 9px;
+    height: 16px;
+    top: 50px;
+    left: 253px;
+  }
+  
+  .tutorial_7 .text-wrapper-4 {
+    position: absolute;
+    width: 305px;
+    height: 22px;
+    top: 5px;
+    left: 3px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #3e3939;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .tutorial_7 .arrow-right-circle {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top: 61%;
+    left: 99%;
+  }
+  
+  .tutorial_7 .view-5 {
+    position: absolute;
+    width: 352px;
+    height: 191px;
+    top: 248px;
+    left: 14px;
+  }
+  
+  .tutorial_7 .overlap-5 {
+    position: relative;
+    width: 375px;
+    height: 219px;
+    left: -14px;
+  }
+  
+  .tutorial_7 .rectangle-3 {
+    position: absolute;
+    width: 375px;
+    height: 191px;
+    top: 28px;
+    left: 0;
+  }
+  
+  .tutorial_7 .text-wrapper-5 {
+    position: absolute;
+    width: 337px;
+    top: 45px;
+    left: 23px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #3e3939;
+    font-size: 16.5px;
+    letter-spacing: 0;
+    line-height: 25px;
+  }
+  
+  .tutorial_7 .rectangle-4 {
+    position: absolute;
+    width: 350px;
+    height: 1px;
+    top: 234px;
+    left: 12px;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  
+  .tutorial_7 .div-2 {
+    width: 125px;
+    left: 236px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    position: absolute;
+    height: 105px;
+    top: 111px;
+    background-color: #ffffff;
+    border-radius: 7px;
+  }
+  
+  .tutorial_7 .view-6 {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    top: 61px;
+    left: 3px;
+  }
+  
+  .tutorial_7 .overlap-group-2 {
+    width: 121px;
+    height: 33px;
+    left: -2px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 1px 4px #0c0c0d0d;
+    position: relative;
+    top: -2px;
+  }
+  
+  .tutorial_7 .text-wrapper-6 {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0.28px;
+    line-height: 16.8px;
+    white-space: nowrap;
+  }
+  
+  .tutorial_7 .view-7 {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    top: 12px;
+    left: 3px;
+  }
+  
+  .tutorial_7 .text-wrapper-7 {
+    position: absolute;
+    top: 8px;
+    left: 40px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0.28px;
+    line-height: 16.8px;
+    white-space: nowrap;
+  }
+  
+  .tutorial_7 .div-3 {
+    width: 105px;
+    left: 107px;
+    box-shadow: var(--drop-shadow-100);
+    position: absolute;
+    height: 105px;
+    top: 111px;
+    background-color: #ffffff;
+    border-radius: 7px;
+  }
+  
+  .tutorial_7 .image-3 {
+    position: absolute;
+    width: 40px;
+    height: 41px;
+    top: 4px;
+    left: 5px;
+  }
+  
+  .tutorial_7 .image-4 {
+    position: absolute;
+    width: 40px;
+    height: 41px;
+    top: 54px;
+    left: 8px;
+    object-fit: cover;
+  }
+  
+  .tutorial_7 .image-5 {
+    position: absolute;
+    width: 40px;
+    height: 41px;
+    top: 53px;
+    left: 58px;
+    object-fit: cover;
+  }
+  
+  .tutorial_7 .view-8 {
+    position: absolute;
+    width: 70px;
+    height: 82px;
+    top: 117px;
+    left: 22px;
+  }
+  
+  .tutorial_7 .overlap-6 {
+    position: absolute;
+    width: 373px;
+    height: 46px;
+    top: 42px;
+    left: 0;
+  }
+  
+  .tutorial_7 .image-6 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 12px;
+    left: 334px;
+    object-fit: cover;
+  }
+  
+  .tutorial_7 .image-7 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 12px;
+    left: 298px;
+    object-fit: cover;
+  }
+  
+  .tutorial_7 .image-8 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 12px;
+    left: 18px;
+    object-fit: cover;
+    z-index: 10;
+  }
+  
+  .tutorial_7 .view-9 {
+    position: absolute;
+    width: 373px;
+    height: 39px;
+    top: 7px;
+    left: 0;
+  }
+  
+  .tutorial_7 .rectangle-5 {
+    position: absolute;
+    width: 371px;
+    height: 1px;
+    top: 38px;
+    left: 0;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  
+  .tutorial_7 .text-wrapper-8 {
+    position: absolute;
+    width: 177px;
+    top: 0;
+    left: 101px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0.10px;
+    line-height: 38.4px;
+    white-space: nowrap;
+  }
+  
+  .tutorial_7 .overlap-wrapper-2 {
+    width: 357px;
+    height: 21px;
+    left: 10px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .tutorial_7 .overlap-7 {
+    position: relative;
+    width: 355px;
+    height: 21px;
+    background-color: var(--fuschia-60);
+  }
+  
+  .tutorial_7 .text-wrapper-9 {
+    width: 47px;
+    height: 20px;
+    left: 154px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .tutorial_7 .container-wrapper {
+    position: absolute;
+    width: 67px;
+    height: 12px;
+    top: 17px;
+    left: 288px;
+  }
+  
+  .tutorial_7 .container {
+    position: relative;
+    height: 12px;
+  }
+  
+  .tutorial_7 .battery {
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    top: 0;
+    left: 42px;
+    background-image: url(./img/rectangle.svg);
+    background-size: 100% 100%;
+  }
+  
+  .tutorial_7 .rectangle-6 {
+    position: relative;
+    width: 20px;
+    height: 10px;
+    top: 1px;
+    left: 1px;
+    background-color: #111111;
+    border-radius: 1.6px;
+  }
+  
+  .tutorial_7 .combined-shape {
+    position: absolute;
+    width: 17px;
+    height: 11px;
+    top: 0;
+    left: 0;
+  }
+  
+  .tutorial_7 .wi-fi {
+    position: absolute;
+    width: 15px;
+    height: 11px;
+    top: 0;
+    left: 22px;
+  }
+  
+  .tutorial_7 .home-indicator {
+    position: absolute;
+    width: 134px;
+    height: 5px;
+    top: 800px;
+    left: 121px;
+    background-color: #000000;
+    border-radius: 100px;
+  }
+  
+  .tutorial_7 .action {
+    position: absolute;
+    width: 56px;
+    height: 18px;
+    top: 14px;
+    left: 28px;
+  }
+  
+  .tutorial_7 .time {
+    position: absolute;
+    width: 54px;
+    top: 0;
+    left: 0;
+    font-family: "Pretendard-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #111111;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: -0.17px;
+    line-height: normal;
+  }
+  
+  @media (max-width:800px){
+    .tutorial_7 {
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    
+    .tutorial_7 .div {
+      background-color: #f2f2f2;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .tutorial_7 .overlap {
+      position: absolute;
+      left: 14px;
+      width: 92vw;
+      height: 45vh;
+    }
+    
+    .tutorial_7 .view {
+      position: absolute;
+      width: 354px;
+      height: 134px;
+      top: 242px;
+      left: 0;
+    }
+    
+    .tutorial_7 .overlap-group {
+      position: absolute;
+      width: 104%;
+      height: 71%;
+      top: 41px;
+      left: 0;
+      background-color: #ffffff;
+      border-radius: 7px;
+      box-shadow: 0px 8px 20px #1d3a580d;
+    }
+    
+    .tutorial_7 .button-wrapper {
+      position: absolute;
+      width: 62px;
+      height: 18px;
+      top: 72px;
+      left: 144px;
+    }
+    
+    .tutorial_7 .button {
+      display: flex;
+      width: 54px;
+      height: 18px;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      padding: 4px 10px;
+      position: relative;
+      background-color: #aeaeb2;
+      border-radius: 40px;
+      bottom: 51%;
+    }
+    
+    .tutorial_7 .symbol {
+      position: absolute;
+      left: 8px;
+    }
+    
+    .tutorial_7 .symbol img {
+      width: 15px;
+      height: 15px;
+    }
+    
+    .tutorial_7 .label {
+      position: relative;
+      width: fit-content;
+      margin-top: -6.00px;
+      margin-bottom: -4.00px;
+      margin-right: -14px;
+      font-family: var(--subheadline-regular-font-family);
+      font-weight: var(--subheadline-regular-font-weight);
+      color: var(--system-colors-grays-white);
+      font-size: var(--subheadline-regular-font-size);
+      letter-spacing: var(--subheadline-regular-letter-spacing);
+      line-height: var(--subheadline-regular-line-height);
+      white-space: nowrap;
+      font-style: var(--subheadline-regular-font-style);
+    }
+    
+    .tutorial_7 .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 6px;
+      left: 325px;
+      object-fit: cover;
+    }
+    
+    .tutorial_7 .text-wrapper {
+      position: absolute;
+      top: 8px;
+      left: 105px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 700;
+      color: #000000;
+      font-size: 18px;
+      letter-spacing: 0.36px;
+      line-height: 21.6px;
+      white-space: nowrap;
+    }
+    
+    .tutorial_7 .p {
+      position: absolute;
+      width: 266px;
+      top: 35%;
+      left: 57px;
+      font-family: "Manrope-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 10px;
+      letter-spacing: 0.20px;
+      line-height: 12.0px;
+    }
+    
+    .tutorial_7 .overlap-group-wrapper {
+      position: absolute;
+      width: 95px;
+      height: 37px;
+      top: 0;
+      left: 0;
+    }
+    
+    .tutorial_7 .div-wrapper {
+      position: relative;
+      width: 93px;
+      height: 37px;
+      background-color: #333333;
+      border-radius: 16px;
+    }
+    
+    .tutorial_7 .text-wrapper-2 {
+      position: absolute;
+      width: 80px;
+      height: 20px;
+      top: 9px;
+      left: 5px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 14px;
+      text-align: center;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+    
+    .tutorial_7 .overlap-wrapper {
+      position: absolute;
+      width: 350px;
+      height: 204px;
+      top: 0;
+      left: 0;
+      box-shadow: var(--drop-shadow-300);
+    }
+    
+    .tutorial_7 .overlap-2 {
+      position: relative;
+      width: 375px;
+      height: 232px;
+      left: -14px;
+    }
+    
+    .tutorial_7 .rectangle {
+      position: absolute;
+      width: 375px;
+      height: 199px;
+      top: 33px;
+      left: 0;
+    }
+    
+    .tutorial_7 .view-2 {
+      position: absolute;
+      width: 95px;
+      height: 37px;
+      top: 0;
+      left: 14px;
+    }
+    
+    .tutorial_7 .image {
+      position: absolute;
+      width: 160px;
+      height: 53px;
+      top: 150px;
+      left: 194px;
+    }
+    
+    .tutorial_7 .img {
+      position: absolute;
+      width: 160px;
+      height: 53px;
+      top: 101px;
+      left: 194px;
+    }
+    
+    .tutorial_7 .image-2 {
+      position: absolute;
+      width: 160px;
+      height: 53px;
+      top: 52px;
+      left: 194px;
+    }
+    
+    .tutorial_7 .view-3 {
+      position: absolute;
+      width: 70px;
+      height: 82px;
+      top: 80px;
+      left: 53px;
+    }
+    
+    .tutorial_7 .overlap-3 {
+      width: 71px;
+      height: 84px;
+      position: relative;
+      top: -2px;
+    }
+    
+    .tutorial_7 .group {
+      position: absolute;
+      width: 62px;
+      height: 62px;
+      top: 22px;
+      left: 0;
+      background-color: #030000;
+      border-radius: 31.13px / 30.85px;
+    }
+    
+    .tutorial_7 .group-2 {
+      position: absolute;
+      width: 31px;
+      height: 26px;
+      top: 20px;
+      left: 15px;
+    }
+    
+    .tutorial_7 .group-3 {
+      position: absolute;
+      width: 21px;
+      height: 35px;
+      top: 0;
+      left: 50px;
+    }
+    
+    .tutorial_7 .view-4 {
+      position: absolute;
+      width: 284px;
+      height: 70px;
+      top: 189px;
+      left: 64px;
+    }
+    
+    .tutorial_7 .overlap-4 {
+      position: relative;
+      width: 280px;
+      height: 66px;
+      top: 20%;
+    }
+    
+    .tutorial_7 .rectangle-2 {
+      position: absolute;
+      width: 310px;
+      height: 49px;
+      top: 0;
+      left: 0;
+      background-color: #ffd8e4;
+      border-radius: 7px;
+      transform: rotate(179.87deg);
+    }
+    
+    .tutorial_7 .text-wrapper-3 {
+      position: absolute;
+      width: 28px;
+      height: 30px;
+      top: 8%;
+      left: 6px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 700;
+      color: #5f5f5f;
+      font-size: 10px;
+      letter-spacing: 0.70px;
+      line-height: 14px;
+    }
+    
+    .tutorial_7 .polygon {
+      position: absolute;
+      width: 9px;
+      height: 16px;
+      top: 50px;
+      left: 253px;
+    }
+    
+    .tutorial_7 .text-wrapper-4 {
+      position: absolute;
+      width: 305px;
+      height: 22px;
+      top: 5px;
+      left: 3px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 700;
+      color: #3e3939;
+      font-size: 15px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+    
+    .tutorial_7 .arrow-right-circle {
+      position: absolute;
+      width: 33px;
+      height: 33px;
+      top: 58%;
+      left: 99%;
+    }
+    
+    .tutorial_7 .view-5 {
+      position: absolute;
+      width: 352px;
+      height: 191px;
+      top: 248px;
+      left: 14px;
+    }
+    
+    .tutorial_7 .overlap-5 {
+      position: relative;
+      width: 375px;
+      height: 219px;
+      left: -14px;
+    }
+    
+    .tutorial_7 .rectangle-3 {
+      position: absolute;
+      width: 375px;
+      height: 191px;
+      top: 28px;
+      left: 0;
+    }
+    
+    .tutorial_7 .text-wrapper-5 {
+      position: absolute;
+      width: 337px;
+      top: 45px;
+      left: 23px;
+      font-family: "Manrope-Regular", Helvetica;
+      font-weight: 400;
+      color: #3e3939;
+      font-size: 16.5px;
+      letter-spacing: 0;
+      line-height: 25px;
+    }
+    
+    .tutorial_7 .rectangle-4 {
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      top: 234px;
+      left: 12px;
+      background-color: #0000004c;
+      opacity: 0.7;
+    }
+    
+    .tutorial_7 .div-2 {
+      width: 125px;
+      left: 236px;
+      box-shadow: 0px 8px 20px #1d3a580d;
+      position: absolute;
+      height: 105px;
+      top: 111px;
+      background-color: #ffffff;
+      border-radius: 7px;
+    }
+    
+    .tutorial_7 .view-6 {
+      position: absolute;
+      width: 120px;
+      height: 30px;
+      top: 61px;
+      left: 3px;
+    }
+    
+    .tutorial_7 .overlap-group-2 {
+      width: 121px;
+      height: 33px;
+      left: -2px;
+      background-color: #ffffff;
+      border-radius: 7px;
+      box-shadow: 0px 1px 4px #0c0c0d0d;
+      position: relative;
+      top: -2px;
+    }
+    
+    .tutorial_7 .text-wrapper-6 {
+      position: absolute;
+      top: 8px;
+      left: 12px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 700;
+      color: #000000;
+      font-size: 14px;
+      letter-spacing: 0.28px;
+      line-height: 16.8px;
+      white-space: nowrap;
+    }
+    
+    .tutorial_7 .view-7 {
+      position: absolute;
+      width: 120px;
+      height: 30px;
+      top: 12px;
+      left: 3px;
+    }
+    
+    .tutorial_7 .text-wrapper-7 {
+      position: absolute;
+      top: 8px;
+      left: 40px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 700;
+      color: #000000;
+      font-size: 14px;
+      letter-spacing: 0.28px;
+      line-height: 16.8px;
+      white-space: nowrap;
+    }
+    
+    .tutorial_7 .div-3 {
+      width: 105px;
+      left: 107px;
+      box-shadow: var(--drop-shadow-100);
+      position: absolute;
+      height: 105px;
+      top: 111px;
+      background-color: #ffffff;
+      border-radius: 7px;
+    }
+    
+    .tutorial_7 .image-3 {
+      position: absolute;
+      width: 40px;
+      height: 41px;
+      top: 4px;
+      left: 5px;
+    }
+    
+    .tutorial_7 .image-4 {
+      position: absolute;
+      width: 40px;
+      height: 41px;
+      top: 54px;
+      left: 8px;
+      object-fit: cover;
+    }
+    
+    .tutorial_7 .image-5 {
+      position: absolute;
+      width: 40px;
+      height: 41px;
+      top: 53px;
+      left: 58px;
+      object-fit: cover;
+    }
+    
+    .tutorial_7 .view-8 {
+      position: absolute;
+      width: 70px;
+      height: 82px;
+      top: 117px;
+      left: 22px;
+    }
+    
+    .tutorial_7 .overlap-6 {
+      position: absolute;
+      width: 373px;
+      height: 51px;
+      top: 42px;
+      left: 2px;
+    }
+    
+    .tutorial_7 .image-6 {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 12px;
+      left: 334px;
+      object-fit: cover;
+    }
+    
+    .tutorial_7 .image-7 {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 12px;
+      left: 298px;
+      object-fit: cover;
+    }
+    
+    .tutorial_7 .image-8 {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 12px;
+      left: 18px;
+      object-fit: cover;
+      z-index: 10;
+    }
+    
+    .tutorial_7 .view-9 {
+      position: absolute;
+      width: 373px;
+      height: 39px;
+      top: 7px;
+      left: 0;
+    }
+    
+    .tutorial_7 .rectangle-5 {
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      top: 38px;
+      left: 0;
+      background-color: #0000004c;
+      opacity: 0.7;
+    }
+    
+    .tutorial_7 .text-wrapper-8 {
+      position: absolute;
+      width: 177px;
+      top: 0;
+      left: 101px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 700;
+      color: #000000;
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 0.10px;
+      line-height: 38.4px;
+      white-space: nowrap;
+    }
+    
+    .tutorial_7 .overlap-wrapper-2 {
+      width: 357px;
+      height: 21px;
+      left: 10px;
+      position: absolute;
+      top: 0;
+    }
+    
+    .tutorial_7 .overlap-7 {
+      position: relative;
+      width: 100vw;
+      height: 21px;
+      background-color: var(--fuschia-60);
+      left: -3%;
+    }
+    
+    .tutorial_7 .text-wrapper-9 {
+      width: 47px;
+      height: 20px;
+      left: 43%;
+      font-family: "Manrope-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 13px;
+      letter-spacing: 0;
+      line-height: normal;
+      position: absolute;
+      top: 0;
+    }
+    
+    .tutorial_7 .container-wrapper {
+      position: absolute;
+      width: 67px;
+      height: 12px;
+      top: 17px;
+      left: 288px;
+    }
+    
+    .tutorial_7 .container {
+      position: relative;
+      height: 12px;
+    }
+    
+    .tutorial_7 .battery {
+      position: absolute;
+      width: 24px;
+      height: 12px;
+      top: 0;
+      left: 42px;
+      background-image: url(./img/rectangle.svg);
+      background-size: 100% 100%;
+    }
+    
+    .tutorial_7 .rectangle-6 {
+      position: relative;
+      width: 20px;
+      height: 10px;
+      top: 1px;
+      left: 1px;
+      background-color: #111111;
+      border-radius: 1.6px;
+    }
+    
+    .tutorial_7 .combined-shape {
+      position: absolute;
+      width: 17px;
+      height: 11px;
+      top: 0;
+      left: 0;
+    }
+    
+    .tutorial_7 .wi-fi {
+      position: absolute;
+      width: 15px;
+      height: 11px;
+      top: 0;
+      left: 22px;
+    }
+    
+    .tutorial_7 .home-indicator {
+      position: absolute;
+      width: 134px;
+      height: 5px;
+      top: 800px;
+      left: 121px;
+      background-color: #000000;
+      border-radius: 100px;
+    }
+    
+    .tutorial_7 .action {
+      position: absolute;
+      width: 56px;
+      height: 18px;
+      top: 14px;
+      left: 28px;
+    }
+    
+    .tutorial_7 .time {
+      position: absolute;
+      width: 54px;
+      top: 0;
+      left: 0;
+      font-family: "Pretendard-SemiBold", Helvetica;
+      font-weight: 600;
+      color: #111111;
+      font-size: 15px;
+      text-align: center;
+      letter-spacing: -0.17px;
+      line-height: normal;
+    }
+  }

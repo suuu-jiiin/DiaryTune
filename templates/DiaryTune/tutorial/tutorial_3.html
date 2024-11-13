@@ -1,0 +1,102 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href={% static "DiaryTune/css/tutorial/tutorial_styleguide.css" %} />
+    <link rel="stylesheet" href={% static "DiaryTune/css/tutorial/tutorial_style_3.css" %} />
+  </head>
+  <body style="margin: 0;">
+    <div class="tutorial_3">
+      <div class="div">
+        <div class="overlap-2">
+          <div class="view-2">
+            <div class="rectangle"></div>
+            <div class="text-wrapper-3">10월 15일 (화)</div>
+          </div>
+          <img class="image" src={% static "DiaryTune/images/뒤로가기 버튼.png" %} onclick="location.href='{% url 'tutorial_2' %}'" style="cursor: pointer;"/>
+          <div class="overlap-wrapper">
+            <div class="div-wrapper"><div class="text-wrapper-4">Tutorial</div></div>
+          </div>
+        </div>
+        <div class="overlap-3">
+          <div class="view">
+            <div class="overlap"><div class="text-wrapper">내용을 입력해주세요</div></div>
+            <div class="overlap-group-wrapper">
+              <div class="overlap-group"><div class="text-wrapper-2">오늘의 일기</div></div>
+            </div>
+          </div>
+          <div class="view-3">
+            <div class="overlap-4">
+              <div class="navbar">
+                <div class="text-wrapper-5">운동</div>
+                <div class="text-wrapper-6">휴식</div>
+                <div class="text-wrapper-7">공부</div>
+                <div class="text-wrapper-8">일</div>
+                <div class="text-wrapper-9">쇼핑</div>
+              </div>
+              <div class="view-4">
+                <img class="img" src={% static "DiaryTune/images/운동.png" %} />
+                <img class="image-2" src={% static "DiaryTune/images/휴식.png" %} />
+                <img class="image-3" src={% static "DiaryTune/images/공부.png" %} />
+                <img class="image-4" src={% static "DiaryTune/images/일.png" %} />
+                <img class="image-5" src={% static "DiaryTune/images/쇼핑.png" %} />
+              </div>
+            </div>
+            <div class="overlap-group-wrapper-2">
+              <div class="overlap-group-2"><div class="text-wrapper-2">오늘의 활동</div></div>
+            </div>
+          </div>
+          <div class="view-5">
+            <div class="overlap-group-wrapper-2">
+              <div class="overlap-group-2"><div class="text-wrapper-2">오늘의 날씨</div></div>
+            </div>
+            <div class="div-2">
+              <div class="element">
+                <div class="view-6">
+                  <img class="image-6" src={% static "DiaryTune/images/맑음.png" %} />
+                  <img class="image-7" src={% static "DiaryTune/images/눈.png" %} />
+                  <img class="image-8" src={% static "DiaryTune/images/흐림.png" %} />
+                  <img class="image-9" src={% static "DiaryTune/images/비.png" %} />
+                </div>
+                <div class="view-7">
+                  <div class="text-wrapper-11">맑음</div>
+                  <div class="text-wrapper-13">눈</div>
+                  <div class="text-wrapper-10">흐림</div>
+                  <div class="text-wrapper-12">비</div>
+                </div>
+              </div>
+              <div class="element-2">
+                <div class="view-8">
+                  <div class="text-wrapper-10">폭풍</div>
+                  <div class="text-wrapper-11">바람</div>
+                  <div class="text-wrapper-12">더움</div>
+                  <div class="text-wrapper-13">추움</div>
+                </div>
+                <div class="view-6">
+                  <img class="image-10" src={% static "DiaryTune/images/폭풍.png" %} />
+                  <img class="image-11" src={% static "DiaryTune/images/바람.png" %} />
+                  <img class="image-12" src={% static "DiaryTune/images/더움.png" %} />
+                  <img class="image-13" src={% static "DiaryTune/images/추움.png" %} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overlap-5">
+            <div class="rectangle-2"></div>
+            <div class="text-wrapper-14">3/7</div>
+            <div class="text-wrapper-15">오늘의 날씨도 골라 보세요</div>
+            <img class="arrow-right-circle" src={% static "DiaryTune/images/arrow-right-circle.png" %} onclick="location.href='{% url 'tutorial_4' %}'" style="cursor: pointer;" />
+          </div>
+        </div>
+        <div class="overlap-6">
+          <div class="text-wrapper-16">
+            완&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 료
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

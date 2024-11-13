@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 페이지</title>
+    <link rel="stylesheet" href="{% static 'diarytune/main/main.css' %}">
+</head>
+<body>
+    <!-- 메인 페이지 콘텐츠 -->
+    <header>
+        <h1>나의 음악 다이어리</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'tutorial' %}">Tutorial 바로가기</a></li>
+            <li><a href="{% url 'main' %}">메인 화면</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>환영합니다!</h2>
+        <p>이곳은 음악과 감정을 기록할 수 있는 페이지입니다.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 나의 음악 다이어리</p>
+    </footer>
+
+    <script src="{% static 'diarytune/js/main.js' %}"></script>
+</body>
+</html>
