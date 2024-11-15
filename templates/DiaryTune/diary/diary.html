@@ -23,7 +23,7 @@
             <div class="today_activity">
               <div class="activity_item">
                 <label for="rest">
-                  <input type="checkbox" name="rating" class="activity" id="rest" value="rest" />
+                  <input type="checkbox" name="rating" class="activity" id="rest" value="휴식" {% if '휴식' in activities %} checked {% endif %}/>
                   <img class="rest_img" src={% static "DiaryTune/images/휴식.png" %} />
                   <div class="rest_text">휴식</div>
                 </label>
@@ -31,7 +31,7 @@
               
               <div class="activity_item">
                 <label for="health">
-                  <input type="checkbox" name="rating" class="activity" id="health" value="health" />
+                  <input type="checkbox" name="rating" class="activity" id="health" value="운동" {% if '운동' in activities %} checked {% endif %}/>
                   <img class="health_img" src={% static "DiaryTune/images/운동.png" %} />
                   <div class="health_text">운동</div>
                 </label>
@@ -39,7 +39,7 @@
             
               <div class="activity_item">
                 <label for="study">
-                  <input type="checkbox" name="rating" class="activity" id="study" value="study" />
+                  <input type="checkbox" name="rating" class="activity" id="study" value="공부" {% if '공부' in activities %} checked {% endif %} />
                   <img class="study_img" src={% static "DiaryTune/images/공부.png" %} />
                   <div class="study_text">공부</div>
                 </label>
@@ -47,7 +47,7 @@
             
               <div class="activity_item">
                 <label for="work">
-                  <input type="checkbox" name="rating" class="activity" id="work" value="work" />
+                  <input type="checkbox" name="rating" class="activity" id="work" value="일" {% if '일' in activities %} checked {% endif %} />
                   <img class="work_img" src={% static "DiaryTune/images/일.png" %} />
                   <div class="work_text">일</div>
                 </label>
@@ -55,7 +55,7 @@
             
               <div class="activity_item">
                 <label for="shopping">
-                  <input type="checkbox" name="rating" class="activity" id="shopping" value="shopping" />
+                  <input type="checkbox" name="rating" class="activity" id="shopping" value="쇼핑" {% if '쇼핑' in activities %} checked {% endif %} />
                   <img class="shopping_img" src={% static "DiaryTune/images/쇼핑.png" %} />
                   <div class="shopping_text">쇼핑</div>
                 </label>
@@ -73,28 +73,28 @@
               <div class="weather_row">
                 <div class="weather_item">
                   <label for="sunny">
-                    <input type="checkbox" name="weather" class="weather" id="sunny" value="sunny" />
+                    <input type="checkbox" name="weather" class="weather" id="sunny" value="맑음" {% if '맑음' in weather %} checked {% endif %} />
                     <img class="sunny_img" src={% static "DiaryTune/images/맑음.png" %} />
                   </label>
                   <div class="weather_text">맑음</div>
                 </div>
                 <div class="weather_item">
                   <label for="흐림">
-                    <input type="checkbox" name="weather" class="weather" id="흐림" value="흐림" />
+                    <input type="checkbox" name="weather" class="weather" id="흐림" value="흐림" {% if '흐림' in weather %} checked {% endif %} />
                     <img class="cloudy_img" src={% static "DiaryTune/images/흐림.png" %} />
                   </label>
                   <div class="weather_text">흐림</div>
                 </div>
                 <div class="weather_item">
                   <label for="비">
-                    <input type="checkbox" name="weather" class="weather" id="비" value="비" />
+                    <input type="checkbox" name="weather" class="weather" id="비" value="비" {% if '비' in weather %} checked {% endif %} />
                     <img class="rainy_img" src={% static "DiaryTune/images/비.png" %} />
                   </label>
                   <div class="weather_text">비</div>
                 </div>
                 <div class="weather_item">
                   <label for="눈">
-                    <input type="checkbox" name="weather" class="weather" id="눈" value="눈" />
+                    <input type="checkbox" name="weather" class="weather" id="눈" value="눈" {% if '눈' in weather %} checked {% endif %} />
                     <img class="snow_img" src={% static "DiaryTune/images/눈.png" %} />
                   </label>
                   <div class="weather_text">눈</div>
@@ -105,28 +105,28 @@
               <div class="weather_row">
                 <div class="weather_item">
                   <label for="폭풍">
-                    <input type="checkbox" name="weather" class="weather" id="폭풍" value="폭풍" />
+                    <input type="checkbox" name="weather" class="weather" id="폭풍" value="폭풍" {% if '폭풍' in weather %} checked {% endif %}/>
                     <img class="stormy_img" src={% static "DiaryTune/images/폭풍.png" %} />
                   </label>
                   <div class="weather_text">폭풍</div>
                 </div>
                 <div class="weather_item">
                   <label for="바람">
-                    <input type="checkbox" name="weather" class="weather" id="바람" value="바람" />
+                    <input type="checkbox" name="weather" class="weather" id="바람" value="바람" {% if '바람' in weather %} checked {% endif %}/>
                     <img class="windy_img" src={% static "DiaryTune/images/바람.png" %} />
                   </label>
                   <div class="weather_text">바람</div>
                 </div>
                 <div class="weather_item">
                   <label for="더움">
-                    <input type="checkbox" name="weather" class="weather" id="더움" value="더움" />
+                    <input type="checkbox" name="weather" class="weather" id="더움" value="더움" {% if '더움' in weather %} checked {% endif %}/>
                     <img class="hot_img" src={% static "DiaryTune/images/더움.png" %} />
                   </label>
                   <div class="weather_text">더움</div>
                 </div>
                 <div class="weather_item">
                   <label for="추움">
-                    <input type="checkbox" name="weather" class="weather" id="추움" value="추움" />
+                    <input type="checkbox" name="weather" class="weather" id="추움" value="추움" {% if '추움' in weather %} checked {% endif %}/>
                     <img class="cold_img" src={% static "DiaryTune/images/추움.png" %} />
                   </label>
                   <div class="weather_text">추움</div>
@@ -142,7 +142,7 @@
             </div>
             <div class="today_diary">
               <div class="diary_text" contenteditable="true" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
-                내용 입력해주세요</div>
+                {{ diary_content }}</div>
             </div>
           </div>
         </div>

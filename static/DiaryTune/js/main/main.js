@@ -136,27 +136,43 @@ function generateDates(year, month) {
 
           if (day >= 1 && day <= daysInMonth) {
             dateCell.addEventListener("click", () => {
-              const currenDate = new Date();
-              const selectedDate = new Date(year, month, day);
-            
-              // 미래 날짜 클릭 시 알림
-              if (selectedDate > currenDate) {
-                swal({
-                  icon: "error",
-                  content: {
-                    element: "p",
-                    attributes: {
-                      innerHTML: "미래의 하루는 기록할 수 없어요! 🥹",
-                    }
-                  }
-                });
-              } else {
-                // Django URL 패턴 사용
-                const url = `/DiaryTune/diary/${year}/${month + 1}/${day}/${dayOfWeek}/`;
-                window.location.href = url;
-              }
+                const currenDate = new Date();
+                const selectedDate = new Date(year, month, day);
+        
+                // 미래 날짜 클릭 시 알림
+                if (selectedDate > currenDate) {
+                    swal({
+                        icon: "error",
+                        content: {
+                            element: "p",
+                            attributes: {
+                                innerHTML: "미래의 하루는 기록할 수 없어요! 🥹",
+                            }
+                        }
+                    });
+                } else {
+                    // 선택된 날짜에 해당하는 일기 존재 여부 확인
+                    fetch(`/DiaryTune/check_diary/${year}/${month + 1}/${day}/`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.exists) {
+                                // 일기가 있으면 recommendation 페이지로 이동
+                                const recommend_url = `/DiaryTune/recommendation/${year}/${month + 1}/${day}/${dayOfWeek}/`;
+                                window.location.href = recommend_url;
+                            } else {
+                                // 일기가 없으면 diary 페이지로 이동
+                                const diary_url = `/DiaryTune/diary/${year}/${month + 1}/${day}/${dayOfWeek}/`;
+                                window.location.href = diary_url;
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error checking diary:', error);
+                            swal("오류", "일기 확인 중 문제가 발생했습니다.", "error");
+                        });
+                }
             });
         }
+        
           // 구조에 추가
           rectangle.appendChild(textWrapper);
           overlapGroup.appendChild(rectangle);
@@ -169,4 +185,6 @@ function generateDates(year, month) {
   // 모든 주를 담은 calendar-date div를 전체 날짜 컨테이너에 추가
   datesContainer.appendChild(calendarDateContainer);
 }
+
+
 

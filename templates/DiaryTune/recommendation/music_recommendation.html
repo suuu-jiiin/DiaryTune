@@ -15,7 +15,7 @@
 
         <!--상단바-->
         <div class="bar">
-            <div class="date">10월 1일 (화)</div>
+            <div class="date" data-month="{{ month }}" data-day="{{ day }}" data-dayofweek="{{ dayofweek }}" ></div>
             <img class="modify" src={% static "DiaryTune/images/modify.png" %} />
             <img class="trash" src={% static "DiaryTune/images/trash.png" %} />
             <img class="back" src={% static "DiaryTune/images/back.png" %} />
@@ -37,8 +37,16 @@
 
         <!--일기 부분-->
         <div class="diary">
-            <div class="diarybox"><div class="text-diary-content">오늘은 아침부터 비가 왔다. 그래서 엄마한테 학교로 데려달라고 했는데 거절당했다. 우울한 기분에 깜빡하고 숙제를 챙기지 않았다. 근데 선생님한테 숙제를 안 해왔다고 혼났다. 기분전환하러 엄마랑 쇼핑하러 갔다. 근데 내가 원하는 옷들이 없어서 너무 너무 슬펐다. 오늘은 되는 게 하나도 없는 날인가보다ㅠㅠ 오늘은 아침부터 비가 왔다. 그래서 엄마한테 학교로 데려달라고 했는데 거절당했다. 우울한 기분에 깜빡하고 숙제를 챙기지 않았다. 근데 선생님한테 숙제를 안 해왔다고 혼났다. 기분전환하러 엄마랑 쇼핑하러 갔다. 근데 내가 원하는 옷들이 없어서 너무 너무 슬펐다. 오늘은 되는 게 하나도 없는 날인가보다ㅠㅠ </div></div>
-        </div>
+          <div class="diarybox">
+              <div class="text-diary-content">
+                  {% if diary_content %}
+                      {{ diary_content }}
+                  {% else %}
+                      <p>작성된 일기가 없습니다.</p>
+                  {% endif %}
+              </div>
+          </div>
+      </div>
 
         <div class="today-diary">
             <div class="blackbox"><div class="text-diary">오늘의 일기</div></div>
@@ -66,7 +74,12 @@
         </div>
         <div class="music">
           <div class="musicbox">
-            <img id="heart" class="heart" src={% static "DiaryTune/images/heart-1.png" %} />
+            {% comment %} <img id="heart" class="heart" src={% static "DiaryTune/images/heart-1.png" %} /> {% endcomment %}
+            <img id="heart" class="heart" src="{% static 'DiaryTune/images/heart-1.png' %}" 
+     data-heart-on="{% static 'DiaryTune/images/heart-2.png' %}" 
+     data-heart-off="{% static 'DiaryTune/images/heart-1.png' %}" 
+     alt="Heart Image" />
+
             <div class="music_description">노래 설명</div>
             <div class="music_title">🎵가수 - 노래</div>
             <div class="PLAY">
