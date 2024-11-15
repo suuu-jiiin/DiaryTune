@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-pn^)z5n79i@1zi7dc&h-0v*fl16_%w(**dd&7*e@%rn55pukj2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'HCI_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'diary',          # 방금 생성한 데이터베이스 이름
+        'USER': 'beejin',           # 생성한 사용자 이름
+        'PASSWORD': '1111',           # 비밀번호
+        'HOST': 'localhost',          # 서버 주소 (로컬이면 localhost)
+        'PORT': '5432',               # 기본 포트
     }
 }
 
@@ -114,7 +118,7 @@ TIME_ZONE = "Asia/Seoul"
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

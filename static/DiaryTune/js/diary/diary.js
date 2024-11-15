@@ -7,14 +7,10 @@ checkboxes.forEach((checkbox) => {
         if (checkedCount > 2) {
             checkbox.checked = false; // Uncheck the current box if the limit is exceeded
             swal({
-              icon: "error",
-              content: {
-                  element: "p",
-                  attributes: {
-                      innerHTML: "최대 두 개만 선택할 수 있어요",
-                  }
-              }
-          });
+                icon: "error",
+                text: "최대 두 개만 선택할 수 있어요",
+                button: "확인"
+              });
         }
     });
 });
@@ -31,14 +27,11 @@ checkboxes_weather.forEach((checkbox) => {
         if (checkedCount_weather > 2) {
             checkbox.checked = false; // Uncheck the current checkbox
             swal({
-              icon: "error",
-              content: {
-                  element: "p",
-                  attributes: {
-                      innerHTML: "최대 두 개만 선택할 수 있어요",
-                  }
-              }
-          });
+                icon: "error",
+                text: "최대 두 개만 선택할 수 있어요",
+                button: "확인"
+              });
+              
         }
     });
 });
@@ -70,11 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // "back" 버튼 누르면 작성 취소되고 main화면으로 이동
 function confirmExit() {
-    const view9Element = document.querySelector(".upper_icon .back_img");
-    const year = view9Element.getAttribute("data-year");
-    const month = view9Element.getAttribute("data-month");
-    const day = view9Element.getAttribute("data-day");
-
     swal({
         title: "편집한 내용이 저장되지 않았어요.",
         text: "정말 나가시는 거예요? 🥹",
@@ -113,57 +101,65 @@ function restorePlaceholder(element) {
 }
 
 
-// "완료" 버튼 누르면 작성된 내용들 저장 & main화면으로 이동
+// "완료" 버튼 클릭 이벤트
 document.getElementById('saveButton').addEventListener('click', function() {
     // 선택된 "오늘의 활동"
     const selectedActivities = Array.from(document.querySelectorAll('input[type="checkbox"].activity:checked'))
-      .map((checkbox) => checkbox.value);
-    
+        .map((checkbox) => checkbox.value);
+
     // 선택된 "오늘의 날씨"
     const selectedWeather = Array.from(document.querySelectorAll('input[type="checkbox"].weather:checked'))
-      .map((checkbox) => checkbox.value);
-  
+        .map((checkbox) => checkbox.value);
+
     // 작성된 "오늘의 일기"
     const diaryContent = document.querySelector('.diary_text').textContent.trim();
-  
+
+    // CSRF 토큰 가져오기
+    const csrfToken = getCsrfToken();
+
     // Prepare data for Django
     const data = {
-      activities: selectedActivities,
-      weather: selectedWeather,
-      diary: diaryContent,
+        activities: selectedActivities,
+        weather: selectedWeather,
+        diary: diaryContent,
     };
-  
-    // 보내는 URL (Django의 URL 패턴을 따라 설정)
-    const url = window.location.pathname;  // 현재 URL로 POST 요청을 보냄
-  
-    // AJAX POST 요청 보내기
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRFToken': getCsrfToken(),  // CSRF 토큰을 추가 (보안을 위해)
-      },
-      body: JSON.stringify(data),  // 데이터를 JSON 형식으로 전송
+
+    // URL에서 year, month, day, diary_id 값을 추출
+    const urlParts = window.location.pathname.split('/'); // URL을 '/'로 분리
+    const currentYear = urlParts[urlParts.length - 4];  // year
+    const currentMonth = urlParts[urlParts.length - 3]; // month
+    const currentDay = urlParts[urlParts.length - 2];   // day
+    const dayofweek = urlParts[urlParts.length - 1];    // dayofweek
+
+    fetch(window.location.pathname, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken,
+        },
+        body: JSON.stringify(data)
     })
-    .then(response => response.json())  // 서버에서 JSON 응답을 받음
+    .then(response => response.json())
     .then(data => {
-      if (data.success) {
-        // 성공적으로 저장되었으면 main 화면으로 이동
-        window.location.href = '/main/' + data.year + '/' + data.month + '/' + data.day + '/';
-      } else {
-        // 에러 처리 (예: 실패 메시지 출력)
-        alert('저장에 실패했습니다. 다시 시도해주세요.');
-      }
+        console.log(data.message);  // 서버 응답 메시지 출력
+        window.location.href = `/main/${currentYear}/${currentMonth}/${currentDay}/`; // main 페이지로 리디렉션
     })
     .catch(error => {
-      console.error('Error:', error);
-      alert('저장 중 오류가 발생했습니다.');
+        console.error('Error saving diary:', error);
     });
-  });
+
+    
+});
+
+
   
-// CSRF 토큰을 가져오는 함수 (Django에서 CSRF 보호를 위해 필요)
+// CSRF 토큰을 가져오는 함수
 function getCsrfToken() {
-  const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-  return csrfToken;
+    const csrfTokenElement = document.querySelector('meta[name="csrf-token"]');
+    if (!csrfTokenElement) {
+        console.error('CSRF token element not found');
+        return '';
+    }
+    return csrfTokenElement.getAttribute('content');
 }
   

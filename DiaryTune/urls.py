@@ -7,6 +7,7 @@ urlpatterns = [
     path('main/<int:year>/<int:month>/<int:day>/', views.main, name='main_with_params'),
     path('recommendation/', views.recommendation, name='recommendation'),
     path('diary/', views.diary, name='diary'),
+    #path('diary/<int:year>/<int:month>/<int:day>/<int:dayofweek>/<int:diary_id>/', views.save_diary, name='save-diary'),
     path('diary/<int:year>/<int:month>/<int:day>/<int:dayofweek>/', views.diary, name='diary_with_params'),
     path('tutorial/', views.tutorial, name='tutorial'),
     path('tutorial_2/', views.tutorial_2, name='tutorial_2'),
