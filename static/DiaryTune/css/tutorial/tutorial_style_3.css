@@ -1,16 +1,646 @@
 .tutorial_3 {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.tutorial_3 .div {
+  background-color: #f2f2f2;
+  overflow: hidden;
+  width: 375px;
+  height: 812px;
+  position: relative;
+}
+
+.tutorial_3 .view {
+  position: absolute;
+  width: 335px;
+  height: 184px;
+  top: 106%;
+  left: 0;
+  filter: blur(1px);
+}
+
+.tutorial_3 .overlap {
+  position: absolute;
+  width: 331px;
+  height: 186px;
+  top: 47px;
+  left: 2px;
+  background-color: #ffffff;
+  border-radius: 7px;
+}
+
+.tutorial_3 .text-wrapper {
+  position: absolute;
+  width: 236px;
+  height: 71px;
+  top: 34px;
+  left: 47px;
+  font-family: "Manrope-Medium", Helvetica;
+  font-weight: 500;
+  color: #3e3939;
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 2.86px;
+  line-height: normal;
+}
+
+.tutorial_3 .overlap-group-wrapper {
+  position: absolute;
+  width: 95px;
+  height: 37px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_3 .overlap-group {
+  position: relative;
+  width: 93px;
+  height: 37px;
+  background-color: #333333;
+  border-radius: 16px;
+}
+
+.tutorial_3 .text-wrapper-2 {
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  top: 9px;
+  left: 5px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.tutorial_3 .overlap-2 {
+  position: absolute;
+  width: 373px;
+  height: 51px;
+  top: 42px;
+  left: 2px;
+}
+
+.tutorial_3 .view-2 {
+  position: absolute;
+  width: 373px;
+  height: 39px;
+  top: 12px;
+  left: 0;
+  filter: blur(1px);
+}
+
+.tutorial_3 .rectangle {
+  width: 371px;
+  height: 1px;
+  top: 38px;
+  background-color: #0000004c;
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+}
+
+.tutorial_3 .text-wrapper-3 {
+  position: absolute;
+  width: 177px;
+  top: 0;
+  left: 101px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.10px;
+  line-height: 38.4px;
+  white-space: nowrap;
+}
+
+.tutorial_3 .image {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 12px;
+  left: 16px;
+  object-fit: cover;
+}
+
+.tutorial_3 .overlap-wrapper {
+  width: 357px;
+  height: 21px;
+  left: 8px;
+  position: absolute;
+  top: 0;
+}
+
+.tutorial_3 .div-wrapper {
+  position: relative;
+  width: 355px;
+  height: 21px;
+  background-color: var(--fuschia-60);
+}
+
+.tutorial_3 .text-wrapper-4 {
+  width: 47px;
+  height: 20px;
+  left: 154px;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.tutorial_3 .overlap-3 {
+  position: absolute;
+  width: 334px;
+  height: 414px;
+  top: 115px;
+  left: 23px;
+}
+
+.tutorial_3 .view-3 {
+  position: absolute;
+  width: 332px;
+  height: 183px;
+  top: 0;
+  left: 1px;
+  filter: blur(1px);
+}
+
+.tutorial_3 .overlap-4 {
+  position: absolute;
+  width: 332px;
+  height: 138px;
+  top: 45px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 7px;
+}
+
+.tutorial_3 .navbar {
+  position: absolute;
+  width: 312px;
+  height: 9px;
+  top: 100px;
+  left: 14px;
+}
+
+.tutorial_3 .text-wrapper-5 {
+  left: 68px;
+  position: absolute;
+  width: 37px;
+  height: 9px;
+  top: 0;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tutorial_3 .text-wrapper-6 {
+  left: 0;
+  position: absolute;
+  width: 37px;
+  height: 9px;
+  top: 0;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tutorial_3 .text-wrapper-7 {
+  left: 133px;
+  position: absolute;
+  width: 37px;
+  height: 9px;
+  top: 0;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tutorial_3 .text-wrapper-8 {
+  left: 200px;
+  position: absolute;
+  width: 37px;
+  height: 9px;
+  top: 0;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tutorial_3 .text-wrapper-9 {
+  left: 266px;
+  position: absolute;
+  width: 37px;
+  height: 9px;
+  top: 0;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tutorial_3 .view-4 {
+  position: absolute;
+  width: 312px;
+  height: 53px;
+  top: 28px;
+  left: 8px;
+}
+
+.tutorial_3 .img {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_3 .image-2 {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  top: 3px;
+  left: 65px;
+}
+
+.tutorial_3 .image-3 {
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  top: 2px;
+  left: 134px;
+}
+
+.tutorial_3 .image-4 {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  top: 0;
+  left: 197px;
+}
+
+.tutorial_3 .image-5 {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  top: 0;
+  left: 262px;
+}
+
+.tutorial_3 .overlap-group-wrapper-2 {
+  position: absolute;
+  width: 94px;
+  height: 37px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_3 .overlap-group-2 {
+  position: relative;
+  width: 92px;
+  height: 37px;
+  background-color: #333333;
+  border-radius: 16px;
+}
+
+.tutorial_3 .view-5 {
+  position: absolute;
+  width: 334px;
+  height: 217px;
+  top: 197px;
+  left: 0;
+}
+
+.tutorial_3 .div-2 {
+  position: absolute;
+  width: 332px;
+  height: 171px;
+  top: 47px;
+  left: 2px;
+  background-color: #ffffff;
+  border-radius: 7px;
+}
+
+.tutorial_3 .element {
+  position: absolute;
+  width: 292px;
+  height: 68px;
+  top: 11px;
+  left: 14px;
+}
+
+.tutorial_3 .view-6 {
+  position: absolute;
+  width: 292px;
+  height: 47px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_3 .image-6 {
+  position: absolute;
+  width: 47px;
+  height: 49px;
+  top: -1px;
+  left: -1px;
+}
+
+.tutorial_3 .image-7 {
+  position: absolute;
+  width: 47px;
+  height: 49px;
+  top: -1px;
+  left: 246px;
+}
+
+.tutorial_3 .image-8 {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  top: 1px;
+  left: 82px;
+  object-fit: cover;
+}
+
+.tutorial_3 .image-9 {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 2px;
+  left: 165px;
+  object-fit: cover;
+}
+
+.tutorial_3 .view-7 {
+  position: absolute;
+  width: 287px;
+  height: 8px;
+  top: 60px;
+  left: 6px;
+}
+
+.tutorial_3 .text-wrapper-10 {
+  position: absolute;
+  width: 33px;
+  height: 8px;
+  top: 0;
+  left: 81px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tutorial_3 .text-wrapper-11 {
+  left: 0;
+  position: absolute;
+  width: 33px;
+  height: 8px;
+  top: 0;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tutorial_3 .text-wrapper-12 {
+  left: 164px;
+  position: absolute;
+  width: 33px;
+  height: 8px;
+  top: 0;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tutorial_3 .text-wrapper-13 {
+  left: 246px;
+  position: absolute;
+  width: 33px;
+  height: 8px;
+  top: 0;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tutorial_3 .element-2 {
+  position: absolute;
+  width: 292px;
+  height: 64px;
+  top: 92px;
+  left: 16px;
+}
+
+.tutorial_3 .view-8 {
+  position: absolute;
+  width: 287px;
+  height: 8px;
+  top: 56px;
+  left: 4px;
+}
+
+.tutorial_3 .image-10 {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.tutorial_3 .image-11 {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  top: 0;
+  left: 79px;
+  object-fit: cover;
+}
+
+.tutorial_3 .image-12 {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  top: 0;
+  left: 165px;
+  object-fit: cover;
+}
+
+.tutorial_3 .image-13 {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  top: 0;
+  left: 245px;
+  object-fit: cover;
+}
+
+.tutorial_3 .view-9 {
+  position: absolute;
+  width: 247px;
+  height: 73px;
+  top: 150px;
+  left: 72px;
+}
+
+.tutorial_3 .overlap-5 {
+  position: relative;
+  width: 243px;
+  height: 73px;
+  bottom: -37%;
+  right: -21%;
+}
+
+.tutorial_3 .rectangle-2 {
+  width: 238px;
+  height: 49px;
+  top: 0;
+  background-color: #ffd8e4;
+  border-radius: 7px;
+  position: absolute;
+  left: 0;
+}
+
+.tutorial_3 .text-wrapper-14 {
+  position: absolute;
+  width: 26px;
+  height: 21px;
+  top: 3px;
+  left: 8px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #5f5f5f;
+  font-size: 10px;
+  letter-spacing: 0.70px;
+  line-height: 14px;
+}
+
+.tutorial_3 .polygon {
+  position: absolute;
+  width: 14px;
+  height: 17px;
+  top: 44px;
+  left: 7px;
+}
+
+.tutorial_3 .text-wrapper-15 {
+  position: absolute;
+  width: 235px;
+  height: 62px;
+  top: 18px;
+  left: 8px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #3e3939;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.tutorial_3 .arrow-right-circle {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 40px;
+  left: 84%;
+}
+
+.tutorial_3 .overlap-6 {
+  position: relative;
+  width: 375px;
+  height: 75px;
+  background-color: #333333;
+  border-radius: 13px;
+  top: 93%;
+  filter: blur(1px);
+}
+
+.tutorial_3 .text-wrapper-16 {
+  position: absolute;
+  width: 203px;
+  height: 14px;
+  top: 17px;
+  left: 84px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px){
+  .tutorial_3 {
     background-color: #f2f2f2;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
   }
   
   .tutorial_3 .div {
     background-color: #f2f2f2;
     overflow: hidden;
-    width: 375px;
-    height: 812px;
+    width: 100vw;
+    height: 100vh;
     position: relative;
   }
   
@@ -18,14 +648,14 @@
     position: absolute;
     width: 335px;
     height: 184px;
-    top: 106%;
+    top: 125%;
     left: 0;
   }
   
   .tutorial_3 .overlap {
     position: absolute;
     width: 331px;
-    height: 186px;
+    height: 50vh;
     top: 47px;
     left: 2px;
     background-color: #ffffff;
@@ -95,7 +725,7 @@
   }
   
   .tutorial_3 .rectangle {
-    width: 371px;
+    width: 100vw;
     height: 1px;
     top: 38px;
     background-color: #0000004c;
@@ -138,15 +768,16 @@
   
   .tutorial_3 .div-wrapper {
     position: relative;
-    width: 355px;
+    width: 100vw;
     height: 21px;
+    left: -3%;
     background-color: var(--fuschia-60);
   }
   
   .tutorial_3 .text-wrapper-4 {
     width: 47px;
     height: 20px;
-    left: 154px;
+    left: 43%;
     font-family: "Manrope-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
@@ -159,10 +790,10 @@
   
   .tutorial_3 .overlap-3 {
     position: absolute;
-    width: 334px;
-    height: 414px;
+    width: 100vw;
+    height: 48vh;
     top: 115px;
-    left: 23px;
+    left: 8%;
   }
   
   .tutorial_3 .view-3 {
@@ -171,6 +802,7 @@
     height: 183px;
     top: 0;
     left: 1px;
+    filter: blur(1px);
   }
   
   .tutorial_3 .overlap-4 {
@@ -339,7 +971,7 @@
     position: absolute;
     width: 334px;
     height: 217px;
-    top: 197px;
+    top: 57%;
     left: 0;
   }
   
@@ -531,7 +1163,7 @@
     position: absolute;
     width: 247px;
     height: 73px;
-    top: 150px;
+    top: 48%;
     left: 72px;
   }
   
@@ -539,12 +1171,12 @@
     position: relative;
     width: 243px;
     height: 73px;
-    top: 37%;
-    left: 21%;
+    top: 45%;
+    right: -20%;
   }
   
   .tutorial_3 .rectangle-2 {
-    width: 205px;
+    width: 238px;
     height: 49px;
     top: 0;
     background-color: #ffd8e4;
@@ -594,24 +1226,24 @@
     width: 33px;
     height: 33px;
     top: 40px;
-    right: 15%;
+    left: 84%;
   }
   
   .tutorial_3 .overlap-6 {
     position: relative;
-    width: 375px;
+    width: 100vw;
     height: 75px;
+    top: 93%;
     background-color: #333333;
     border-radius: 13px;
-    top: 93%;
   }
   
   .tutorial_3 .text-wrapper-16 {
     position: absolute;
     width: 203px;
     height: 14px;
-    top: 17px;
-    left: 84px;
+    top: 9%;
+    left: 24%;
     font-family: "Manrope-Bold", Helvetica;
     font-weight: 700;
     color: #ffffff;
@@ -621,631 +1253,4 @@
     line-height: normal;
     white-space: nowrap;
   }
-  
-  @media (max-width: 800px){
-    .tutorial_3 {
-      background-color: #f2f2f2;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 100vw;
-      height: 100vh;
-    }
-    
-    .tutorial_3 .div {
-      background-color: #f2f2f2;
-      overflow: hidden;
-      width: 100vw;
-      height: 100vh;
-      position: relative;
-    }
-    
-    .tutorial_3 .view {
-      position: absolute;
-      width: 335px;
-      height: 184px;
-      top: 125%;
-      left: 0;
-    }
-    
-    .tutorial_3 .overlap {
-      position: absolute;
-      width: 331px;
-      height: 50vh;
-      top: 47px;
-      left: 2px;
-      background-color: #ffffff;
-      border-radius: 7px;
-    }
-    
-    .tutorial_3 .text-wrapper {
-      position: absolute;
-      width: 236px;
-      height: 71px;
-      top: 34px;
-      left: 47px;
-      font-family: "Manrope-Medium", Helvetica;
-      font-weight: 500;
-      color: #3e3939;
-      font-size: 22px;
-      text-align: center;
-      letter-spacing: 2.86px;
-      line-height: normal;
-    }
-    
-    .tutorial_3 .overlap-group-wrapper {
-      position: absolute;
-      width: 95px;
-      height: 37px;
-      top: 0;
-      left: 0;
-    }
-    
-    .tutorial_3 .overlap-group {
-      position: relative;
-      width: 93px;
-      height: 37px;
-      background-color: #333333;
-      border-radius: 16px;
-    }
-    
-    .tutorial_3 .text-wrapper-2 {
-      position: absolute;
-      width: 80px;
-      height: 20px;
-      top: 9px;
-      left: 5px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #ffffff;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-    }
-    
-    .tutorial_3 .overlap-2 {
-      position: absolute;
-      width: 373px;
-      height: 51px;
-      top: 42px;
-      left: 2px;
-    }
-    
-    .tutorial_3 .view-2 {
-      position: absolute;
-      width: 373px;
-      height: 39px;
-      top: 12px;
-      left: 0;
-    }
-    
-    .tutorial_3 .rectangle {
-      width: 100vw;
-      height: 1px;
-      top: 38px;
-      background-color: #0000004c;
-      opacity: 0.7;
-      position: absolute;
-      left: 0;
-    }
-    
-    .tutorial_3 .text-wrapper-3 {
-      position: absolute;
-      width: 177px;
-      top: 0;
-      left: 101px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 24px;
-      text-align: center;
-      letter-spacing: 0.10px;
-      line-height: 38.4px;
-      white-space: nowrap;
-    }
-    
-    .tutorial_3 .image {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      top: 12px;
-      left: 16px;
-      object-fit: cover;
-    }
-    
-    .tutorial_3 .overlap-wrapper {
-      width: 357px;
-      height: 21px;
-      left: 8px;
-      position: absolute;
-      top: 0;
-    }
-    
-    .tutorial_3 .div-wrapper {
-      position: relative;
-      width: 100vw;
-      height: 21px;
-      left: -3%;
-      background-color: var(--fuschia-60);
-    }
-    
-    .tutorial_3 .text-wrapper-4 {
-      width: 47px;
-      height: 20px;
-      left: 43%;
-      font-family: "Manrope-Regular", Helvetica;
-      font-weight: 400;
-      color: #000000;
-      font-size: 13px;
-      letter-spacing: 0;
-      line-height: normal;
-      position: absolute;
-      top: 0;
-    }
-    
-    .tutorial_3 .overlap-3 {
-      position: absolute;
-      width: 100vw;
-      height: 48vh;
-      top: 115px;
-      left: 8%;
-    }
-    
-    .tutorial_3 .view-3 {
-      position: absolute;
-      width: 332px;
-      height: 183px;
-      top: 0;
-      left: 1px;
-    }
-    
-    .tutorial_3 .overlap-4 {
-      position: absolute;
-      width: 332px;
-      height: 138px;
-      top: 45px;
-      left: 0;
-      background-color: #ffffff;
-      border-radius: 7px;
-    }
-    
-    .tutorial_3 .navbar {
-      position: absolute;
-      width: 312px;
-      height: 9px;
-      top: 100px;
-      left: 14px;
-    }
-    
-    .tutorial_3 .text-wrapper-5 {
-      left: 68px;
-      position: absolute;
-      width: 37px;
-      height: 9px;
-      top: 0;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
-    }
-    
-    .tutorial_3 .text-wrapper-6 {
-      left: 0;
-      position: absolute;
-      width: 37px;
-      height: 9px;
-      top: 0;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
-    }
-    
-    .tutorial_3 .text-wrapper-7 {
-      left: 133px;
-      position: absolute;
-      width: 37px;
-      height: 9px;
-      top: 0;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
-    }
-    
-    .tutorial_3 .text-wrapper-8 {
-      left: 200px;
-      position: absolute;
-      width: 37px;
-      height: 9px;
-      top: 0;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
-    }
-    
-    .tutorial_3 .text-wrapper-9 {
-      left: 266px;
-      position: absolute;
-      width: 37px;
-      height: 9px;
-      top: 0;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
-    }
-    
-    .tutorial_3 .view-4 {
-      position: absolute;
-      width: 312px;
-      height: 53px;
-      top: 28px;
-      left: 8px;
-    }
-    
-    .tutorial_3 .img {
-      position: absolute;
-      width: 49px;
-      height: 49px;
-      top: 0;
-      left: 0;
-    }
-    
-    .tutorial_3 .image-2 {
-      position: absolute;
-      width: 49px;
-      height: 49px;
-      top: 3px;
-      left: 65px;
-    }
-    
-    .tutorial_3 .image-3 {
-      position: absolute;
-      width: 51px;
-      height: 51px;
-      top: 2px;
-      left: 134px;
-    }
-    
-    .tutorial_3 .image-4 {
-      position: absolute;
-      width: 49px;
-      height: 49px;
-      top: 0;
-      left: 197px;
-    }
-    
-    .tutorial_3 .image-5 {
-      position: absolute;
-      width: 49px;
-      height: 49px;
-      top: 0;
-      left: 262px;
-    }
-    
-    .tutorial_3 .overlap-group-wrapper-2 {
-      position: absolute;
-      width: 94px;
-      height: 37px;
-      top: 0;
-      left: 0;
-    }
-    
-    .tutorial_3 .overlap-group-2 {
-      position: relative;
-      width: 92px;
-      height: 37px;
-      background-color: #333333;
-      border-radius: 16px;
-    }
-    
-    .tutorial_3 .view-5 {
-      position: absolute;
-      width: 334px;
-      height: 217px;
-      top: 57%;
-      left: 0;
-    }
-    
-    .tutorial_3 .div-2 {
-      position: absolute;
-      width: 332px;
-      height: 171px;
-      top: 47px;
-      left: 2px;
-      background-color: #ffffff;
-      border-radius: 7px;
-    }
-    
-    .tutorial_3 .element {
-      position: absolute;
-      width: 292px;
-      height: 68px;
-      top: 11px;
-      left: 14px;
-    }
-    
-    .tutorial_3 .view-6 {
-      position: absolute;
-      width: 292px;
-      height: 47px;
-      top: 0;
-      left: 0;
-    }
-    
-    .tutorial_3 .image-6 {
-      position: absolute;
-      width: 47px;
-      height: 49px;
-      top: -1px;
-      left: -1px;
-    }
-    
-    .tutorial_3 .image-7 {
-      position: absolute;
-      width: 47px;
-      height: 49px;
-      top: -1px;
-      left: 246px;
-    }
-    
-    .tutorial_3 .image-8 {
-      position: absolute;
-      width: 47px;
-      height: 47px;
-      top: 1px;
-      left: 82px;
-      object-fit: cover;
-    }
-    
-    .tutorial_3 .image-9 {
-      position: absolute;
-      width: 45px;
-      height: 45px;
-      top: 2px;
-      left: 165px;
-      object-fit: cover;
-    }
-    
-    .tutorial_3 .view-7 {
-      position: absolute;
-      width: 287px;
-      height: 8px;
-      top: 60px;
-      left: 6px;
-    }
-    
-    .tutorial_3 .text-wrapper-10 {
-      position: absolute;
-      width: 33px;
-      height: 8px;
-      top: 0;
-      left: 81px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
-    }
-    
-    .tutorial_3 .text-wrapper-11 {
-      left: 0;
-      position: absolute;
-      width: 33px;
-      height: 8px;
-      top: 0;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
-    }
-    
-    .tutorial_3 .text-wrapper-12 {
-      left: 164px;
-      position: absolute;
-      width: 33px;
-      height: 8px;
-      top: 0;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
-    }
-    
-    .tutorial_3 .text-wrapper-13 {
-      left: 246px;
-      position: absolute;
-      width: 33px;
-      height: 8px;
-      top: 0;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
-    }
-    
-    .tutorial_3 .element-2 {
-      position: absolute;
-      width: 292px;
-      height: 64px;
-      top: 92px;
-      left: 16px;
-    }
-    
-    .tutorial_3 .view-8 {
-      position: absolute;
-      width: 287px;
-      height: 8px;
-      top: 56px;
-      left: 4px;
-    }
-    
-    .tutorial_3 .image-10 {
-      position: absolute;
-      width: 47px;
-      height: 47px;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-    }
-    
-    .tutorial_3 .image-11 {
-      position: absolute;
-      width: 47px;
-      height: 47px;
-      top: 0;
-      left: 79px;
-      object-fit: cover;
-    }
-    
-    .tutorial_3 .image-12 {
-      position: absolute;
-      width: 47px;
-      height: 47px;
-      top: 0;
-      left: 165px;
-      object-fit: cover;
-    }
-    
-    .tutorial_3 .image-13 {
-      position: absolute;
-      width: 47px;
-      height: 47px;
-      top: 0;
-      left: 245px;
-      object-fit: cover;
-    }
-    
-    .tutorial_3 .view-9 {
-      position: absolute;
-      width: 247px;
-      height: 73px;
-      top: 48%;
-      left: 72px;
-    }
-    
-    .tutorial_3 .overlap-5 {
-      position: relative;
-      width: 243px;
-      height: 73px;
-      top: 37%;
-      left: 21%;
-    }
-    
-    .tutorial_3 .rectangle-2 {
-      width: 205px;
-      height: 49px;
-      top: 0;
-      background-color: #ffd8e4;
-      border-radius: 7px;
-      position: absolute;
-      left: 0;
-    }
-    
-    .tutorial_3 .text-wrapper-14 {
-      position: absolute;
-      width: 26px;
-      height: 21px;
-      top: 3px;
-      left: 8px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #5f5f5f;
-      font-size: 10px;
-      letter-spacing: 0.70px;
-      line-height: 14px;
-    }
-    
-    .tutorial_3 .polygon {
-      position: absolute;
-      width: 14px;
-      height: 17px;
-      top: 44px;
-      left: 7px;
-    }
-    
-    .tutorial_3 .text-wrapper-15 {
-      position: absolute;
-      width: 235px;
-      height: 62px;
-      top: 18px;
-      left: 8px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #3e3939;
-      font-size: 16px;
-      letter-spacing: 0;
-      line-height: normal;
-    }
-    
-    .tutorial_3 .arrow-right-circle {
-      position: absolute;
-      width: 33px;
-      height: 33px;
-      top: 40px;
-      right: 15%;
-    }
-    
-    .tutorial_3 .overlap-6 {
-      position: relative;
-      width: 100vw;
-      height: 75px;
-      top: 93%;
-      background-color: #333333;
-      border-radius: 13px;
-    }
-    
-    .tutorial_3 .text-wrapper-16 {
-      position: absolute;
-      width: 203px;
-      height: 14px;
-      top: 9%;
-      left: 24%;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #ffffff;
-      font-size: 35px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-      white-space: nowrap;
-    }
-  }
+}

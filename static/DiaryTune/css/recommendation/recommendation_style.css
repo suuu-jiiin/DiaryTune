@@ -90,7 +90,7 @@
   position: absolute;
   width: 350px;
   height: 1px;
-  top: 183px;
+  top: 234px;
   left: 12px;
   background-color: #0000004c;
   opacity: 0.7;
@@ -150,7 +150,9 @@
   height: 42px;
   background-color: #ffffff;
   background-size: contain; 
-  border-radius: 0px;
+  border-radius: 21px;
+  box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+  border: 0.5px solid rgb(0 0 0 / 10%);
 }
 
 .screen .activity2 {
@@ -161,7 +163,9 @@
   height: 42px;
   background-color: #ffffff;
   background-size: contain; 
-  border-radius: 0px;
+  box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+  border: 0.5px solid rgb(0 0 0 / 10%);
+  border-radius: 21px;
 }
 .screen .weather2 {
   top: 7px;
@@ -171,7 +175,9 @@
   height: 42px;
   background-color: #ffffff;
   background-size: contain; 
-  border-radius: 0px;
+  border-radius: 21px;
+  box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+  border: 0.5px solid rgb(0 0 0 / 10%);
 }
 
 .screen .activity1 {
@@ -182,7 +188,9 @@
   height: 42px;
   background-color: #ffffff;
   background-size: contain; 
-  border-radius: 0px;
+  border-radius: 21px;
+  box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+  border: 0.5px solid rgb(0 0 0 / 10%);
 }
 
   /*일기 부분*/
@@ -566,8 +574,8 @@
   position: absolute;
   width: 100vw;
   height: 1px;
-  top: 95%;
-  left: 12px;
+  top: 100%;
+  left: 0vh;
   background-color: #0000004c;
   opacity: 0.7;
 }
@@ -575,8 +583,8 @@
   position: absolute;
   width: 100vw;
   height: 1px;
-  top: 100%;
-  left: 12px;
+  top: 25%;
+  left: 0vh;
   background-color: #0000004c;
   opacity: 0.7;
 }
@@ -594,19 +602,18 @@ height: 13%;
 
 /* Summ Box */
 .screen .summ {
-width: 40%;
-box-shadow: 0px 8px 20px #1d3a580d;
-position: absolute;
-height: 90%;
-top: 0px;
-left: 58%;
-background-color: #ffffff;
-border-radius: 7px;
-display: flex;
-align-items: center;
-flex-direction: column;
-flex-wrap: wrap;
-gap: 5%;
+  width: 39%;
+  box-shadow: 0px 8px 20px #1d3a580d;
+  position: absolute;
+  height: 12.5%;
+  top: 11%;
+  left: 58%;
+  background-color: #ffffff;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .screen .hashtags, .screen .musics {
 width: 90%;
@@ -628,17 +635,18 @@ top: 5%;
 top: 50%;
 }
 .screen .weather_activity {
-width: 30%;
-left: 25%;
-box-shadow: var(--drop-shadow-100);
-position: relative;
-height: 90%;
-background-color: #ffffff;
-border-radius: 7px;
-top: 0;
-display: flex;
-justify-content: center;
-align-items: center;
+  width: 25%;
+  height: 26%;
+  left: 31%;
+  box-shadow: var(--drop-shadow-100);
+  position: relative;
+  height: 12.5%;
+  background-color: #ffffff;
+  border-radius: 7px;
+  top: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .screen .box {
 height: 100%;
@@ -706,7 +714,7 @@ left: 56%;
   left: 14px;
 }
 .screen .text-diary {
-  width: 71px;
+  width: 74px;
   height: 20px;
   top: 9px;
   left: 10px;
@@ -773,7 +781,7 @@ left: 56%;
   left: 14px;
 }
 .screen .text-music {
-  width: 71px;
+  width: 74px;
   height: 20px;
   top: 8px;
   left: 9px;
@@ -890,7 +898,7 @@ left: 56%;
   left: 14px;
 } 
 .screen .text-emotion {
-  width: 71px;
+  width: 74px;
   height: 20px;
   top: 8px;
   left: 10px;

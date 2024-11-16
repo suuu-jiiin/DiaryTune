@@ -19,6 +19,7 @@
     height: 51px;
     top: 125px;
     left: 106px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .overlap-group {
@@ -92,6 +93,7 @@
     height: 87px;
     top: 650px;
     left: 49px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .overlap {
@@ -420,6 +422,7 @@
     height: 69px;
     top: 1px;
     left: 140px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .overlap-wrapper-2 {
@@ -457,6 +460,7 @@
     height: 28px;
     top: 197px;
     left: 6px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .days-of-week {
@@ -563,6 +567,7 @@
     height: 388px;
     top: 0;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .group-10 {
@@ -571,6 +576,7 @@
     height: 72px;
     top: 79px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .overlap-group-3 {
@@ -613,6 +619,7 @@
     height: 72px;
     top: 0;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .group-12 {
@@ -621,6 +628,7 @@
     height: 72px;
     top: 237px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .text-wrapper-11 {
@@ -645,6 +653,7 @@
     height: 72px;
     top: 316px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .group-14 {
@@ -661,6 +670,7 @@
     width: 47px;
     height: 388px;
     top: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .mon-2 {
@@ -677,6 +687,7 @@
     height: 388px;
     top: 0;
     left: 156px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .thu {
@@ -685,6 +696,7 @@
     height: 388px;
     top: 0;
     left: 208px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .fri {
@@ -693,6 +705,7 @@
     height: 388px;
     top: 0;
     left: 260px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .sat {
@@ -701,6 +714,7 @@
     height: 388px;
     top: 0;
     left: 312px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .view-2 {
@@ -715,8 +729,8 @@
     position: absolute;
     width: 244px;
     height: 95px;
-    top: 80px;
-    left: 114px;
+    top: 309px;
+    left: 135px;
   }
   
   .tutorial_6 .overlap-6 {
@@ -801,6 +815,7 @@
       height: 51px;
       top: 125px;
       left: 106px;
+      filter: blur(1px);
     }
     
     .tutorial_6 .overlap-group {
@@ -874,6 +889,7 @@
       height: 87px;
       top: 650px;
       left: 49px;
+      filter: blur(1px);
     }
     
     .tutorial_6 .overlap {
@@ -1202,6 +1218,7 @@
       height: 69px;
       top: 1px;
       left: 140px;
+      filter: blur(1px);
     }
     
     .tutorial_6 .overlap-wrapper-2 {
@@ -1239,6 +1256,7 @@
       height: 28px;
       top: 197px;
       left: 6px;
+      filter: blur(1px);
     }
     
     .tutorial_6 .days-of-week {
@@ -1345,6 +1363,7 @@
       height: 388px;
       top: 0;
       left: 0;
+      filter: blur(1px);
     }
     
     .tutorial_6 .group-10 {
@@ -1353,6 +1372,7 @@
       height: 72px;
       top: 79px;
       left: 0;
+      filter: blur(1px);
     }
     
     .tutorial_6 .overlap-group-3 {
@@ -1395,6 +1415,7 @@
       height: 72px;
       top: 0;
       left: 0;
+      filter: blur(1px);
     }
     
     .tutorial_6 .group-12 {
@@ -1403,6 +1424,7 @@
       height: 72px;
       top: 237px;
       left: 0;
+      filter: blur(1px);
     }
     
     .tutorial_6 .text-wrapper-11 {
@@ -1427,6 +1449,7 @@
       height: 72px;
       top: 316px;
       left: 0;
+      filter: blur(1px);
     }
     
     .tutorial_6 .group-14 {
@@ -1443,6 +1466,7 @@
       width: 47px;
       height: 388px;
       top: 0;
+      filter: blur(1px);
     }
     
     .tutorial_6 .mon-2 {
@@ -1459,6 +1483,7 @@
       height: 388px;
       top: 0;
       left: 156px;
+      filter: blur(1px);
     }
     
     .tutorial_6 .thu {
@@ -1467,6 +1492,7 @@
       height: 388px;
       top: 0;
       left: 208px;
+      filter: blur(1px);
     }
     
     .tutorial_6 .fri {
@@ -1475,6 +1501,7 @@
       height: 388px;
       top: 0;
       left: 260px;
+      filter: blur(1px);
     }
     
     .tutorial_6 .sat {
@@ -1483,6 +1510,7 @@
       height: 388px;
       top: 0;
       left: 312px;
+      filter: blur(1px);
     }
     
     .tutorial_6 .view-2 {
@@ -1497,14 +1525,15 @@
       position: absolute;
       width: 244px;
       height: 95px;
-      top: 80px;
-      left: 114px;
+      top: 258px;
+      left: 122px;
     }
     
     .tutorial_6 .overlap-6 {
       position: relative;
       width: 240px;
       height: 95px;
+      top: 51px;
     }
     
     .tutorial_6 .rectangle-2 {

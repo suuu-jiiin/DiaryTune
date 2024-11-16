@@ -19,6 +19,7 @@
     height: 51px;
     top: 125px;
     left: 106px;
+    filter: blur(1px);
   }
   
   .tutorial_1 .month_group {
@@ -92,6 +93,7 @@
     height: 87px;
     top: 650px;
     left: 49px;
+    filter: blur(1px);
   }
   
   .tutorial_1 .overlap {
@@ -167,7 +169,7 @@
     left: 191px;
   }
 
-  .tutorial_1 .tutorial_1_alarm {
+  .tutorial_1 .tutorial_alarm {
     width: 357px;
     height: 21px;
     position: absolute;
@@ -175,7 +177,7 @@
     left: 0;
   }
 
-  .tutorial_1 .tutorial_1_rectangle {
+  .tutorial_1 .tutorial_rectangle {
     position: relative;
     width: 355px;
     height: 21px;
@@ -184,7 +186,7 @@
     left: 3%;
   }
 
-  .tutorial_1 .tutorial_1_text {
+  .tutorial_1 .tutorial_text {
     width: 47px;
     height: 20px;
     left: 154px;
@@ -295,6 +297,7 @@
     height: 69px;
     top: 43px;
     left: 150px;
+    filter: blur(1px);
   }
   
   .tutorial_1 .calendar-week {
@@ -303,6 +306,7 @@
     height: 28px;
     top: 197px;
     left: 6px;
+    filter: blur(1px);
   }
   
   .tutorial_1 .days-of-week {
@@ -401,6 +405,7 @@
     height: 388px;
     top: 0;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_1 .group-10 {
@@ -409,6 +414,7 @@
     height: 72px;
     top: 79px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_1 .overlap-group-3 {
@@ -451,6 +457,7 @@
     height: 72px;
     top: 0;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_1 .group-12 {
@@ -459,6 +466,7 @@
     height: 72px;
     top: 237px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_1 .text-wrapper-10 {
@@ -483,6 +491,7 @@
     height: 72px;
     top: 316px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_1 .group-14 {
@@ -491,6 +500,24 @@
     height: 72px;
     top: 158px;
     left: 0;
+  }
+
+  .tutorial_1 .tutorial_group {
+    position: absolute;
+    width: 49px;
+    height: 72px;
+    top: 158px;
+    left: 0;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow:0 0 10px #fcddec;
+    }
+    50% {
+      transform: scale(1.06); /* 확대 효과 */
+      box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* 더 강한 반짝임 */
+    }
   }
 
   .tutorial_1 .rectangle2 {
@@ -511,6 +538,7 @@
     height: 388px;
     top: 0;
     left: 52px;
+    filter: blur(1px);
   }
   
   .tutorial_1 .tue {
@@ -527,6 +555,7 @@
     height: 388px;
     top: 0;
     left: 156px;
+    filter: blur(1px);
   }
   
   .tutorial_1 .thu {
@@ -535,6 +564,7 @@
     height: 388px;
     top: 0;
     left: 208px;
+    filter: blur(1px);
   }
   
   .tutorial_1 .fri {
@@ -543,6 +573,7 @@
     height: 388px;
     top: 0;
     left: 260px;
+    filter: blur(1px);
   }
   
   .tutorial_1 .sat {
@@ -551,6 +582,7 @@
     height: 388px;
     top: 0;
     left: 312px;
+    filter: blur(1px);
   }
 
   .tutorial_1 .image {
@@ -568,3 +600,4 @@
     top: 370px;
     left: 312px;
   }
+

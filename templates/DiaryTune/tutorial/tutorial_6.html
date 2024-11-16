@@ -8,6 +8,7 @@
     <link rel="stylesheet" href={% static "DiaryTune/css/tutorial/tutorial_styleguide.css" %} />
     <link rel="stylesheet" href={% static "DiaryTune/css/tutorial/tutorial_style_6.css" %} />
   </head>
+  <link rel="icon"  sizes="32x32" href={% static "DiaryTune/images/music.ico" %}>
   <body style="margin: 0;">
     <div class="tutorial_6">
       <div class="div">
@@ -195,7 +196,7 @@
                   <div class="text-wrapper-10">29</div>
                 </div>
               </div>
-              <div class="group-14">
+              <div class="group-14" >
                 <div class="overlap-group-3">
                   <div class="rectangle"></div>
                   <div class="text-wrapper-10">15</div>
@@ -331,7 +332,7 @@
               </div>
             </div>
           </div>
-          <div class="view-2">
+          <div class="view-2"onclick="location.href='{% url 'tutorial_7' %}'" style="cursor: pointer;">
             <div class="overlap-group-2">
               <div class="group"><img class="group-9" src={% static "DiaryTune/images/sentiment_표정_5.png" %} /></div>
               <img class="group-3" src={% static "DiaryTune/images/음표머리.png" %} />

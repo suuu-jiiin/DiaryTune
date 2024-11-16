@@ -20,6 +20,7 @@
     height: 184px;
     top: 106%;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_2 .overlap {
@@ -92,6 +93,7 @@
     height: 39px;
     top: 12px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_2 .rectangle {
@@ -341,6 +343,7 @@
     height: 217px;
     top: 197px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_2 .div-2 {
@@ -604,6 +607,7 @@
     background-color: #333333;
     border-radius: 13px;
     top: 93%;
+    filter: blur(1px);
   }
   
   .tutorial_2 .text-wrapper-16 {

@@ -92,6 +92,7 @@
     height: 39px;
     top: 12px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_4 .rectangle {
@@ -171,6 +172,7 @@
     height: 183px;
     top: 0;
     left: 1px;
+    filter: blur(1px);
   }
   
   .tutorial_4 .overlap-4 {
@@ -341,6 +343,7 @@
     height: 217px;
     top: 197px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_4 .div-2 {
@@ -604,6 +607,7 @@
     background-color: #333333;
     border-radius: 13px;
     top: 93%;
+    filter: blur(1px);
   }
   
   .tutorial_4 .text-wrapper-16 {
@@ -718,6 +722,7 @@
       height: 39px;
       top: 12px;
       left: 0;
+      filter: blur(1px);
     }
     
     .tutorial_4 .rectangle {
@@ -798,6 +803,7 @@
       height: 183px;
       top: 0;
       left: 1px;
+      filter: blur(1px);
     }
     
     .tutorial_4 .overlap-4 {
@@ -968,6 +974,7 @@
       height: 217px;
       top: 57%;
       left: 0;
+      filter: blur(1px);
     }
     
     .tutorial_4 .div-2 {
@@ -1231,6 +1238,7 @@
       top: 93%;
       background-color: #333333;
       border-radius: 13px;
+      filter: blur(1px);
     }
     
     .tutorial_4 .text-wrapper-16 {
