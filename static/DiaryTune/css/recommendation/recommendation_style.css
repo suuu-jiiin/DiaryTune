@@ -90,7 +90,7 @@
   position: absolute;
   width: 350px;
   height: 1px;
-  top: 240px;
+  top: 183px;
   left: 12px;
   background-color: #0000004c;
   opacity: 0.7;
@@ -149,10 +149,10 @@
   width: 42px;
   height: 42px;
   background-color: #ffffff;
+  background-size: contain; 
   border-radius: 0px;
-  border: 1px solid;
-  border-color: #dedede80;
 }
+
 .screen .activity2 {
   top: 56px;
   left: 56px;
@@ -160,9 +160,8 @@
   width: 42px;
   height: 42px;
   background-color: #ffffff;
+  background-size: contain; 
   border-radius: 0px;
-  border: 1px solid;
-  border-color: #dedede80;
 }
 .screen .weather2 {
   top: 7px;
@@ -171,10 +170,10 @@
   width: 42px;
   height: 42px;
   background-color: #ffffff;
+  background-size: contain; 
   border-radius: 0px;
-  border: 1px solid;
-  border-color: #dedede80;
 }
+
 .screen .activity1 {
   top: 56px;
   left: 7px;
@@ -182,9 +181,8 @@
   width: 42px;
   height: 42px;
   background-color: #ffffff;
+  background-size: contain; 
   border-radius: 0px;
-  border: 1px solid;
-  border-color: #dedede80;
 }
 
   /*일기 부분*/
@@ -656,9 +654,7 @@ position: absolute;
 width: 30px;
 height: 30px;
 background-color: #ffffff;
-border: 1px solid;
-border-color: #dedede80;
-border-radius: 0;
+background-size: contain; 
 }
 
 .screen .weather1 {

@@ -18,33 +18,3 @@ class DiaryAdmin(admin.ModelAdmin):
 admin.site.register(Diary, DiaryAdmin)
 
 
-# class DiaryAdmin(admin.ModelAdmin):
-#     # 표시할 필드 목록을 지정
-#     list_display = ('year', 'month', 'day', 'diary_content', 'get_activities', 'get_weather', 'created_at', 'updated_at')
-    
-#     # 관리자 페이지에서 사용할 필드를 지정
-#     fields = ('year', 'month', 'day', 'diary_content', 'activities', 'weather')
-    
-#     # 수정 페이지에서 각 필드를 나누어 표시할 수 있음
-#     fieldsets = (
-#         (None, {
-#             'fields': ('year', 'month', 'day')
-#         }),
-#         ('Content', {
-#             'fields': ('diary_content', 'activities', 'weather')
-#         }),
-#         ('Dates', {
-#             'fields': ('created_at', 'updated_at'),
-#             'classes': ('collapse',),  # 이 필드는 접어서 보여줌
-#         }),
-#     )
-
-#     # activities와 weather 필드를 문자열로 표시
-#     def get_activities(self, obj):
-#         return ', '.join(obj.get_activities())  # 리스트로 저장된 값들을 쉼표로 구분하여 출력
-
-#     def get_weather(self, obj):
-#         return ', '.join(obj.get_weather())  # 리스트로 저장된 값들을 쉼표로 구분하여 출력
-
-# # 모델을 admin에 등록
-# admin.site.register(Diary, DiaryAdmin)

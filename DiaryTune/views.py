@@ -93,7 +93,7 @@ def delete_diary(request, year, month, day):
     diary.delete()
     
     # 삭제 후 main 페이지로 리디렉션
-    return redirect('main')  # 여기서 'main'은 main 화면을 표시하는 URL 이름입니다
+    return redirect('main_with_params', year=year, month=month, day=day)  
 
 
 def recommendation(request, year=None, month=None, day=None, dayofweek=None):
@@ -101,8 +101,13 @@ def recommendation(request, year=None, month=None, day=None, dayofweek=None):
     try:
         diary = Diary.objects.get(year=year, month=month, day=day)
         diary_content = diary.diary_content
+        activities = json.loads(diary.activities) if diary.activities else []
+        weathers = json.loads(diary.weather) if diary.weather else []
+        
     except Diary.DoesNotExist:
         diary_content = None
+        activities = []
+        weathers = []
         
     context = {
             'year': year,
@@ -110,6 +115,8 @@ def recommendation(request, year=None, month=None, day=None, dayofweek=None):
             'day': day,
             'dayofweek': dayofweek,
             'diary_content': diary_content,
+            'activities': activities,
+            'weather': weathers,
         }
     return render(request, 'DiaryTune/recommendation/music_recommendation.html', context)
 

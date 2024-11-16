@@ -151,7 +151,6 @@ document.getElementById('saveButton').addEventListener('click', function() {
     
 });
 
-
   
 // CSRF 토큰을 가져오는 함수
 function getCsrfToken() {
