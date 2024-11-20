@@ -9,214 +9,142 @@
   .tutorial_7 .div {
     background-color: #f2f2f2;
     width: 375px;
-    height: 812px;
+    height: 100vh;
     position: relative;
+    overflow: hidden;
   }
   
-  .tutorial_7 .overlap {
-    position: absolute;
-    width: 354px;
-    height: 345px;
-    top: 446px;
-    left: 14px;
-  }
-  
-  .tutorial_7 .view {
-    position: absolute;
-    width: 354px;
-    height: 134px;
-    top: 211px;
-    left: 0;
-  }
-  
-  .tutorial_7 .overlap-group {
-    position: absolute;
-    width: 350px;
-    height: 93px;
-    top: 41px;
-    left: 0;
-    background-color: #ffffff;
-    border-radius: 7px;
-    box-shadow: 0px 8px 20px #1d3a580d;
-  }
-  
-  .tutorial_7 .button-wrapper {
-    position: absolute;
-    width: 62px;
-    height: 18px;
-    top: 72px;
-    left: 144px;
-  }
-  
-  .tutorial_7 .button {
-    display: flex;
-    width: 54px;
-    height: 18px;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    padding: 4px 10px;
+  .tutorial_7 .blackbox {
     position: relative;
-    background-color: #aeaeb2;
-    border-radius: 40px;
-    bottom: 51%;
+    width: 92px;
+    height: 35px;
+    background-color: #000000;
+    border-radius: 15px;
   }
   
-  .tutorial_7 .symbol {
+  .tutorial_7 .overlap-wrapper-2 {
+    width: 357px;
+    height: 21px;
+    left: 10px;
     position: absolute;
-    left: 8px;
+    top: 0;
+    z-index: 1;
   }
   
-  .tutorial_7 .symbol img {
-    width: 15px;
-    height: 15px;
-  }
-  
-  .tutorial_7 .label {
+  .tutorial_7 .overlap-7 {
     position: relative;
-    width: fit-content;
-    margin-top: -6.00px;
-    margin-bottom: -4.00px;
-    margin-right: -14px;
-    font-family: var(--subheadline-regular-font-family);
-    font-weight: var(--subheadline-regular-font-weight);
-    color: var(--system-colors-grays-white);
-    font-size: var(--subheadline-regular-font-size);
-    letter-spacing: var(--subheadline-regular-letter-spacing);
-    line-height: var(--subheadline-regular-line-height);
-    white-space: nowrap;
-    font-style: var(--subheadline-regular-font-style);
+    width: 355px;
+    height: 21px;
+    background-color: var(--fuschia-60);
   }
   
-  .tutorial_7 .heart {
-    position: absolute;
-    width: 20px;
+  .tutorial_7 .text-wrapper-9 {
+    width: 47px;
     height: 20px;
-    top: 6px;
-    left: 325px;
-    object-fit: cover;
-  }
-  
-  .tutorial_7 .text-wrapper {
-    position: absolute;
-    top: 8px;
-    left: 105px;
-    font-family: "Manrope-Bold", Helvetica;
-    font-weight: 700;
-    color: #000000;
-    font-size: 18px;
-    letter-spacing: 0.36px;
-    line-height: 21.6px;
-    white-space: nowrap;
-  }
-  
-  .tutorial_7 .p {
-    position: absolute;
-    width: 266px;
-    top: 35%;
-    left: 57px;
+    left: 154px;
     font-family: "Manrope-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
-    font-size: 10px;
-    letter-spacing: 0.20px;
-    line-height: 12.0px;
-  }
-  
-  .tutorial_7 .overlap-group-wrapper {
-    position: absolute;
-    width: 95px;
-    height: 37px;
-    top: 0;
-    left: 0;
-  }
-  
-  .tutorial_7 .div-wrapper {
-    position: relative;
-    width: 93px;
-    height: 37px;
-    background-color: #333333;
-    border-radius: 16px;
-  }
-  
-  .tutorial_7 .text-wrapper-2 {
-    position: absolute;
-    width: 80px;
-    height: 20px;
-    top: 9px;
-    left: 5px;
-    font-family: "Manrope-Bold", Helvetica;
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 14px;
-    text-align: center;
+    font-size: 13px;
     letter-spacing: 0;
     line-height: normal;
-  }
-  
-  .tutorial_7 .overlap-wrapper {
     position: absolute;
-    width: 350px;
-    height: 204px;
     top: 0;
-    left: 0;
-    box-shadow: var(--drop-shadow-300);
+  }
+
+  .tutorial_7 .non-scroll {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 177px;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    background: #f2f2f2;
     filter: blur(1px);
   }
   
-  .tutorial_7 .overlap-2 {
-    position: relative;
-    width: 375px;
-    height: 232px;
-    left: -14px;
-  }
-  
-  .tutorial_7 .rectangle {
+  /*상단바*/
+  .tutorial_7 .bar {
     position: absolute;
-    width: 375px;
-    height: 199px;
-    top: 33px;
+    display: flex;
+    flex-direction: column;
+    width: 373px;
+    height: 39px;
+    top: 8px;
     left: 0;
   }
-  
-  .tutorial_7 .view-2 {
-    position: absolute;
-    width: 95px;
-    height: 37px;
+  .tutorial_7 .date {
+    width: 177px;
     top: 0;
-    left: 14px;
-  }
-  
-  .tutorial_7 .image {
+    left: 101px;
+    font-family: "Manrope-Bold";
+    font-weight: 700;
+    color: #000000;
+    font-size: 26px;
+    letter-spacing: 0.10px;
+    line-height: 40px;
+    white-space: nowrap;
     position: absolute;
-    width: 160px;
-    height: 53px;
-    top: 150px;
-    left: 194px;
+    text-align: center;
   }
-  
-  .tutorial_7 .img {
+  .tutorial_7 .modify {
     position: absolute;
-    width: 160px;
-    height: 53px;
-    top: 101px;
-    left: 194px;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 334px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
   }
-  
-  .tutorial_7 .image-2 {
+  .tutorial_7 .trash {
     position: absolute;
-    width: 160px;
-    height: 53px;
-    top: 52px;
-    left: 194px;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 298px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  } 
+  .tutorial_7 .back {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 18px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
   }
   
+  .tutorial_7 .line1 {
+    position: absolute;
+    width: 350px;
+    height: 1px;
+    top: 45px;
+    left: 12px;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  .tutorial_7 .line2 {
+    position: absolute;
+    width: 350px;
+    height: 1px;
+    top: 176px;
+    left: 12px;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  
+  /*Overview*/
   .tutorial_7 .view-3 {
     position: absolute;
     width: 70px;
     height: 82px;
-    top: 80px;
-    left: 53px;
+    top: 55px;
+    left: 12px;
   }
   
   .tutorial_7 .overlap-3 {
@@ -251,13 +179,477 @@
     top: 0;
     left: 50px;
   }
+
+  .tutorial_7 .summ {
+    width: 124px;
+    left: 236px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    position: absolute;
+    height: 105px;
+    top: 60px;
+    background-color: #ffffff;
+    border-radius: 7px;
+  }
+  .tutorial_7 .hashtags, .tutorial_7 .musics {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    font-size: 18px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    color: #000000; /* 텍스트 색상 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+  }
+  .tutorial_7 .hashtags {
+    top: 9px;
+    left: 12px;
+  }
+  .tutorial_7 .musics {
+    top: 57px;
+    left: 12px;
+  }
   
+  .tutorial_7 .weather_activity {
+    width: 105px;
+    left: 120px;
+    box-shadow: var(--drop-shadow-100);
+    position: absolute;
+    height: 105px;
+    top: 60px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tutorial_7 .weather1 {
+    top: 7px;
+    left: 7px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    background-size: contain; 
+    border-radius: 21px;
+    box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+    border: 0.5px solid rgb(0 0 0 / 10%);
+  }
+  
+  .tutorial_7 .activity2 {
+    top: 56px;
+    left: 56px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    background-size: contain; 
+    box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+    border: 0.5px solid rgb(0 0 0 / 10%);
+    border-radius: 21px;
+  }
+  .tutorial_7 .weather2 {
+    top: 7px;
+    left: 56px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    background-size: contain; 
+    border-radius: 21px;
+    box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+    border: 0.5px solid rgb(0 0 0 / 10%);
+  }
+  
+  .tutorial_7 .activity1 {
+    top: 56px;
+    left: 7px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    background-size: contain; 
+    border-radius: 21px;
+    box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+    border: 0.5px solid rgb(0 0 0 / 10%);
+  }
+  
+  
+  .tutorial_7 .scroll {
+    display: flex;
+    flex-direction: column;
+    width: 381px;
+    height: 1000px;
+    align-items: flex-end;
+    gap: 33px;
+    position: absolute;
+    top: 183px;
+    max-height: 74vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease; /* 부드러운 전환 효과 */
+    opacity: 1; /* 기본 상태: 보임 */
+  }
+  
+    /*일기 부분*/
+  .tutorial_7 .diary {
+    position: absolute;
+    width: 352px;
+    height: 151px;
+    top: 44px;
+    left: 7px;
+    filter: blur(1px);
+  }
+  
+  .tutorial_7 .diarybox {
+    position: relative;
+    width: 354px;
+    height: 160px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    overflow-y: auto;
+  }
+  .tutorial_7 .today-diary {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    left: 7px;
+    filter: blur(1px);
+  }
+
+  .tutorial_7 .text-diary {
+    width: 74px;
+    height: 20px;
+    top: 9px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .tutorial_7 .text-diary-content {
+    top: 6px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 1.0px;
+    line-height: 20.0px;
+    white-space: normal;
+    position: absolute;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-align: left;
+  }
+  
+  /*음악 부분*/
+  .tutorial_7 .music {
+    position: absolute;
+    width: 354px;
+    height: 150px;
+    top: 490px;
+    left: 7px;
+
+  }
+  
+  .tutorial_7 .musicbox {
+    position: relative;
+    width: 354px;
+    height: 114%;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+  }
+  
+  .tutorial_7 .today-music {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 445px;
+    left: 7px;
+  }
+  .tutorial_7 .text-music {
+    width: 74px;
+    height: 20px;
+    top: 8px;
+    left: 9px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .tutorial_7 .music_title {
+    top: 8px;
+    left: 124px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    line-height: 21.6px;
+    white-space: nowrap;
+    position: absolute;
+    text-align: center;
+  }
+
+  .tutorial_7 .music_description {
+    width: 354px;
+    margin-top: 11%;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    letter-spacing: 0.20px;
+    line-height: 12.0px;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .tutorial_7 .music_recommendation {
+    width: 354px;
+    margin-top: 25%;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    letter-spacing: 0.20px;
+    line-height: 12.0px;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .tutorial_7 .PLAY {
+    position: absolute;
+    width: 72px;
+    height: 25px;
+    bottom: 2%;
+    left: 41%;
+    cursor: pointer;
+  }
+  .tutorial_7 .PLAY-btn{
+    position: relative;
+    width: 65px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 15px;
+  }
+  .tutorial_7 .polygon {
+    position: absolute;
+    width: 9px;
+    height: 11px;
+    top: 5px;
+    left: 8px;
+  }
+  .tutorial_7 .text-play {
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 0.30px;
+    line-height: 18.0px;
+    white-space: nowrap;
+  }
+  
+  .tutorial_7 .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 6px;
+    left: 325px;
+    object-fit: cover;
+    cursor:pointer;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow:0 0 10px #fcddec;
+    }
+    50% {
+      transform: scale(1.06); /* 확대 효과 */
+      box-shadow: 0 0 20px #fcddec; /* 더 강한 반짝임 */
+    }
+  }
+  
+  /*감정 부분*/
+  .tutorial_7 .emotion{
+    position: absolute;
+    width: 350px;
+    height: 159px;
+    top: 262px;
+    left: 7px;
+    filter: blur(1px);
+  }
+
+  .tutorial_7 .emotionbox {
+    position: relative;
+    width: 354px;
+    height: 165px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+  }
+  .tutorial_7 .today-emotion {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 219px;
+    left: 7px;
+    filter: blur(1px);
+  } 
+
+  .tutorial_7 .text-emotion {
+    width: 74px;
+    height: 20px;
+    top: 8px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .tutorial_7 .emotions {
+    position: absolute;
+    width: 160px;
+    height: 151px;
+    top: 12px;
+    left: 194px;
+  }
+  .tutorial_7 .hashtag1, .tutorial_7 .hashtag2, .tutorial_7 .hashtag3 {
+    position: absolute;
+    width: 145px;
+    height: 45px;
+    font-size: 18px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    color: #000000; /* 텍스트 색상 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+  }
+  .tutorial_7 .hashtag1 {
+    top: 0px;
+    left: 0;
+  }
+  .tutorial_7 .hashtag2 {
+    top: 49px;
+    left: 0;
+  }
+  .tutorial_7 .hashtag3 {
+    top: 98px;
+    left: 0;
+  }
+  
+  .tutorial_7 .overlap-3 {
+    width: 71px;
+    height: 84px;
+    position: relative;
+    top: 21%;
+    left: 10%;
+  }
+  
+  .tutorial_7 .group {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    top: 22px;
+    left: 0;
+    background-color: #030000;
+    border-radius: 31.13px / 30.85px;
+  }
+  
+  .tutorial_7 .group-2 {
+    position: absolute;
+    width: 31px;
+    height: 26px;
+    top: 20px;
+    left: 15px;
+  }
+  
+  .tutorial_7 .group-3 {
+    position: absolute;
+    width: 21px;
+    height: 35px;
+    top: 0;
+    left: 50px;
+  }
+  
+  /* 팝업 전체 배경색 */
+  .swal-modal {
+    background-color: #FCDDEC !important; /* 원하는 배경색 */
+    border-radius: 15px; /* 팝업의 모서리를 둥글게 */
+  }
+  
+  /* 팝업 제목 스타일 */
+  .swal-title {
+    color: #333; /* 제목 텍스트 색상 */
+    font-size: 22px; /* 제목 글자 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    margin-bottom: 10px; /* 아래 여백 */
+  }
+  
+  /* 팝업 본문 텍스트 스타일 */
+  .swal-text {
+    color: #555; /* 본문 텍스트 색상 */
+    font-size: 16px; /* 본문 글자 크기 */
+    line-height: 1.5; /* 줄 간격 */
+  }
+  
+  /* 버튼 스타일 */
+  .swal-button {
+    background-color: #f2f2f2; /* 버튼 배경색 */
+    font-size: 14px; /* 버튼 글자 크기 */
+    color: #333; /* 버튼 텍스트 색상 */
+    border-radius: 5px; /* 버튼 모서리를 둥글게 */
+    padding: 8px 16px; /* 버튼 패딩 */
+  }
+  
+  /* 삭제 버튼의 스타일 (위험한 작업을 강조) */
+  .swal-button--danger {
+    background-color: #ff4d4f; /* 빨간색 계열 */
+    color: #fff; /* 버튼 텍스트 흰색 */
+  }
+  
+  /* 버튼에 마우스를 올렸을 때 스타일 */
+  .swal-button:hover {
+    background-color: #e0e0e0; /* hover 효과 */
+  }
+  
+  .swal-button--danger:hover {
+    background-color: #d9383e; /* hover 시 위험 버튼 색상 */
+  }
+
   .tutorial_7 .view-4 {
     position: absolute;
     width: 284px;
     height: 70px;
-    top: 189px;
-    left: 64px;
+    top: 79%;
+    left: 50px;
   }
   
   .tutorial_7 .overlap-4 {
@@ -322,239 +714,34 @@
     left: 99%;
   }
   
-  .tutorial_7 .view-5 {
-    position: absolute;
-    width: 352px;
-    height: 191px;
-    top: 248px;
-    left: 14px;
-    filter: blur(1px);
+  
+  @media (max-width: 750px){
+  .tutorial_7 {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height:100vh;
+    align-items: center;
   }
   
-  .tutorial_7 .overlap-5 {
+  .tutorial_7 .div {
+    background-color: #f2f2f2;
+    width: 100vw;
+    height: 100vh;
     position: relative;
-    width: 375px;
-    height: 219px;
-    left: -14px;
+    margin: 0 auto;
   }
   
-  .tutorial_7 .rectangle-3 {
-    position: absolute;
-    width: 375px;
-    height: 191px;
-    top: 28px;
-    left: 0;
-  }
-  
-  .tutorial_7 .text-wrapper-5 {
-    position: absolute;
-    width: 337px;
-    top: 45px;
-    left: 23px;
-    font-family: "Manrope-Regular", Helvetica;
-    font-weight: 400;
-    color: #3e3939;
-    font-size: 16.5px;
-    letter-spacing: 0;
-    line-height: 25px;
-  }
-  
-  .tutorial_7 .rectangle-4 {
-    position: absolute;
-    width: 350px;
-    height: 1px;
-    top: 234px;
-    left: 12px;
-    background-color: #0000004c;
-    opacity: 0.7;
-    filter: blur(1px);
-  }
-  
-  .tutorial_7 .div-2 {
-    width: 125px;
-    left: 236px;
-    box-shadow: 0px 8px 20px #1d3a580d;
-    position: absolute;
-    height: 105px;
-    top: 111px;
-    background-color: #ffffff;
-    border-radius: 7px;
-    filter: blur(1px);
-  }
-  
-  .tutorial_7 .view-6 {
-    position: absolute;
-    width: 120px;
-    height: 30px;
-    top: 61px;
-    left: 3px;
-  }
-  
-  .tutorial_7 .overlap-group-2 {
-    width: 121px;
-    height: 33px;
-    left: -2px;
-    background-color: #ffffff;
-    border-radius: 7px;
-    box-shadow: 0px 1px 4px #0c0c0d0d;
+  .tutorial_7 .blackbox {
     position: relative;
-    top: -2px;
+    width: 92px;
+    height: 35px;
+    background-color: #000000;
+    border-radius: 15px;
   }
-  
-  .tutorial_7 .text-wrapper-6 {
-    position: absolute;
-    top: 8px;
-    left: 12px;
-    font-family: "Manrope-Bold", Helvetica;
-    font-weight: 700;
-    color: #000000;
-    font-size: 14px;
-    letter-spacing: 0.28px;
-    line-height: 16.8px;
-    white-space: nowrap;
-  }
-  
-  .tutorial_7 .view-7 {
-    position: absolute;
-    width: 120px;
-    height: 30px;
-    top: 12px;
-    left: 3px;
-  }
-  
-  .tutorial_7 .text-wrapper-7 {
-    position: absolute;
-    top: 8px;
-    left: 40px;
-    font-family: "Manrope-Bold", Helvetica;
-    font-weight: 700;
-    color: #000000;
-    font-size: 14px;
-    letter-spacing: 0.28px;
-    line-height: 16.8px;
-    white-space: nowrap;
-  }
-  
-  .tutorial_7 .div-3 {
-    width: 105px;
-    left: 107px;
-    box-shadow: var(--drop-shadow-100);
-    position: absolute;
-    height: 105px;
-    top: 111px;
-    background-color: #ffffff;
-    border-radius: 7px;
-    filter: blur(1px);
-  }
-  
-  .tutorial_7 .image-3 {
-    position: absolute;
-    width: 40px;
-    height: 41px;
-    top: 4px;
-    left: 5px;
-  }
-  
-  .tutorial_7 .image-4 {
-    position: absolute;
-    width: 40px;
-    height: 41px;
-    top: 54px;
-    left: 8px;
-    object-fit: cover;
-  }
-  
-  .tutorial_7 .image-5 {
-    position: absolute;
-    width: 40px;
-    height: 41px;
-    top: 53px;
-    left: 58px;
-    object-fit: cover;
-  }
-  
-  .tutorial_7 .view-8 {
-    position: absolute;
-    width: 70px;
-    height: 82px;
-    top: 117px;
-    left: 22px;
-    filter: blur(1px);
-  }
-  
-  .tutorial_7 .overlap-6 {
-    position: absolute;
-    width: 373px;
-    height: 46px;
-    top: 42px;
-    left: 0;
-  }
-  
-  .tutorial_7 .image-6 {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 12px;
-    left: 334px;
-    object-fit: cover;
-    filter: blur(1px);
-  }
-  
-  .tutorial_7 .image-7 {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 12px;
-    left: 298px;
-    object-fit: cover;
-    filter: blur(1px);
-  }
-  
-  .tutorial_7 .image-8 {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 12px;
-    left: 18px;
-    object-fit: cover;
-    z-index: 10;
-    filter: blur(1px);
-  }
-  
-  .tutorial_7 .view-9 {
-    position: absolute;
-    width: 373px;
-    height: 39px;
-    top: 7px;
-    left: 0;
-    filter: blur(1px);
-  }
-  
-  .tutorial_7 .rectangle-5 {
-    position: absolute;
-    width: 371px;
-    height: 1px;
-    top: 38px;
-    left: 0;
-    background-color: #0000004c;
-    opacity: 0.7;
-  }
-  
-  .tutorial_7 .text-wrapper-8 {
-    position: absolute;
-    width: 177px;
-    top: 0;
-    left: 101px;
-    font-family: "Manrope-Bold", Helvetica;
-    font-weight: 700;
-    color: #000000;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: 0.10px;
-    line-height: 38.4px;
-    white-space: nowrap;
-  }
-  
+
   .tutorial_7 .overlap-wrapper-2 {
     width: 357px;
     height: 21px;
@@ -565,7 +752,8 @@
   
   .tutorial_7 .overlap-7 {
     position: relative;
-    width: 355px;
+    width: 100vw;
+    left: -10px;
     height: 21px;
     background-color: var(--fuschia-60);
   }
@@ -584,754 +772,643 @@
     top: 0;
   }
   
-  .tutorial_7 .container-wrapper {
-    position: absolute;
-    width: 67px;
-    height: 12px;
-    top: 17px;
-    left: 288px;
-  }
-  
-  .tutorial_7 .container {
+  /* non-scroll 영역 */
+  .tutorial_7 .non-scroll {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 181px;
+    align-items: center;
+    gap: 12px;
     position: relative;
-    height: 12px;
+    background: #f2f2f2;
   }
   
-  .tutorial_7 .battery {
+  /*상단바*/
+  .tutorial_7 .bar {
     position: absolute;
-    width: 24px;
-    height: 12px;
-    top: 0;
-    left: 42px;
-    background-image: url(./img/rectangle.svg);
-    background-size: 100% 100%;
-  }
-  
-  .tutorial_7 .rectangle-6 {
-    position: relative;
-    width: 20px;
-    height: 10px;
-    top: 1px;
-    left: 1px;
-    background-color: #111111;
-    border-radius: 1.6px;
-  }
-  
-  .tutorial_7 .combined-shape {
-    position: absolute;
-    width: 17px;
-    height: 11px;
-    top: 0;
+    width: 100%;
+    height: 39px;
+    top: 5%;
     left: 0;
+    align-items: center;
   }
-  
-  .tutorial_7 .wi-fi {
-    position: absolute;
-    width: 15px;
-    height: 11px;
-    top: 0;
-    left: 22px;
-  }
-  
-  .tutorial_7 .home-indicator {
-    position: absolute;
-    width: 134px;
-    height: 5px;
-    top: 800px;
-    left: 121px;
-    background-color: #000000;
-    border-radius: 100px;
-  }
-  
-  .tutorial_7 .action {
-    position: absolute;
-    width: 56px;
-    height: 18px;
-    top: 14px;
-    left: 28px;
-  }
-  
-  .tutorial_7 .time {
-    position: absolute;
-    width: 54px;
-    top: 0;
-    left: 0;
-    font-family: "Pretendard-SemiBold", Helvetica;
-    font-weight: 600;
-    color: #111111;
-    font-size: 15px;
+  .tutorial_7 .date {
+    width: auto; /* 필요에 따라 조정 */
+    font-family: "Manrope-Bold";
+    font-weight: 700;
+    color: #000000;
+    font-size: 26px;
+    letter-spacing: 0.10px;
+    line-height: 40px;
+    white-space: nowrap;
+    position: absolute; /* 중앙 정렬 위해 절대 위치 */
+    left: 50%; /* 부모 기준으로 50% 왼쪽 */
+    transform: translateX(-50%); /* 중앙 정렬 */
     text-align: center;
-    letter-spacing: -0.17px;
+  }
+  .tutorial_7 .modify {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 90%;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .tutorial_7 .trash {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 80%;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  } 
+  .tutorial_7 .back {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 18px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .tutorial_7 .line1 {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    top: 100%;
+    left: 0vh;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  .tutorial_7 .line2 {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    top: 93%;
+    left: 0vh;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  
+  /*Overview*/
+
+  .tutorial_7 .view-3 {
+    position: absolute;
+    width: 70px;
+    height: 82px;
+    top: 33%;
+    left: 3%;
+  }
+  
+  .tutorial_7 .overlap-3 {
+    width: 71px;
+    height: 84px;
+    position: relative;
+    top: -2px;
+  }
+  
+  .tutorial_7 .group {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    top: 22px;
+    left: 0;
+    background-color: #030000;
+    border-radius: 31.13px / 30.85px;
+  }
+  
+  .tutorial_7 .group-2 {
+    position: absolute;
+    width: 31px;
+    height: 26px;
+    top: 20px;
+    left: 15px;
+  }
+  
+  .tutorial_7 .group-3 {
+    position: absolute;
+    width: 21px;
+    height: 35px;
+    top: 0;
+    left: 50px;
+  }
+
+  .tutorial_7 .overview-container {
+  position: absolute;
+  top: 12%;
+  left: 0%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 13%;
+  }
+  
+  /* Summ Box */
+  .tutorial_7 .summ {
+    width: 38%;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    position: absolute;
+    height: 51.5%;
+    top: 33%;
+    left: 59%;
+    background-color: #ffffff;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .tutorial_7 .hashtags, .tutorial_7 .musics {
+  width: 90%;
+  height: 40%;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: absolute;
+  }
+  .tutorial_7 .hashtags {
+  top: 5%;
+  
+  }
+  .tutorial_7 .musics{
+  top: 50%;
+  }
+  .tutorial_7 .weather_activity {
+    width: 25%;
+    height: 26%;
+    left: -7%;
+    box-shadow: var(--drop-shadow-100);
+    position: relative;
+    height: 49.5%;
+    background-color: #ffffff;
+    border-radius: 7px;
+    top: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tutorial_7 .box {
+  height: 100%;
+  width: 70%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10%;
+  }
+  .tutorial_7 .activity1, .tutorial_7 .activity2, .tutorial_7 .weather1, .tutorial_7 .weather2 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  background-size: contain; 
+  }
+  
+  .tutorial_7 .weather1 {
+  top: 10%;  /* 상단에 배치 */
+  left: 10%;
+  }
+  
+  .tutorial_7 .weather2 {
+  top: 10%;  /* 상단에 배치 */
+  left: 56%;
+  }
+  
+  .tutorial_7 .activity1 {
+  top: 56%;  /* 하단에 배치 */
+  left: 10%;
+  }
+  
+  .tutorial_7 .activity2 {
+  top: 56%;  /* 하단에 배치 */
+  left: 56%;
+  }
+  
+  /* scroll 영역 */
+  .tutorial_7 .scroll {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 6%;
+    transition: all 0.3s ease;
+    opacity: 1;
+  }
+  
+    /*일기 부분*/
+  .tutorial_7 .diary {
+    position: relative;
+    width: 100%;
+    height: 22%;
+    top: 7%;
+    left: 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tutorial_7 .diarybox {
+    position: relative;
+    width: 96%;
+    height: 160px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    overflow-y: auto;
+  }
+  .tutorial_7 .today-diary {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+  }
+  
+  .tutorial_7 .text-diary {
+    width: 74px;
+    height: 20px;
+    top: 9px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .tutorial_7 .text-diary-content {
+    top: 6px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 1.0px;
+    line-height: 20.0px;
+    white-space: normal;
+    position: absolute;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-align: left;
+  }
+  
+  /*음악 부분*/
+  .tutorial_7 .music {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    top: 15%;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 위쪽으로 정렬 */
+    padding-top: 2%; /* 원하는 높이 조정을 위해 패딩 추가 */
+  }
+  
+  .tutorial_7 .musicbox {
+    position: relative;
+    width: 96%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 15px;
+  }
+  
+  .tutorial_7 .today-music {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 68%;
+  }
+  
+  .tutorial_7 .text-music {
+    width: 74px;
+    height: 20px;
+    top: 8px;
+    left: 9px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .tutorial_7 .music_title {
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    line-height: 21.6px;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: -141px; /* 제목과 설명 사이 간격 */
+    position: static; /* 중앙 정렬을 위해 absolute 제거 */
+  }
+  .tutorial_7 .music_description {
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    letter-spacing: 0.20px;
+    line-height: 12px;
+    text-align: center;
+    position: static;
+    margin-top: 36px;
+  }
+  
+  .tutorial_7 .music_recommendation {
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    letter-spacing: 0.20px;
+    line-height: 12px;
+    text-align: center;
+    position: static;
+    margin-top: 15px;
+  }
+  
+  .tutorial_7 .PLAY {
+    display: flex;
+    justify-content: center;  /* 가로 중앙 정렬 */
+    position: absolute;
+    width: 72px;
+    height: 25px;
+    left: 50%;                /* 화면 가로 중앙 */
+    transform: translate(-50%, -50%); /* 정확히 중앙에 위치하도록 이동 */
+    cursor: pointer;
+    bottom: -13px;
+  }
+  
+  .tutorial_7 .PLAY-btn {
+    position: relative;
+    width: 65px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 15px;
+  }
+  
+  .tutorial_7 .polygon {
+    position: absolute;
+    width: 9px;
+    height: 11px;
+    top: 5px;
+    left: 8px;
+  }
+  
+  .tutorial_7 .text-play {
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 0.30px;
+    line-height: 18.0px;
+    white-space: nowrap;
+  }
+  
+  .tutorial_7 .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 6px;
+    left: 93%;
+    object-fit: cover;
+    cursor:pointer;
+  }
+  
+  /*감정 부분*/
+  .tutorial_7 .emotion{
+    position: relative;
+    width: 100%;
+    height: 27%;
+    top: 13%;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tutorial_7 .emotionbox {
+    position: relative;
+    width: 96%;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+  }
+  .tutorial_7 .today-emotion {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 32%;
+  } 
+  
+  .tutorial_7 .text-emotion {
+    width: 74px;
+    height: 20px;
+    top: 8px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .tutorial_7 .emotions {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    top: 12px;
+    left: 50%;
+  }
+  .tutorial_7 .hashtag1, .tutorial_7 .hashtag2, .tutorial_7 .hashtag3 {
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    font-size: 18px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    color: #000000; /* 텍스트 색상 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+  }
+  .tutorial_7 .hashtag1 {
+    top: 0%;
+    left: 0;
+  }
+  .tutorial_7 .hashtag2 {
+    top: 35%;
+    left: 0;
+  }
+  .tutorial_7 .hashtag3 {
+    top: 70%;
+    left: 0;
+  }
+  
+  .tutorial_7 .musical-note {
+    position: absolute;
+    width: 18%;
+    height: 80%;
+    top: 10%;
+    left: 20%;
+    background-color: #ffffff;
+  }
+  /* 팝업 전체 배경색 */
+  .swal-modal {
+      background-color: #FCDDEC !important; /* 원하는 배경색 */
+      border-radius: 15px; /* 팝업의 모서리를 둥글게 */
+  }
+  
+  /* 팝업 제목 스타일 */
+  .swal-title {
+      color: #333; /* 제목 텍스트 색상 */
+      font-size: 22px; /* 제목 글자 크기 */
+      font-weight: bold; /* 텍스트 굵기 */
+      margin-bottom: 10px; /* 아래 여백 */
+  }
+  
+  /* 팝업 본문 텍스트 스타일 */
+  .swal-text {
+      color: #555; /* 본문 텍스트 색상 */
+      font-size: 16px; /* 본문 글자 크기 */
+      line-height: 1.5; /* 줄 간격 */
+  }
+  
+  /* 버튼 스타일 */
+  .swal-button {
+      background-color: #f2f2f2; /* 버튼 배경색 */
+      font-size: 14px; /* 버튼 글자 크기 */
+      color: #333; /* 버튼 텍스트 색상 */
+      border-radius: 5px; /* 버튼 모서리를 둥글게 */
+      padding: 8px 16px; /* 버튼 패딩 */
+  }
+  
+  /* 삭제 버튼의 스타일 (위험한 작업을 강조) */
+  .swal-button--danger {
+      background-color: #ff4d4f; /* 빨간색 계열 */
+      color: #fff; /* 버튼 텍스트 흰색 */
+  }
+  
+  /* 버튼에 마우스를 올렸을 때 스타일 */
+  .swal-button:hover {
+      background-color: #e0e0e0; /* hover 효과 */
+  }
+  
+  .swal-button--danger:hover {
+      background-color: #d9383e; /* hover 시 위험 버튼 색상 */
+  }
+
+  .tutorial_7 .view-4 {
+    position: absolute;
+    width: 284px;
+    height: 70px;
+    top: 64%;
+    left: 64px;
+  }
+  
+  .tutorial_7 .overlap-4 {
+    position: relative;
+    width: 280px;
+    height: 66px;
+    top: -28%;
+  }
+  
+  .tutorial_7 .rectangle-2 {
+    position: absolute;
+    width: 310px;
+    height: 49px;
+    top: 0;
+    left: 0;
+    background-color: #ffd8e4;
+    border-radius: 7px;
+    transform: rotate(179.87deg);
+  }
+  
+  .tutorial_7 .text-wrapper-3 {
+    position: absolute;
+    width: 28px;
+    height: 30px;
+    top: 8%;
+    left: 6px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #5f5f5f;
+    font-size: 10px;
+    letter-spacing: 0.70px;
+    line-height: 14px;
+  }
+  
+  .tutorial_7 .polygon {
+    position: absolute;
+    width: 9px;
+    height: 16px;
+    top: 50px;
+    left: 253px;
+  }
+  
+  .tutorial_7 .text-wrapper-4 {
+    position: absolute;
+    width: 305px;
+    height: 22px;
+    top: 5px;
+    left: 3px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #3e3939;
+    font-size: 15px;
+    letter-spacing: 0;
     line-height: normal;
   }
   
-  @media (max-width:800px){
-    .tutorial_7 {
-      background-color: #f2f2f2;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      width: 100vw;
-      height: 100vh;
-    }
-    
-    .tutorial_7 .div {
-      background-color: #f2f2f2;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .tutorial_7 .overlap {
-      position: absolute;
-      left: 14px;
-      width: 92vw;
-      height: 45vh;
-    }
-    
-    .tutorial_7 .view {
-      position: absolute;
-      width: 354px;
-      height: 134px;
-      top: 242px;
-      left: 0;
-    }
-    
-    .tutorial_7 .overlap-group {
-      position: absolute;
-      width: 104%;
-      height: 71%;
-      top: 41px;
-      left: 0;
-      background-color: #ffffff;
-      border-radius: 7px;
-      box-shadow: 0px 8px 20px #1d3a580d;
-    }
-    
-    .tutorial_7 .button-wrapper {
-      position: absolute;
-      width: 62px;
-      height: 18px;
-      top: 72px;
-      left: 144px;
-    }
-    
-    .tutorial_7 .button {
-      display: flex;
-      width: 54px;
-      height: 18px;
-      align-items: center;
-      justify-content: center;
-      gap: 3px;
-      padding: 4px 10px;
-      position: relative;
-      background-color: #aeaeb2;
-      border-radius: 40px;
-      bottom: 51%;
-    }
-    
-    .tutorial_7 .symbol {
-      position: absolute;
-      left: 8px;
-    }
-    
-    .tutorial_7 .symbol img {
-      width: 15px;
-      height: 15px;
-    }
-    
-    .tutorial_7 .label {
-      position: relative;
-      width: fit-content;
-      margin-top: -6.00px;
-      margin-bottom: -4.00px;
-      margin-right: -14px;
-      font-family: var(--subheadline-regular-font-family);
-      font-weight: var(--subheadline-regular-font-weight);
-      color: var(--system-colors-grays-white);
-      font-size: var(--subheadline-regular-font-size);
-      letter-spacing: var(--subheadline-regular-letter-spacing);
-      line-height: var(--subheadline-regular-line-height);
-      white-space: nowrap;
-      font-style: var(--subheadline-regular-font-style);
-    }
-    
-    .tutorial_7 .heart {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      top: 6px;
-      left: 325px;
-      object-fit: cover;
-    }
-    
-    .tutorial_7 .text-wrapper {
-      position: absolute;
-      top: 8px;
-      left: 105px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 18px;
-      letter-spacing: 0.36px;
-      line-height: 21.6px;
-      white-space: nowrap;
-    }
-    
-    .tutorial_7 .p {
-      position: absolute;
-      width: 266px;
-      top: 35%;
-      left: 57px;
-      font-family: "Manrope-Regular", Helvetica;
-      font-weight: 400;
-      color: #000000;
-      font-size: 10px;
-      letter-spacing: 0.20px;
-      line-height: 12.0px;
-    }
-    
-    .tutorial_7 .overlap-group-wrapper {
-      position: absolute;
-      width: 95px;
-      height: 37px;
-      top: 0;
-      left: 0;
-    }
-    
-    .tutorial_7 .div-wrapper {
-      position: relative;
-      width: 93px;
-      height: 37px;
-      background-color: #333333;
-      border-radius: 16px;
-    }
-    
-    .tutorial_7 .text-wrapper-2 {
-      position: absolute;
-      width: 80px;
-      height: 20px;
-      top: 9px;
-      left: 5px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #ffffff;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0;
-      line-height: normal;
-    }
-    
-    .tutorial_7 .overlap-wrapper {
-      position: absolute;
-      width: 350px;
-      height: 204px;
-      top: 0;
-      left: 0;
-      box-shadow: var(--drop-shadow-300);
-      filter: blur(1px);
-    }
-    
-    .tutorial_7 .overlap-2 {
-      position: relative;
-      width: 375px;
-      height: 232px;
-      left: -14px;
-    }
-    
-    .tutorial_7 .rectangle {
-      position: absolute;
-      width: 375px;
-      height: 199px;
-      top: 33px;
-      left: 0;
-    }
-    
-    .tutorial_7 .view-2 {
-      position: absolute;
-      width: 95px;
-      height: 37px;
-      top: 0;
-      left: 14px;
-    }
-    
-    .tutorial_7 .image {
-      position: absolute;
-      width: 160px;
-      height: 53px;
-      top: 150px;
-      left: 194px;
-    }
-    
-    .tutorial_7 .img {
-      position: absolute;
-      width: 160px;
-      height: 53px;
-      top: 101px;
-      left: 194px;
-    }
-    
-    .tutorial_7 .image-2 {
-      position: absolute;
-      width: 160px;
-      height: 53px;
-      top: 52px;
-      left: 194px;
-    }
-    
-    .tutorial_7 .view-3 {
-      position: absolute;
-      width: 70px;
-      height: 82px;
-      top: 80px;
-      left: 53px;
-    }
-    
-    .tutorial_7 .overlap-3 {
-      width: 71px;
-      height: 84px;
-      position: relative;
-      top: -2px;
-    }
-    
-    .tutorial_7 .group {
-      position: absolute;
-      width: 62px;
-      height: 62px;
-      top: 22px;
-      left: 0;
-      background-color: #030000;
-      border-radius: 31.13px / 30.85px;
-    }
-    
-    .tutorial_7 .group-2 {
-      position: absolute;
-      width: 31px;
-      height: 26px;
-      top: 20px;
-      left: 15px;
-    }
-    
-    .tutorial_7 .group-3 {
-      position: absolute;
-      width: 21px;
-      height: 35px;
-      top: 0;
-      left: 50px;
-    }
-    
-    .tutorial_7 .view-4 {
-      position: absolute;
-      width: 284px;
-      height: 70px;
-      top: 189px;
-      left: 64px;
-    }
-    
-    .tutorial_7 .overlap-4 {
-      position: relative;
-      width: 280px;
-      height: 66px;
-      top: 20%;
-    }
-    
-    .tutorial_7 .rectangle-2 {
-      position: absolute;
-      width: 310px;
-      height: 49px;
-      top: 0;
-      left: 0;
-      background-color: #ffd8e4;
-      border-radius: 7px;
-      transform: rotate(179.87deg);
-    }
-    
-    .tutorial_7 .text-wrapper-3 {
-      position: absolute;
-      width: 28px;
-      height: 30px;
-      top: 8%;
-      left: 6px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #5f5f5f;
-      font-size: 10px;
-      letter-spacing: 0.70px;
-      line-height: 14px;
-    }
-    
-    .tutorial_7 .polygon {
-      position: absolute;
-      width: 9px;
-      height: 16px;
-      top: 50px;
-      left: 253px;
-    }
-    
-    .tutorial_7 .text-wrapper-4 {
-      position: absolute;
-      width: 305px;
-      height: 22px;
-      top: 5px;
-      left: 3px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #3e3939;
-      font-size: 15px;
-      letter-spacing: 0;
-      line-height: normal;
-    }
-    
-    .tutorial_7 .arrow-right-circle {
-      position: absolute;
-      width: 33px;
-      height: 33px;
-      top: 58%;
-      left: 99%;
-    }
-    
-    .tutorial_7 .view-5 {
-      position: absolute;
-      width: 352px;
-      height: 191px;
-      top: 248px;
-      left: 14px;
-      filter: blur(1px);
-    }
-    
-    .tutorial_7 .overlap-5 {
-      position: relative;
-      width: 375px;
-      height: 219px;
-      left: -14px;
-    }
-    
-    .tutorial_7 .rectangle-3 {
-      position: absolute;
-      width: 375px;
-      height: 191px;
-      top: 28px;
-      left: 0;
-    }
-    
-    .tutorial_7 .text-wrapper-5 {
-      position: absolute;
-      width: 337px;
-      top: 45px;
-      left: 23px;
-      font-family: "Manrope-Regular", Helvetica;
-      font-weight: 400;
-      color: #3e3939;
-      font-size: 16.5px;
-      letter-spacing: 0;
-      line-height: 25px;
-    }
-    
-    .tutorial_7 .rectangle-4 {
-      position: absolute;
-      width: 100vw;
-      height: 1px;
-      top: 234px;
-      left: 12px;
-      background-color: #0000004c;
-      opacity: 0.7;
-      filter: blur(1px);
-    }
-    
-    .tutorial_7 .div-2 {
-      width: 125px;
-      left: 236px;
-      box-shadow: 0px 8px 20px #1d3a580d;
-      position: absolute;
-      height: 105px;
-      top: 111px;
-      background-color: #ffffff;
-      border-radius: 7px;
-      filter: blur(1px);
-    }
-    
-    .tutorial_7 .view-6 {
-      position: absolute;
-      width: 120px;
-      height: 30px;
-      top: 61px;
-      left: 3px;
-    }
-    
-    .tutorial_7 .overlap-group-2 {
-      width: 121px;
-      height: 33px;
-      left: -2px;
-      background-color: #ffffff;
-      border-radius: 7px;
-      box-shadow: 0px 1px 4px #0c0c0d0d;
-      position: relative;
-      top: -2px;
-    }
-    
-    .tutorial_7 .text-wrapper-6 {
-      position: absolute;
-      top: 8px;
-      left: 12px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 14px;
-      letter-spacing: 0.28px;
-      line-height: 16.8px;
-      white-space: nowrap;
-    }
-    
-    .tutorial_7 .view-7 {
-      position: absolute;
-      width: 120px;
-      height: 30px;
-      top: 12px;
-      left: 3px;
-    }
-    
-    .tutorial_7 .text-wrapper-7 {
-      position: absolute;
-      top: 8px;
-      left: 40px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 14px;
-      letter-spacing: 0.28px;
-      line-height: 16.8px;
-      white-space: nowrap;
-    }
-    
-    .tutorial_7 .div-3 {
-      width: 105px;
-      left: 107px;
-      box-shadow: var(--drop-shadow-100);
-      position: absolute;
-      height: 105px;
-      top: 111px;
-      background-color: #ffffff;
-      border-radius: 7px;
-      filter: blur(1px);
-    }
-    
-    .tutorial_7 .image-3 {
-      position: absolute;
-      width: 40px;
-      height: 41px;
-      top: 4px;
-      left: 5px;
-    }
-    
-    .tutorial_7 .image-4 {
-      position: absolute;
-      width: 40px;
-      height: 41px;
-      top: 54px;
-      left: 8px;
-      object-fit: cover;
-    }
-    
-    .tutorial_7 .image-5 {
-      position: absolute;
-      width: 40px;
-      height: 41px;
-      top: 53px;
-      left: 58px;
-      object-fit: cover;
-    }
-    
-    .tutorial_7 .view-8 {
-      position: absolute;
-      width: 70px;
-      height: 82px;
-      top: 117px;
-      left: 22px;
-      filter: blur(1px);
-    }
-    
-    .tutorial_7 .overlap-6 {
-      position: absolute;
-      width: 373px;
-      height: 51px;
-      top: 42px;
-      left: 2px;
-    }
-    
-    .tutorial_7 .image-6 {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      top: 12px;
-      left: 334px;
-      object-fit: cover;
-      filter: blur(1px);
-    }
-    
-    .tutorial_7 .image-7 {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      top: 12px;
-      left: 298px;
-      object-fit: cover;
-      filter: blur(1px);
-    }
-    
-    .tutorial_7 .image-8 {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      top: 12px;
-      left: 18px;
-      object-fit: cover;
-      z-index: 10;
-      filter: blur(1px);
-    }
-    
-    .tutorial_7 .view-9 {
-      position: absolute;
-      width: 373px;
-      height: 39px;
-      top: 7px;
-      left: 0;
-      filter: blur(1px);
-    }
-    
-    .tutorial_7 .rectangle-5 {
-      position: absolute;
-      width: 100vw;
-      height: 1px;
-      top: 38px;
-      left: 0;
-      background-color: #0000004c;
-      opacity: 0.7;
-    }
-    
-    .tutorial_7 .text-wrapper-8 {
-      position: absolute;
-      width: 177px;
-      top: 0;
-      left: 101px;
-      font-family: "Manrope-Bold", Helvetica;
-      font-weight: 700;
-      color: #000000;
-      font-size: 24px;
-      text-align: center;
-      letter-spacing: 0.10px;
-      line-height: 38.4px;
-      white-space: nowrap;
-    }
-    
-    .tutorial_7 .overlap-wrapper-2 {
-      width: 357px;
-      height: 21px;
-      left: 10px;
-      position: absolute;
-      top: 0;
-    }
-    
-    .tutorial_7 .overlap-7 {
-      position: relative;
-      width: 100vw;
-      height: 21px;
-      background-color: var(--fuschia-60);
-      left: -3%;
-    }
-    
-    .tutorial_7 .text-wrapper-9 {
-      width: 47px;
-      height: 20px;
-      left: 43%;
-      font-family: "Manrope-Regular", Helvetica;
-      font-weight: 400;
-      color: #000000;
-      font-size: 13px;
-      letter-spacing: 0;
-      line-height: normal;
-      position: absolute;
-      top: 0;
-    }
-    
-    .tutorial_7 .container-wrapper {
-      position: absolute;
-      width: 67px;
-      height: 12px;
-      top: 17px;
-      left: 288px;
-    }
-    
-    .tutorial_7 .container {
-      position: relative;
-      height: 12px;
-    }
-    
-    .tutorial_7 .battery {
-      position: absolute;
-      width: 24px;
-      height: 12px;
-      top: 0;
-      left: 42px;
-      background-image: url(./img/rectangle.svg);
-      background-size: 100% 100%;
-    }
-    
-    .tutorial_7 .rectangle-6 {
-      position: relative;
-      width: 20px;
-      height: 10px;
-      top: 1px;
-      left: 1px;
-      background-color: #111111;
-      border-radius: 1.6px;
-    }
-    
-    .tutorial_7 .combined-shape {
-      position: absolute;
-      width: 17px;
-      height: 11px;
-      top: 0;
-      left: 0;
-    }
-    
-    .tutorial_7 .wi-fi {
-      position: absolute;
-      width: 15px;
-      height: 11px;
-      top: 0;
-      left: 22px;
-    }
-    
-    .tutorial_7 .home-indicator {
-      position: absolute;
-      width: 134px;
-      height: 5px;
-      top: 800px;
-      left: 121px;
-      background-color: #000000;
-      border-radius: 100px;
-    }
-    
-    .tutorial_7 .action {
-      position: absolute;
-      width: 56px;
-      height: 18px;
-      top: 14px;
-      left: 28px;
-    }
-    
-    .tutorial_7 .time {
-      position: absolute;
-      width: 54px;
-      top: 0;
-      left: 0;
-      font-family: "Pretendard-SemiBold", Helvetica;
-      font-weight: 600;
-      color: #111111;
-      font-size: 15px;
-      text-align: center;
-      letter-spacing: -0.17px;
-      line-height: normal;
-    }
+  .tutorial_7 .arrow-right-circle {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top: 61%;
+    left: 99%;
+  }
+  .tutorial_7 .overlap-3 {
+    width: 71px;
+    height: 84px;
+    position: relative;
+    top: -1%;
+    left: 10%;
+  }
+  
   }
