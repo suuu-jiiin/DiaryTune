@@ -38,3 +38,14 @@ class Diary(models.Model):
     
     def __str__(self):
         return f"{self.year}-{self.month}-{self.day}의 일기"
+
+class csv_file(models.Model):
+    title= models.TextField()
+    artist = models.TextField()
+    album = models.TextField()
+    lyrics = models.TextField()
+    original_description = models.TextField()
+    new_description= models.TextField()
+    
+    def __str__(self):
+        return self.title

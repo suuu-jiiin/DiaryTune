@@ -13,82 +13,87 @@
   <body style="margin: 0;">
     <div class="screen">
       <div class="div">
+        <!--Scroll 불가능-->
+        <div class='non-scroll'>
+          <!--상단바-->
+          <div class="bar">
+            <div class="date" data-month="{{ month }}" data-day="{{ day }}" data-dayofweek="{{ dayofweek }}" ></div>
+            <div id="exit-url" data-url="{% url 'main_with_params' year=year month=month day=day %}"></div>
+            <img class="modify" src={% static "DiaryTune/images/modify.png" %} />
+            <img class="trash" src={% static "DiaryTune/images/trash.png" %} />
+            <img class="back" src={% static "DiaryTune/images/back.png" %} />
+            <div class="line1"></div>
+          </div>
+          <div class="line2"></div>
 
-        <!--상단바-->
-        <div class="bar">
-          <div class="date" data-month="{{ month }}" data-day="{{ day }}" data-dayofweek="{{ dayofweek }}" ></div>
-          <div id="exit-url" data-url="{% url 'main_with_params' year=year month=month day=day %}"></div>
-          <img class="modify" src={% static "DiaryTune/images/modify.png" %} />
-          <img class="trash" src={% static "DiaryTune/images/trash.png" %} />
-          <img class="back" src={% static "DiaryTune/images/back.png" %} />
-          <div class="line1"></div>
-        </div>
-        <div class="line2"></div>
-
-        <!--Overview-->
-        <div class="summ">
-            <div class="hashtags">#감정1</div>
-            <div class="musics">#가수 - 노래</div>
-        </div>
-        <div class="weather_activity">
-          <div class="weather1" data-weather="{{ weather.0 }}" data-weather-img="{% static 'DiaryTune/images/' %}{{ weather.0 }}.png"></div>
-          <div class="weather2" data-weather="{{ weather.1 }}" data-weather-img="{% static 'DiaryTune/images/' %}{{ weather.1 }}.png"></div>
-          <div class="activity1" data-activity="{{ activities.0 }}" data-activity-img="{% static 'DiaryTune/images/' %}{{ activities.0 }}.png"></div>
-          <div class="activity2" data-activity="{{ activities.1 }}" data-activity-img="{% static 'DiaryTune/images/' %}{{ activities.1 }}.png"></div>
+          <!--Overview-->
+          <div class="summ">
+              <div class="hashtags">#감정1</div>
+              <div class="musics">#가수 - 노래</div>
+          </div>
+          <div class="weather_activity">
+            <div class="weather1" data-weather="{{ weather.0 }}" data-weather-img="{% static 'DiaryTune/images/' %}{{ weather.0 }}.png"></div>
+            <div class="weather2" data-weather="{{ weather.1 }}" data-weather-img="{% static 'DiaryTune/images/' %}{{ weather.1 }}.png"></div>
+            <div class="activity1" data-activity="{{ activities.0 }}" data-activity-img="{% static 'DiaryTune/images/' %}{{ activities.0 }}.png"></div>
+            <div class="activity2" data-activity="{{ activities.1 }}" data-activity-img="{% static 'DiaryTune/images/' %}{{ activities.1 }}.png"></div>
+          </div>
         </div>      
 
-        <!--일기 부분-->
-        <div class="today-diary">
-          <div class="blackbox"><div class="text-diary">오늘의 일기</div></div>
-        </div>
-
-        <div class="diary">
-          <div class="diarybox">
-              <div class="text-diary-content">
-                  {% if diary_content %}
-                      {{ diary_content }}
-                  {% else %}
-                      <p>작성된 일기가 없습니다.</p>
-                  {% endif %}
-              </div>
-            </div>
-        </div>
-          
-        <!--감정 부분-->
-        <div class="today-emotion">
-          <div class="blackbox"><div class="text-emotion">오늘의 감정</div></div>
-        </div>
-        
-        <div class="emotion">
-          <div class="emotionbox">
-            <div class="emotions">
-              <div class="hashtag1">#감정1</div>
-              <div class="hashtag2">#감정2</div>
-              <div class="hashtag3">#감정3</div>
-            </div>
-            <div class="musical-note"></div>
+        <!--Scroll 가능-->
+        <div class='scroll'>
+            <!--일기 부분-->
+          <div class="today-diary">
+            <div class="blackbox"><div class="text-diary">오늘의 일기</div></div>
           </div>
-        </div>
-          
-        <!--음악 부분-->
-        <div class="today-music">
-          <div class="blackbox"><div class="text-music">오늘의 노래</div></div>
-        </div>
 
-        <div class="music">
-          <div class="musicbox">
-            <img id="heart" class="heart" src="{% static 'DiaryTune/images/heart-1.png' %}" data-heart-on="{% static 'DiaryTune/images/heart-2.png' %}" data-heart-off="{% static 'DiaryTune/images/heart-1.png' %}" alt="Heart Image" />
-            <div class="music_description">노래 설명</div>
-            <div class="music_title">🎵가수 - 노래</div>
-            <div class="PLAY">
-              <div id = 'play-btn' class="PLAY-btn">
-                <img class="polygon" src={% static "DiaryTune/images/play.png" %} />
-                <div class="text-play">PLAY</div>
+          <div class="diary">
+            <div class="diarybox">
+                <div class="text-diary-content">
+                    {% if diary_content %}
+                        {{ diary_content }}
+                    {% else %}
+                        <p>작성된 일기가 없습니다.</p>
+                    {% endif %}
+                </div>
               </div>
+          </div>
+
+          <!--감정 부분-->
+          <div class="today-emotion">
+            <div class="blackbox"><div class="text-emotion">오늘의 감정</div></div>
+          </div>
+
+          <div class="emotion">
+            <div class="emotionbox">
+              <div class="emotions">
+                <div class="hashtag1">#감정1</div>
+                <div class="hashtag2">#감정2</div>
+                <div class="hashtag3">#감정3</div>
+              </div>
+              <div class="musical-note"></div>
             </div>
           </div>
-        </div>
 
+          <!--음악 부분-->
+          <div class="today-music">
+            <div class="blackbox"><div class="text-music">오늘의 노래</div></div>
+          </div>
+
+          <div class="music">
+            <div class="musicbox">
+              <img id="heart" class="heart" src="{% static 'DiaryTune/images/heart-1.png' %}" data-heart-on="{% static 'DiaryTune/images/heart-2.png' %}" data-heart-off="{% static 'DiaryTune/images/heart-1.png' %}" alt="Heart Image" />
+              <div class="music_description">[노래 설명] </div>
+              <div class="music_recommendation">[추천 이유] </div>
+              <div class="music_title">🎵가수 - 노래</div>
+              <div class="PLAY">
+                <div id = 'play-btn' class="PLAY-btn">
+                  <img class="polygon" src={% static "DiaryTune/images/play.png" %} />
+                  <div class="text-play">PLAY</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

@@ -9,7 +9,7 @@
 .screen .div {
   background-color: #f2f2f2;
   width: 375px;
-  height: 812px;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -22,6 +22,18 @@
   border-radius: 15px;
 }
 
+.screen .non-scroll {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 177px;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 10; /* 최상단에 표시 */
+  background: #f2f2f2;
+}
+
 /*상단바*/
 .screen .bar {
   position: absolute;
@@ -29,7 +41,7 @@
   flex-direction: column;
   width: 373px;
   height: 39px;
-  top: 49px;
+  top: 8px;
   left: 0;
 }
 .screen .date {
@@ -90,7 +102,7 @@
   position: absolute;
   width: 350px;
   height: 1px;
-  top: 234px;
+  top: 176px;
   left: 12px;
   background-color: #0000004c;
   opacity: 0.7;
@@ -103,7 +115,7 @@
   box-shadow: 0px 8px 20px #1d3a580d;
   position: absolute;
   height: 105px;
-  top: 111px;
+  top: 60px;
   background-color: #ffffff;
   border-radius: 7px;
 }
@@ -131,11 +143,11 @@
 
 .screen .weather_activity {
   width: 105px;
-  left: 107px;
+  left: 120px;
   box-shadow: var(--drop-shadow-100);
   position: absolute;
   height: 105px;
-  top: 111px;
+  top: 60px;
   background-color: #ffffff;
   border-radius: 7px;
   display: flex;
@@ -193,13 +205,30 @@
   border: 0.5px solid rgb(0 0 0 / 10%);
 }
 
+
+.screen .scroll {
+  display: flex;
+  flex-direction: column;
+  width: 381px;
+  height: 1000px;
+  align-items: flex-end;
+  gap: 33px;
+  position: absolute;
+  top: 183px;
+  max-height: 74vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease; /* 부드러운 전환 효과 */
+  opacity: 1; /* 기본 상태: 보임 */
+}
+
   /*일기 부분*/
 .screen .diary {
   position: absolute;
   width: 352px;
   height: 151px;
-  top: 288px;
-  left: 14px;
+  top: 44px;
+  left: 7px;
 }
 
 .screen .diarybox {
@@ -215,8 +244,7 @@
   position: absolute;
   width: 94px;
   height: 35px;
-  top: 250px;
-  left: 14px;
+  left: 7px;
 }
 .screen .text-diary {
   width: 74px;
@@ -254,15 +282,15 @@
 .screen .music {
   position: absolute;
   width: 354px;
-  height: 93px;
-  top: 698px;
-  left: 14px;
+  height: 150px;
+  top: 490px;
+  left: 7px;
 }
 
 .screen .musicbox {
   position: relative;
   width: 354px;
-  height: 93px;
+  height: 100%;
   background-color: #ffffff;
   border-radius: 7px;
   box-shadow: 0px 8px 20px #1d3a580d;
@@ -272,8 +300,8 @@
   position: absolute;
   width: 94px;
   height: 35px;
-  top: 660px;
-  left: 14px;
+  top: 445px;
+  left: 7px;
 }
 .screen .text-music {
   width: 74px;
@@ -304,9 +332,21 @@
   text-align: center;
 }
 .screen .music_description {
-  width: 266px;
-  top: 38px;
-  left: 47px;
+  width: 354px;
+  margin-top: 11%;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  letter-spacing: 0.20px;
+  line-height: 12.0px;
+  position: absolute;
+  text-align: center;
+}
+
+.screen .music_recommendation {
+  width: 354px;
+  margin-top: 22%;
   font-family: "Manrope-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
@@ -321,8 +361,8 @@
   position: absolute;
   width: 72px;
   height: 25px;
-  top: 68px;
-  left: 151px;
+  bottom: 2%;
+  left: 41%;
   cursor: pointer;
 }
 .screen .PLAY-btn{
@@ -368,8 +408,8 @@
   position: absolute;
   width: 350px;
   height: 159px;
-  top: 491px;
-  left: 14px;
+  top: 262px;
+  left: 7px;
   
 }
 .screen .emotionbox {
@@ -384,8 +424,8 @@
   position: absolute;
   width: 94px;
   height: 35px;
-  top: 453px;
-  left: 14px;
+  top: 219px;
+  left: 7px;
 } 
 .screen .text-emotion {
   width: 74px;
@@ -516,6 +556,19 @@
   border-radius: 15px;
 }
 
+/* non-scroll 영역 */
+.screen .non-scroll {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 181px;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 10;
+  background: #f2f2f2;
+}
+
 /*상단바*/
 .screen .bar {
   position: absolute;
@@ -583,7 +636,7 @@
   position: absolute;
   width: 100vw;
   height: 1px;
-  top: 25%;
+  top: 93%;
   left: 0vh;
   background-color: #0000004c;
   opacity: 0.7;
@@ -602,12 +655,12 @@ height: 13%;
 
 /* Summ Box */
 .screen .summ {
-  width: 39%;
+  width: 38%;
   box-shadow: 0px 8px 20px #1d3a580d;
   position: absolute;
-  height: 12.5%;
-  top: 11%;
-  left: 58%;
+  height: 51.5%;
+  top: 33%;
+  left: 59%;
   background-color: #ffffff;
   border-radius: 7px;
   display: flex;
@@ -637,13 +690,13 @@ top: 50%;
 .screen .weather_activity {
   width: 25%;
   height: 26%;
-  left: 31%;
+  left: -7%;
   box-shadow: var(--drop-shadow-100);
   position: relative;
-  height: 12.5%;
+  height: 49.5%;
   background-color: #ffffff;
   border-radius: 7px;
-  top: 11%;
+  top: 33%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -685,12 +738,26 @@ top: 56%;  /* 하단에 배치 */
 left: 56%;
 }
 
+/* scroll 영역 */
+.screen .scroll {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  gap: 6%;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
   /*일기 부분*/
 .screen .diary {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 19%;
-  top: 32%;
+  height: 22%;
+  top: 7%;
   left: 0px;
   align-items: center;
   display: flex;
@@ -710,9 +777,8 @@ left: 56%;
   position: absolute;
   width: 94px;
   height: 35px;
-  top: 26%;
-  left: 14px;
 }
+
 .screen .text-diary {
   width: 74px;
   height: 20px;
@@ -747,10 +813,10 @@ left: 56%;
 
 /*음악 부분*/
 .screen .music {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 19%;
-  top: 79%;
+  height: 25%;
+  top: 15%;
   left: 0px;
   display: flex;
   flex-direction: column;
@@ -777,9 +843,9 @@ left: 56%;
   position: absolute;
   width: 94px;
   height: 35px;
-  top: 74%;
-  left: 14px;
+  top: 59%;
 }
+
 .screen .text-music {
   width: 74px;
   height: 20px;
@@ -804,10 +870,22 @@ left: 56%;
   line-height: 21.6px;
   white-space: nowrap;
   text-align: center;
-  margin-bottom: 5px; /* 제목과 설명 사이 간격 */
+  margin-top: -80px; /* 제목과 설명 사이 간격 */
   position: static; /* 중앙 정렬을 위해 absolute 제거 */
 }
 .screen .music_description {
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  letter-spacing: 0.20px;
+  line-height: 12px;
+  text-align: center;
+  position: static;
+  margin-top: 36px;
+}
+
+.screen .music_recommendation {
   font-family: "Manrope-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
@@ -825,7 +903,6 @@ left: 56%;
   position: absolute;
   width: 72px;
   height: 25px;
-  top: 80%;                 /* 화면 세로 중앙 */
   left: 50%;                /* 화면 가로 중앙 */
   transform: translate(-50%, -50%); /* 정확히 중앙에 위치하도록 이동 */
   cursor: pointer;
@@ -873,15 +950,16 @@ left: 56%;
 
 /*감정 부분*/
 .screen .emotion{
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 19%;
-  top: 58%;
+  top: 13%;
   left: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .screen .emotionbox {
   position: relative;
   width: 96%;
@@ -894,9 +972,9 @@ left: 56%;
   position: absolute;
   width: 94px;
   height: 35px;
-  top: 52%;
-  left: 14px;
+  top: 32%;
 } 
+
 .screen .text-emotion {
   width: 74px;
   height: 20px;
