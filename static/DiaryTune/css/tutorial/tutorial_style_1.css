@@ -1,0 +1,602 @@
+.tutorial_1 {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.tutorial_1 .div {
+  background-color: #ffffff;
+  width: 375px;
+  height: 812px;
+  position: relative;
+}
+
+.tutorial_1 .calendar-month {
+  position: absolute;
+  width: 169px;
+  height: 51px;
+  top: 125px;
+  left: 106px;
+  filter: blur(1px);
+}
+
+.tutorial_1 .month_group {
+  position: absolute;
+  width: 83px;
+  height: 51px;
+  top: 0;
+  left: 42px;
+}
+
+.tutorial_1 .calendar {
+  display: flex;
+  width: 83.12px;
+  height: 25.1px;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  position: relative;
+  top: 26px;
+  left: 0;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.tutorial_1 .text {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.tutorial_1 .year_text {
+  position: absolute;
+  width: 59px;
+  height: 27px;
+  top: 0;
+  left: 11px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.tutorial_1 .left_vector {
+  position: absolute;
+  width: 13.06px;
+  height: 14.83px;
+  top: 32px;
+  left: 0px;
+}
+
+.tutorial_1 .right_vector {
+  position: absolute;
+  width: 13.06px;
+  height: 14.83px;
+  top: 32px;
+  right: 0;
+}
+
+.tutorial_1 .view {
+  position: absolute;
+  width: 278px;
+  height: 87px;
+  top: 650px;
+  left: 49px;
+  filter: blur(1px);
+}
+
+.tutorial_1 .overlap {
+  position: relative;
+  width: 276px;
+  height: 87px;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+}
+
+.tutorial_1 .overlap-2 {
+  position: absolute;
+  width: 225px;
+  height: 52px;
+  top: 29px;
+  left: 27px;
+}
+
+.tutorial_1 .sentiment {
+  position: absolute;
+  width: 222px;
+  height: 36px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_1 .sentiment_1 {
+  position: absolute;
+  width: 31px;
+  height: 36px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_1 .sentiment_group {
+  position: absolute;
+  width: 31px;
+  height: 37px;
+  top: -2px;
+}
+
+
+.tutorial_1 .sentiment_2 {
+  position: absolute;
+  width: 31px;
+  height: 37px;
+  top: 0;
+  left: 48px;
+}
+
+
+.tutorial_1 .sentiment_3 {
+  position: absolute;
+  width: 31px;
+  height: 37px;
+  top: 0;
+  left: 96px;
+}
+
+.tutorial_1 .sentiment_4 {
+  position: absolute;
+  width: 30px;
+  height: 37px;
+  top: 0;
+  left: 144px;
+}
+
+.tutorial_1 .sentiment_5 {
+  position: absolute;
+  width: 31px;
+  height: 37px;
+  top: 0;
+  left: 191px;
+}
+
+.tutorial_1 .tutorial_alarm {
+  width: 357px;
+  height: 21px;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+
+.tutorial_1 .tutorial_rectangle {
+  position: relative;
+  width: 355px;
+  height: 21px;
+  background-color: #FCDDEC;
+  top: 197%;
+  left: 3%;
+}
+
+.tutorial_1 .tutorial_text {
+  width: 47px;
+  height: 20px;
+  left: 154px;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 17%;
+}
+
+.tutorial_1 .count_text_1 {
+  width: 18px;
+  height: 16px;
+  top: 36px;
+  left: 2.5px;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_1 .count_text_2 {
+  width: 18px;
+  height: 16px;
+  top: 36px;
+  left: 50.5px;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_1 .count_text_3 {
+  width: 18px;
+  height: 16px;
+  top: 36px;
+  left: 98.5px;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_1 .count_text_4 {
+  width: 18px;
+  height: 16px;
+  top: 36px;
+  left: 146.5px;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_1 .count_text_5 {
+  width: 18px;
+  height: 16px;
+  top: 36px;
+  left: 194.5px;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_1 .text-wrapper-7 {
+  position: absolute;
+  width: 75px;
+  height: 13px;
+  top: 7px;
+  left: 102px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tutorial_1 .music {
+  position: absolute;
+  width: 74px;
+  height: 69px;
+  top: 43px;
+  left: 150px;
+  filter: blur(1px);
+}
+
+.tutorial_1 .calendar-week {
+  position: absolute;
+  width: 361px;
+  height: 28px;
+  top: 197px;
+  left: 6px;
+  filter: blur(1px);
+}
+
+.tutorial_1 .days-of-week {
+  display: flex;
+  width: 361px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px 4px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.tutorial_1 .div-wrapper-2 {
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  height: 24px;
+  background-color: #ffffff;
+}
+
+.tutorial_1 .text-wrapper-8 {
+  position: absolute;
+  height: 15px;
+  top: 3px;
+  left: 16px;
+  opacity: 0.5;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--black);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.tutorial_1 .sun {
+  position: absolute;
+  height: 15px;
+  top: 3px;
+  left: 17px;
+  opacity: 0.5;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--black);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.tutorial_1 .sun-2 {
+  position: absolute;
+  height: 15px;
+  top: 3px;
+  left: 19px;
+  opacity: 0.5;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--black);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.tutorial_1 .sun-3 {
+  position: absolute;
+  height: 15px;
+  top: 3px;
+  left: 18px;
+  opacity: 0.5;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--black);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.tutorial_1 .calendar-date {
+  position: absolute;
+  width: 359px;
+  height: 388px;
+  top: 225px;
+  left: 8px;
+}
+
+.tutorial_1 .sun-4 {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 0;
+  filter: blur(1px);
+}
+
+.tutorial_1 .group-10 {
+  position: absolute;
+  width: 49px;
+  height: 72px;
+  top: 79px;
+  left: 0;
+  filter: blur(1px);
+}
+
+.tutorial_1 .overlap-group-3 {
+  position: relative;
+  width: 47px;
+  height: 72px;
+}
+
+.tutorial_1 .rectangle {
+  position: absolute;
+  width: 47px;
+  height: 72px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+  transform: rotate(180deg);
+}
+
+.tutorial_1 .text-wrapper-9 {
+  position: absolute;
+  width: 17px;
+  height: 11px;
+  top: 3px;
+  left: 15px;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+  white-space: nowrap;
+}
+
+.tutorial_1 .group-11 {
+  position: absolute;
+  width: 49px;
+  height: 72px;
+  top: 0;
+  left: 0;
+  filter: blur(1px);
+}
+
+.tutorial_1 .group-12 {
+  position: absolute;
+  width: 49px;
+  height: 72px;
+  top: 237px;
+  left: 0;
+  filter: blur(1px);
+}
+
+.tutorial_1 .text-wrapper-10 {
+  width: 17px;
+  height: 11px;
+  top: 3px;
+  left: 14px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_1 .group-13 {
+  position: absolute;
+  width: 49px;
+  height: 72px;
+  top: 316px;
+  left: 0;
+  filter: blur(1px);
+}
+
+.tutorial_1 .group-14 {
+  position: absolute;
+  width: 49px;
+  height: 72px;
+  top: 158px;
+  left: 0;
+}
+
+.tutorial_1 .tutorial_group {
+  position: absolute;
+  width: 49px;
+  height: 72px;
+  top: 158px;
+  left: 0;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+@keyframes pulse {
+  0%, 100% {
+    box-shadow:0 0 10px #fcddec;
+  }
+  50% {
+    transform: scale(1.06); /* 확대 효과 */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* 더 강한 반짝임 */
+  }
+}
+
+.tutorial_1 .rectangle2 {
+  position: absolute;
+  width: 47px;
+  height: 72px;
+  top: 0;
+  left: 0;
+  background-color: #dedede;
+  border: 1px solid;
+  border-color: #000000;
+  transform: rotate(180deg);
+}
+
+.tutorial_1 .mon {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 52px;
+  filter: blur(1px);
+}
+
+.tutorial_1 .tue {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 104px;
+}
+
+.tutorial_1 .wed {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 156px;
+  filter: blur(1px);
+}
+
+.tutorial_1 .thu {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 208px;
+  filter: blur(1px);
+}
+
+.tutorial_1 .fri {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 260px;
+  filter: blur(1px);
+}
+
+.tutorial_1 .sat {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 312px;
+  filter: blur(1px);
+}
+
+.tutorial_1 .image {
+  position: absolute;
+  width: 243px;
+  height: 69px;
+  top: 330px;
+  left: 118px;
+}
+
+.tutorial_1 .arrow-right-circle {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 370px;
+  left: 312px;
+}

@@ -1,0 +1,1577 @@
+.tutorial_5 {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.tutorial_5 .div {
+  background-color: #ffffff;
+  width: 375px;
+  height: 812px;
+  position: relative;
+}
+
+.tutorial_5 .calendar-month {
+  position: absolute;
+  width: 169px;
+  height: 51px;
+  top: 125px;
+  left: 106px;
+  filter: blur(1px);
+}
+
+.tutorial_5 .overlap-group {
+  position: absolute;
+  width: 83px;
+  height: 51px;
+  top: 0;
+  left: 42px;
+}
+
+.tutorial_5 .calendar {
+  display: flex;
+  width: 83px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  position: absolute;
+  top: 26px;
+  left: 0;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.tutorial_5 .text {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.tutorial_5 .text-wrapper {
+  position: absolute;
+  width: 59px;
+  height: 27px;
+  top: 0;
+  left: 11px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.tutorial_5 .vector {
+  position: absolute;
+  width: 13px;
+  height: 15px;
+  top: 32px;
+  left: 154px;
+}
+
+.tutorial_5 .img {
+  position: absolute;
+  width: 13px;
+  height: 15px;
+  top: 32px;
+  left: 0;
+}
+
+.tutorial_5 .view {
+  position: absolute;
+  width: 278px;
+  height: 87px;
+  top: 650px;
+  left: 49px;
+}
+
+.tutorial_5 .overlap {
+  position: relative;
+  width: 276px;
+  height: 87px;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+}
+
+.tutorial_5 .overlap-2 {
+  position: absolute;
+  width: 225px;
+  height: 52px;
+  top: 29px;
+  left: 27px;
+}
+
+.tutorial_5 .sentiment {
+  position: absolute;
+  width: 222px;
+  height: 36px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_5 .overlap-group-wrapper {
+  position: absolute;
+  width: 31px;
+  height: 36px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_5 .overlap-group-2 {
+  position: relative;
+  width: 32px;
+  height: 38px;
+  top: -2px;
+}
+
+.tutorial_5 .group {
+  position: absolute;
+  width: 28px;
+  height: 27px;
+  top: 11px;
+  left: 0;
+  background-color: #030000;
+  border-radius: 13.78px / 13.66px;
+}
+
+.tutorial_5 .group-2 {
+  position: absolute;
+  width: 17px;
+  height: 11px;
+  top: 9px;
+  left: 6px;
+}
+
+.tutorial_5 .group-3 {
+  position: absolute;
+  width: 11px;
+  height: 17px;
+  top: 0;
+  left: 21px;
+}
+
+.tutorial_5 .overlap-wrapper {
+  position: absolute;
+  width: 31px;
+  height: 36px;
+  top: 0;
+  left: 48px;
+}
+
+.tutorial_5 .group-4 {
+  position: absolute;
+  width: 13px;
+  height: 8px;
+  top: 21px;
+  left: 7px;
+}
+
+.tutorial_5 .ellipse {
+  left: 0;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  background-color: #ffffff;
+  border-radius: 1.17px / 1.16px;
+  border: 1px solid;
+}
+
+.tutorial_5 .ellipse-2 {
+  left: 11px;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  background-color: #ffffff;
+  border-radius: 1.17px / 1.16px;
+  border: 1px solid;
+}
+
+.tutorial_5 .line {
+  position: absolute;
+  width: 7px;
+  height: 3px;
+  top: 6px;
+  left: 3px;
+}
+
+.tutorial_5 .div-wrapper {
+  position: absolute;
+  width: 31px;
+  height: 36px;
+  top: 0;
+  left: 96px;
+}
+
+.tutorial_5 .group-5 {
+  position: relative;
+  width: 13px;
+  height: 8px;
+  top: 11px;
+  left: 7px;
+}
+
+.tutorial_5 .line-2 {
+  position: absolute;
+  width: 6px;
+  height: 1px;
+  top: 7px;
+  left: 4px;
+  object-fit: cover;
+}
+
+.tutorial_5 .line-3 {
+  position: absolute;
+  width: 3px;
+  height: 17px;
+  top: 0;
+  left: 22px;
+}
+
+.tutorial_5 .vector-2 {
+  position: absolute;
+  width: 11px;
+  height: 16px;
+  top: 0;
+  left: 21px;
+}
+
+.tutorial_5 .sentiment-2 {
+  position: absolute;
+  width: 30px;
+  height: 36px;
+  top: 0;
+  left: 144px;
+}
+
+.tutorial_5 .group-6 {
+  position: relative;
+  width: 13px;
+  height: 8px;
+  top: 10px;
+  left: 7px;
+}
+
+.tutorial_5 .group-wrapper {
+  position: absolute;
+  width: 13px;
+  height: 2px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_5 .group-7 {
+  position: relative;
+  height: 2px;
+}
+
+.tutorial_5 .line-4 {
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  top: 6px;
+  left: 2px;
+}
+
+.tutorial_5 .group-8 {
+  position: absolute;
+  width: 11px;
+  height: 17px;
+  top: 0;
+  left: 20px;
+}
+
+.tutorial_5 .sentiment-3 {
+  position: absolute;
+  width: 31px;
+  height: 36px;
+  top: 0;
+  left: 191px;
+}
+
+.tutorial_5 .group-9 {
+  position: absolute;
+  width: 14px;
+  height: 12px;
+  top: 8px;
+  left: 7px;
+}
+
+.tutorial_5 .count {
+  position: absolute;
+  width: 220px;
+  height: 16px;
+  top: 36px;
+  left: 5px;
+}
+
+.tutorial_5 .text-wrapper-2 {
+  width: 18px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_5 .text-wrapper-3 {
+  width: 18px;
+  height: 16px;
+  top: 0;
+  left: 48px;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_5 .text-wrapper-4 {
+  width: 18px;
+  height: 16px;
+  top: 0;
+  left: 96px;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_5 .text-wrapper-5 {
+  width: 18px;
+  height: 16px;
+  top: 0;
+  left: 144px;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_5 .text-wrapper-6 {
+  width: 18px;
+  height: 16px;
+  top: 0;
+  left: 192px;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_5 .text-wrapper-7 {
+  position: absolute;
+  width: 75px;
+  height: 13px;
+  top: 7px;
+  left: 102px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.tutorial_5 .overlap-3 {
+  position: absolute;
+  width: 357px;
+  height: 70px;
+  top: 42px;
+  left: 10px;
+}
+
+.tutorial_5 .music {
+  position: absolute;
+  width: 74px;
+  height: 69px;
+  top: 1px;
+  left: 140px;
+  filter: blur(1px);
+}
+
+.tutorial_5 .overlap-wrapper-2 {
+  width: 357px;
+  height: 21px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.tutorial_5 .overlap-4 {
+  position: relative;
+  width: 355px;
+  height: 21px;
+  background-color: var(--fuschia-60);
+}
+
+.tutorial_5 .text-wrapper-8 {
+  width: 47px;
+  height: 20px;
+  left: 154px;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 17%;
+}
+
+.tutorial_5 .calendar-week {
+  position: absolute;
+  width: 361px;
+  height: 28px;
+  top: 197px;
+  left: 6px;
+  filter: blur(1px);
+}
+
+.tutorial_5 .days-of-week {
+  display: flex;
+  width: 361px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px 4px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.tutorial_5 .div-wrapper-2 {
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  height: 24px;
+  background-color: #ffffff;
+}
+
+.tutorial_5 .text-wrapper-9 {
+  position: absolute;
+  height: 15px;
+  top: 3px;
+  left: 16px;
+  opacity: 0.5;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--black);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.tutorial_5 .sun {
+  position: absolute;
+  height: 15px;
+  top: 3px;
+  left: 17px;
+  opacity: 0.5;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--black);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.tutorial_5 .sun-2 {
+  position: absolute;
+  height: 15px;
+  top: 3px;
+  left: 19px;
+  opacity: 0.5;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--black);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.tutorial_5 .sun-3 {
+  position: absolute;
+  height: 15px;
+  top: 3px;
+  left: 18px;
+  opacity: 0.5;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--black);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.tutorial_5 .overlap-5 {
+  position: absolute;
+  width: 359px;
+  height: 388px;
+  top: 225px;
+  left: 8px;
+  filter: blur(1px);
+}
+
+.tutorial_5 .calendar-date {
+  position: absolute;
+  width: 359px;
+  height: 388px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_5 .sun-4 {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_5 .group-10 {
+  position: absolute;
+  width: 49px;
+  height: 72px;
+  top: 79px;
+  left: 0;
+}
+
+.tutorial_5 .overlap-group-3 {
+  position: relative;
+  width: 47px;
+  height: 72px;
+}
+
+.tutorial_5 .rectangle {
+  width: 47px;
+  height: 72px;
+  top: 0;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+  transform: rotate(180deg);
+  position: absolute;
+  left: 0;
+}
+
+.tutorial_5 .text-wrapper-10 {
+  width: 17px;
+  height: 11px;
+  top: 3px;
+  left: 15px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_5 .group-11 {
+  position: absolute;
+  width: 49px;
+  height: 72px;
+  top: 0;
+  left: 0;
+}
+
+.tutorial_5 .group-12 {
+  position: absolute;
+  width: 49px;
+  height: 72px;
+  top: 237px;
+  left: 0;
+}
+
+.tutorial_5 .text-wrapper-11 {
+  width: 17px;
+  height: 11px;
+  top: 3px;
+  left: 14px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Lato-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12.5px;
+}
+
+.tutorial_5 .group-13 {
+  position: absolute;
+  width: 49px;
+  height: 72px;
+  top: 316px;
+  left: 0;
+}
+
+.tutorial_5 .group-14 {
+  position: absolute;
+  width: 49px;
+  height: 72px;
+  top: 158px;
+  left: 0;
+}
+
+.tutorial_5 .mon {
+  left: 52px;
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+}
+
+.tutorial_5 .mon-2 {
+  left: 104px;
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+}
+
+.tutorial_5 .wed {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 156px;
+}
+
+.tutorial_5 .thu {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 208px;
+}
+
+.tutorial_5 .fri {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 260px;
+}
+
+.tutorial_5 .sat {
+  position: absolute;
+  width: 47px;
+  height: 388px;
+  top: 0;
+  left: 312px;
+}
+
+.tutorial_5 .view-2 {
+  position: absolute;
+  width: 31px;
+  height: 36px;
+  top: 181px;
+  left: 113px;
+}
+
+.tutorial_5 .view-3 {
+  position: absolute;
+  width: 286px;
+  height: 65px;
+  top: 738px;
+  left: 38px;
+}
+
+.tutorial_5 .overlap-6 {
+  position: relative;
+  width: 282px;
+  height: 64px;
+  bottom: 225%;
+  left: 10%
+}
+
+.tutorial_5 .rectangle-2 {
+  width: 270px;
+  height: 46px;
+  top: 8px;
+  background-color: #ffd8e4;
+  border-radius: 7px;
+  transform: rotate(179.90deg);
+  position: absolute;
+  left: 0;
+}
+
+.tutorial_5 .text-wrapper-12 {
+  position: absolute;
+  width: 26px;
+  height: 21px;
+  top: 10px;
+  left: 8px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #5f5f5f;
+  font-size: 10px;
+  letter-spacing: 0.70px;
+  line-height: 14px;
+}
+
+.tutorial_5 .polygon {
+  position: absolute;
+  width: 9px;
+  height: 12px;
+  top: 0;
+  left: 238px;
+}
+
+.tutorial_5 .p {
+  position: absolute;
+  width: 260px;
+  height: 22px;
+  top: 12px;
+  left: 7px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 600;
+  color: #3e3939;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: revert;
+}
+
+.tutorial_5 .arrow-right-circle {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 44px;
+  left: 233px;
+}
+
+@media (max-width:800px){
+  .tutorial_5 {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .tutorial_5 .div {
+    background-color: #ffffff;
+    width: 375px;
+    height: 812px;
+    position: relative;
+  }
+  
+  .tutorial_5 .calendar-month {
+    position: absolute;
+    width: 169px;
+    height: 51px;
+    top: 125px;
+    left: 106px;
+    filter: blur(1px);
+  }
+  
+  .tutorial_5 .overlap-group {
+    position: absolute;
+    width: 83px;
+    height: 51px;
+    top: 0;
+    left: 42px;
+  }
+  
+  .tutorial_5 .calendar {
+    display: flex;
+    width: 83px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    position: absolute;
+    top: 26px;
+    left: 0;
+    background-color: #000000;
+    border-radius: 4px;
+  }
+  
+  .tutorial_5 .text {
+    position: relative;
+    width: fit-content;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .tutorial_5 .text-wrapper {
+    position: absolute;
+    width: 59px;
+    height: 27px;
+    top: 0;
+    left: 11px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .tutorial_5 .vector {
+    position: absolute;
+    width: 13px;
+    height: 15px;
+    top: 32px;
+    left: 154px;
+  }
+  
+  .tutorial_5 .img {
+    position: absolute;
+    width: 13px;
+    height: 15px;
+    top: 32px;
+    left: 0;
+  }
+  
+  .tutorial_5 .view {
+    position: absolute;
+    width: 278px;
+    height: 87px;
+    top: 650px;
+    left: 49px;
+  }
+  
+  .tutorial_5 .overlap {
+    position: relative;
+    width: 276px;
+    height: 87px;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+  }
+  
+  .tutorial_5 .overlap-2 {
+    position: absolute;
+    width: 225px;
+    height: 52px;
+    top: 29px;
+    left: 27px;
+  }
+  
+  .tutorial_5 .sentiment {
+    position: absolute;
+    width: 222px;
+    height: 36px;
+    top: 0;
+    left: 0;
+  }
+  
+  .tutorial_5 .overlap-group-wrapper {
+    position: absolute;
+    width: 31px;
+    height: 36px;
+    top: 0;
+    left: 0;
+  }
+  
+  .tutorial_5 .overlap-group-2 {
+    position: relative;
+    width: 32px;
+    height: 38px;
+    top: -2px;
+  }
+  
+  .tutorial_5 .group {
+    position: absolute;
+    width: 28px;
+    height: 27px;
+    top: 11px;
+    left: 0;
+    background-color: #030000;
+    border-radius: 13.78px / 13.66px;
+  }
+  
+  .tutorial_5 .group-2 {
+    position: absolute;
+    width: 17px;
+    height: 11px;
+    top: 9px;
+    left: 6px;
+  }
+  
+  .tutorial_5 .group-3 {
+    position: absolute;
+    width: 11px;
+    height: 17px;
+    top: 0;
+    left: 21px;
+  }
+  
+  .tutorial_5 .overlap-wrapper {
+    position: absolute;
+    width: 31px;
+    height: 36px;
+    top: 0;
+    left: 48px;
+  }
+  
+  .tutorial_5 .group-4 {
+    position: absolute;
+    width: 13px;
+    height: 8px;
+    top: 21px;
+    left: 7px;
+  }
+  
+  .tutorial_5 .ellipse {
+    left: 0;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    top: 0;
+    background-color: #ffffff;
+    border-radius: 1.17px / 1.16px;
+    border: 1px solid;
+  }
+  
+  .tutorial_5 .ellipse-2 {
+    left: 11px;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    top: 0;
+    background-color: #ffffff;
+    border-radius: 1.17px / 1.16px;
+    border: 1px solid;
+  }
+  
+  .tutorial_5 .line {
+    position: absolute;
+    width: 7px;
+    height: 3px;
+    top: 6px;
+    left: 3px;
+  }
+  
+  .tutorial_5 .div-wrapper {
+    position: absolute;
+    width: 31px;
+    height: 36px;
+    top: 0;
+    left: 96px;
+  }
+  
+  .tutorial_5 .group-5 {
+    position: relative;
+    width: 13px;
+    height: 8px;
+    top: 11px;
+    left: 7px;
+  }
+  
+  .tutorial_5 .line-2 {
+    position: absolute;
+    width: 6px;
+    height: 1px;
+    top: 7px;
+    left: 4px;
+    object-fit: cover;
+  }
+  
+  .tutorial_5 .line-3 {
+    position: absolute;
+    width: 3px;
+    height: 17px;
+    top: 0;
+    left: 22px;
+  }
+  
+  .tutorial_5 .vector-2 {
+    position: absolute;
+    width: 11px;
+    height: 16px;
+    top: 0;
+    left: 21px;
+  }
+  
+  .tutorial_5 .sentiment-2 {
+    position: absolute;
+    width: 30px;
+    height: 36px;
+    top: 0;
+    left: 144px;
+  }
+  
+  .tutorial_5 .group-6 {
+    position: relative;
+    width: 13px;
+    height: 8px;
+    top: 10px;
+    left: 7px;
+  }
+  
+  .tutorial_5 .group-wrapper {
+    position: absolute;
+    width: 13px;
+    height: 2px;
+    top: 0;
+    left: 0;
+  }
+  
+  .tutorial_5 .group-7 {
+    position: relative;
+    height: 2px;
+  }
+  
+  .tutorial_5 .line-4 {
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    top: 6px;
+    left: 2px;
+  }
+  
+  .tutorial_5 .group-8 {
+    position: absolute;
+    width: 11px;
+    height: 17px;
+    top: 0;
+    left: 20px;
+  }
+  
+  .tutorial_5 .sentiment-3 {
+    position: absolute;
+    width: 31px;
+    height: 36px;
+    top: 0;
+    left: 191px;
+  }
+  
+  .tutorial_5 .group-9 {
+    position: absolute;
+    width: 14px;
+    height: 12px;
+    top: 8px;
+    left: 7px;
+  }
+  
+  .tutorial_5 .count {
+    position: absolute;
+    width: 220px;
+    height: 16px;
+    top: 36px;
+    left: 5px;
+  }
+  
+  .tutorial_5 .text-wrapper-2 {
+    width: 18px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 12.5px;
+  }
+  
+  .tutorial_5 .text-wrapper-3 {
+    width: 18px;
+    height: 16px;
+    top: 0;
+    left: 48px;
+    position: absolute;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 12.5px;
+  }
+  
+  .tutorial_5 .text-wrapper-4 {
+    width: 18px;
+    height: 16px;
+    top: 0;
+    left: 96px;
+    position: absolute;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 12.5px;
+  }
+  
+  .tutorial_5 .text-wrapper-5 {
+    width: 18px;
+    height: 16px;
+    top: 0;
+    left: 144px;
+    position: absolute;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 12.5px;
+  }
+  
+  .tutorial_5 .text-wrapper-6 {
+    width: 18px;
+    height: 16px;
+    top: 0;
+    left: 192px;
+    position: absolute;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 12.5px;
+  }
+  
+  .tutorial_5 .text-wrapper-7 {
+    position: absolute;
+    width: 75px;
+    height: 13px;
+    top: 7px;
+    left: 102px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 11px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .tutorial_5 .overlap-3 {
+    position: absolute;
+    width: 357px;
+    height: 70px;
+    top: 42px;
+    left: 10px;
+  }
+  
+  .tutorial_5 .music {
+    position: absolute;
+    width: 74px;
+    height: 69px;
+    top: 1px;
+    left: 140px;
+    filter: blur(1px);
+  }
+  
+  .tutorial_5 .overlap-wrapper-2 {
+    width: 357px;
+    height: 21px;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+  
+  .tutorial_5 .overlap-4 {
+    position: relative;
+    width: 355px;
+    height: 21px;
+    background-color: var(--fuschia-60);
+  }
+  
+  .tutorial_5 .text-wrapper-8 {
+    width: 47px;
+    height: 20px;
+    left: 154px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 17%;
+  }
+  
+  .tutorial_5 .calendar-week {
+    position: absolute;
+    width: 361px;
+    height: 28px;
+    top: 197px;
+    left: 6px;
+    filter: blur(1px);
+  }
+  
+  .tutorial_5 .days-of-week {
+    display: flex;
+    width: 361px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px 4px;
+    position: relative;
+    background-color: #ffffff;
+  }
+  
+  .tutorial_5 .div-wrapper-2 {
+    position: relative;
+    flex: 1;
+    flex-grow: 1;
+    height: 24px;
+    background-color: #ffffff;
+  }
+  
+  .tutorial_5 .text-wrapper-9 {
+    position: absolute;
+    height: 15px;
+    top: 3px;
+    left: 16px;
+    opacity: 0.5;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--black);
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 15px;
+    white-space: nowrap;
+  }
+  
+  .tutorial_5 .sun {
+    position: absolute;
+    height: 15px;
+    top: 3px;
+    left: 17px;
+    opacity: 0.5;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--black);
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 15px;
+    white-space: nowrap;
+  }
+  
+  .tutorial_5 .sun-2 {
+    position: absolute;
+    height: 15px;
+    top: 3px;
+    left: 19px;
+    opacity: 0.5;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--black);
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 15px;
+    white-space: nowrap;
+  }
+  
+  .tutorial_5 .sun-3 {
+    position: absolute;
+    height: 15px;
+    top: 3px;
+    left: 18px;
+    opacity: 0.5;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--black);
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 15px;
+    white-space: nowrap;
+  }
+  
+  .tutorial_5 .overlap-5 {
+    position: absolute;
+    width: 359px;
+    height: 388px;
+    top: 225px;
+    left: 8px;
+    filter: blur(1px);
+  }
+  
+  .tutorial_5 .calendar-date {
+    position: absolute;
+    width: 359px;
+    height: 388px;
+    top: 0;
+    left: 0;
+  }
+  
+  .tutorial_5 .sun-4 {
+    position: absolute;
+    width: 47px;
+    height: 388px;
+    top: 0;
+    left: 0;
+  }
+  
+  .tutorial_5 .group-10 {
+    position: absolute;
+    width: 49px;
+    height: 72px;
+    top: 79px;
+    left: 0;
+  }
+  
+  .tutorial_5 .overlap-group-3 {
+    position: relative;
+    width: 47px;
+    height: 72px;
+  }
+  
+  .tutorial_5 .rectangle {
+    width: 47px;
+    height: 72px;
+    top: 0;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    transform: rotate(180deg);
+    position: absolute;
+    left: 0;
+  }
+  
+  .tutorial_5 .text-wrapper-10 {
+    width: 17px;
+    height: 11px;
+    top: 3px;
+    left: 15px;
+    white-space: nowrap;
+    position: absolute;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 12.5px;
+  }
+  
+  .tutorial_5 .group-11 {
+    position: absolute;
+    width: 49px;
+    height: 72px;
+    top: 0;
+    left: 0;
+  }
+  
+  .tutorial_5 .group-12 {
+    position: absolute;
+    width: 49px;
+    height: 72px;
+    top: 237px;
+    left: 0;
+  }
+  
+  .tutorial_5 .text-wrapper-11 {
+    width: 17px;
+    height: 11px;
+    top: 3px;
+    left: 14px;
+    white-space: nowrap;
+    position: absolute;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 12.5px;
+  }
+  
+  .tutorial_5 .group-13 {
+    position: absolute;
+    width: 49px;
+    height: 72px;
+    top: 316px;
+    left: 0;
+  }
+  
+  .tutorial_5 .group-14 {
+    position: absolute;
+    width: 49px;
+    height: 72px;
+    top: 158px;
+    left: 0;
+  }
+  
+  .tutorial_5 .mon {
+    left: 52px;
+    position: absolute;
+    width: 47px;
+    height: 388px;
+    top: 0;
+  }
+  
+  .tutorial_5 .mon-2 {
+    left: 104px;
+    position: absolute;
+    width: 47px;
+    height: 388px;
+    top: 0;
+  }
+  
+  .tutorial_5 .wed {
+    position: absolute;
+    width: 47px;
+    height: 388px;
+    top: 0;
+    left: 156px;
+  }
+  
+  .tutorial_5 .thu {
+    position: absolute;
+    width: 47px;
+    height: 388px;
+    top: 0;
+    left: 208px;
+  }
+  
+  .tutorial_5 .fri {
+    position: absolute;
+    width: 47px;
+    height: 388px;
+    top: 0;
+    left: 260px;
+  }
+  
+  .tutorial_5 .sat {
+    position: absolute;
+    width: 47px;
+    height: 388px;
+    top: 0;
+    left: 312px;
+  }
+  
+  .tutorial_5 .view-2 {
+    position: absolute;
+    width: 31px;
+    height: 36px;
+    top: 181px;
+    left: 113px;
+  }
+  
+  .tutorial_5 .view-3 {
+    position: absolute;
+    width: 286px;
+    height: 65px;
+    top: 738px;
+    left: 38px;
+  }
+  
+  .tutorial_5 .overlap-6 {
+    position: relative;
+    width: 282px;
+    height: 64px;
+    bottom: 225%;
+    left: 10%
+  }
+  
+  .tutorial_5 .rectangle-2 {
+    width: 270px;
+    height: 46px;
+    top: 8px;
+    background-color: #ffd8e4;
+    border-radius: 7px;
+    transform: rotate(179.90deg);
+    position: absolute;
+    left: 0;
+  }
+  
+  .tutorial_5 .text-wrapper-12 {
+    position: absolute;
+    width: 26px;
+    height: 21px;
+    top: 10px;
+    left: 8px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #5f5f5f;
+    font-size: 10px;
+    letter-spacing: 0.70px;
+    line-height: 14px;
+  }
+  
+  .tutorial_5 .polygon {
+    position: absolute;
+    width: 9px;
+    height: 12px;
+    top: 0;
+    left: 238px;
+  }
+  
+  .tutorial_5 .p {
+    position: absolute;
+    width: 260px;
+    height: 22px;
+    top: 12px;
+    left: 7px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 600;
+    color: #3e3939;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: revert;
+  }
+  
+  .tutorial_5 .arrow-right-circle {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top: 44px;
+    left: 233px;
+  }
+}

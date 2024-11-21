@@ -1,0 +1,82 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href={% static "DiaryTune/css/main/main_styleguide.css"%}  />
+    <link rel="stylesheet" href={% static "DiaryTune/css/main/main_style.css"%} />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+  </head>
+  <link rel="icon"  sizes="32x32" href={% static "DiaryTune/images/music.ico" %}>
+  <body style="margin: 0;">
+    <div class="screen">
+      <div class="div">
+        <div class="calendar-month">
+          <div class="month_group">
+            <div class="calendar">
+              <div class="month_text" id="month-text">October</div>
+              <div class="year_text" id="year-text">2024</div>
+              <div class="dates" id="dates"></div>
+            </div>
+        <!-- 날짜 이동 -->
+        </div>
+        <img class="left_vector" id="prev" src={% static "DiaryTune/images/left_vector.png" %}  style="cursor: pointer;" />
+        <img class="right_vector" id="next" src={% static "DiaryTune/images/right_vector.png" %} style="cursor: pointer;"/>
+        </div>
+        <!-- 이달의 음표 -->
+        <div class="month_sentiment_group">
+          <div class="month_sentiment">
+            <div class="sentiment">
+              <div class="sentiment_1">
+              <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_1.png" %}/></div>
+              </div>
+              <div class="sentiment_2">
+                <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_2.png" %}/></div> 
+              </div>
+              <div class="sentiment_3">
+                  <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_3.png" %}/></div> 
+              </div>
+              <div class="sentiment_4">
+                  <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_4.png" %}/></div>
+              </div>
+              <div class="sentiment_5">
+                  <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_5.png" %}/></div>
+              </div>
+            </div>
+          <div class="count_text_1">0</div>
+          <div class="count_text_2">0</div>
+          <div class="count_text_3">0</div>
+          <div class="count_text_4">0</div>
+          <div class="count_text_5">0</div>
+          </div>
+          <div class="sentiment_text">이달의 음표들🎵</div>
+        <!-- 달력 -->
+        </div>
+        <img class="music" src={% static "DiaryTune/images/music.png" %} onclick="location.href='{% url 'main' %}'" style="cursor: pointer;"/>
+        <div class="calendar-week">
+          <div class="days-of-week">
+            <div class="day_group"><div class="day_text">Sun</div></div>
+            <div class="day_group"><div class="day_text">Mon</div></div>
+            <div class="day_group"><div class="day_text">Tue</div></div>
+            <div class="day_group"><div class="day_text">Wed</div></div>
+            <div class="day_group"><div class="day_text">Thu</div></div>
+            <div class="day_group"><div class="day_text">Fri</div></div>
+            <div class="day_group"><div class="day_text">Sat</div></div>
+          </div>
+        </div>
+        <!-- Tutorial 바로가기 -->
+        <div class="tutorial">
+            <div class="tutorial_rectangle" onclick="location.href='{% url 'tutorial' %}'" style="cursor: pointer;">
+                <div class="tutorial_text">Tutorial<br>바로 가기</div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src={% static "DiaryTune/js/main/main.js" %}></script> 
+  </body>
+</html>

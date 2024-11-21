@@ -1,0 +1,897 @@
+.div-wrapper {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.div-wrapper .div {
+  background-color: #f2f2f2;
+  /* overflow-x: auto;
+  overflow-y: hidden; */
+  overflow: hidden;
+  width: 375px;
+  height: 100vh;
+  position: relative;
+}
+
+
+.div-wrapper .div-2 {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  height: 1000px;
+  align-items: flex-end;
+  gap: 33px;
+  /* padding: 0; */
+  position: absolute;
+  top: 73px;
+  left: -31px;
+  max-height: 759px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.div-wrapper .activity_div {
+  position: relative;
+  width: 332px;
+  height: 183.3px;
+}
+
+.div-wrapper .today_activity {
+  position: absolute;
+  width: 332px;
+  height: 138px;
+  top: 45px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 7px;
+  display: flex;
+  column-gap: 11%; 
+}
+
+.div-wrapper .activity_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  top: 24%;
+  left: 3%;
+}
+
+.div-wrapper .activity_item label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-wrapper .activity_item input {
+  display: none; /* 체크박스를 숨깁니다. */
+}
+
+.div-wrapper .rest_img, .div-wrapper .health_img, .div-wrapper .study_img, .div-wrapper .work_img, .div-wrapper .shopping_img {
+  width: 49px;
+  height: 49px;
+}
+
+.div-wrapper .rest_text, .div-wrapper .health_text, .div-wrapper .study_text, .div-wrapper .work_text, .div-wrapper .shopping_text {
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  top: 8vh;
+}
+
+.div-wrapper .item_rectangle {
+  position: relative;
+  width: 92px;
+  height: 37px;
+  background-color: #333333;
+  border-radius: 16px;
+}
+
+.div-wrapper .item_text {
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  top: 9px;
+  left: 5px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .weather_div {
+  position: relative;
+  width: 332px;
+  height: 183.3px;
+  top: -2%;
+}
+
+.div-wrapper .today_weather {
+  position: absolute;
+  width: 332px;
+  height: 174px;
+  top: 47px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 7px;
+}
+
+.div-wrapper .weather_row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+  margin-top: 10px;
+  width: 99%;
+  height: 43%;
+}
+
+.div-wrapper .weather_item {
+  text-align: center;
+  width: 23%; /* Each item occupies 1/4 of the row */
+}
+
+.div-wrapper .weather_item input {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+}
+
+.div-wrapper .weather_item img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+
+.div-wrapper .weather_text {
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.div-wrapper .sunny_img, .div-wrapper .cloudy_img, .div-wrapper .rainy_img, .div-wrapper .snow_img,
+.div-wrapper .stormy_img, .div-wrapper .windy_img, .div-wrapper .hot_img, .div-wrapper .cold_img {
+  display: block;
+  margin: 0 auto;
+}
+
+.div-wrapper .weather_text {
+  margin-top: 5px;  /* Space between image and text */
+}
+
+
+.div-wrapper .diary_div {
+  position: relative;
+  width: 334.61px;
+  height: 307.29px;
+  margin-bottom: -49.00px;
+  margin-right: -2.00px;
+}
+
+.div-wrapper .today_diary {
+  position: absolute;
+  width: 331px;
+  height: 412px;
+  top: 46px;
+  left: 2px;
+  background-color: #ffffff;
+  border-radius: 7px;
+}
+
+.div-wrapper .diary_text {
+  position: absolute;
+  width: 95%;
+  height: 70%;
+  top: 8px;
+  left: 2.5px;
+  font-family: "Manrope-Medium", Helvetica;
+  font-weight: 500;
+  color: #3e3939;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.86px;
+  line-height: normal;
+  padding: 5px;
+  overflow-y: auto; 
+}
+
+.div-wrapper .Done_group {
+  position: absolute;
+  width: 183px;
+  height: 65px;
+  bottom: 0%;
+  /* left: 400px; */
+}
+
+.div-wrapper .Done_rectangle {
+position: absolute;
+width: 358px;
+height: 70px;
+bottom: 0;
+background-color: #333333;
+border-radius: 13px;
+border: 1px solid;
+border-color: #000000;
+}
+
+.div-wrapper .Done_text {
+position: absolute;
+width: 203px;
+height: 14px;
+top: 16%;
+left: 22%;
+/* -webkit-text-stroke: 1px #000000; */
+font-family: "Manrope-Bold", Helvetica;
+font-weight: 700;
+color: #ffffff;
+font-size: 35px;
+text-align: center;
+letter-spacing: 0;
+line-height: normal;
+white-space: nowrap;
+}
+
+.div-wrapper .frame {
+  display: flex;
+  flex-direction: column;
+  width: 376px;
+  align-items: flex-start;
+  gap: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f2f4f6;
+  backdrop-filter: blur(100px) brightness(100%);
+  -webkit-backdrop-filter: blur(100px) brightness(100%);
+}
+
+.div-wrapper .status-bar {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 44px;
+  backdrop-filter: blur(4px) brightness(100%);
+  -webkit-backdrop-filter: blur(4px) brightness(100%);
+}
+
+.div-wrapper .action {
+  position: absolute;
+  width: 56px;
+  height: 18px;
+  top: 14px;
+  left: 28px;
+}
+
+.div-wrapper .time {
+  position: absolute;
+  width: 54px;
+  top: 0;
+  left: 0;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #111111;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: -0.17px;
+  line-height: normal;
+}
+
+.div-wrapper .container-wrapper {
+  position: absolute;
+  width: 68px;
+  height: 14px;
+  top: 16px;
+  left: 280px;
+}
+
+.div-wrapper .container {
+  position: relative;
+  width: 67px;
+  height: 12px;
+  top: 1px;
+}
+
+.div-wrapper .battery {
+  position: absolute;
+  width: 24px;
+  height: 12px;
+  top: 0;
+  left: 42px;
+  background-image: url(./img/rectangle.svg);
+  background-size: 100% 100%;
+}
+
+.div-wrapper .rectangle {
+  position: relative;
+  width: 20px;
+  height: 10px;
+  top: 1px;
+  left: 1px;
+  background-color: #111111;
+  border-radius: 1.6px;
+}
+
+.div-wrapper .combined-shape {
+  position: absolute;
+  width: 17px;
+  height: 11px;
+  top: 0;
+  left: 0;
+}
+
+.div-wrapper .wi-fi {
+  position: absolute;
+  width: 15px;
+  height: 11px;
+  top: 0;
+  left: 22px;
+}
+
+.div-wrapper .upper_icon {
+  display: flex;
+  flex-direction: column;
+  width: 370.72px;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  flex: 0 0 auto;
+  backdrop-filter: blur(4px) brightness(100%);
+  -webkit-backdrop-filter: blur(4px) brightness(100%);
+  top: 24px;
+}
+
+.div-wrapper .diary_date {
+  position: relative;
+  align-self: stretch;
+  height: 25.99px;
+  margin-top: -1.00px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.10px;
+  line-height: 38.4px;
+  white-space: nowrap;
+}
+
+.div-wrapper .line {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 1px;
+  margin-bottom: -0.13px;
+  background-color: #0000004c;
+  opacity: 0.7;
+}
+
+.div-wrapper .back_img {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 5px;
+  left: 18px;
+  object-fit: cover;
+}
+
+label {
+  position: relative;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type="checkbox"] + img {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+input + img {
+  cursor: pointer;
+}
+
+input[class="activity"]:hover + img,
+input[class="activity"]:checked + img {
+    border-radius: 100%;
+    border: 4px solid black;
+}
+
+input[class="weather"]:hover + img,
+  input[class="weather"]:checked + img {
+      border-radius: 100%;
+      border: 4px solid black;
+  }
+
+.swal-button {
+background-color: #f2f2f2; 
+font-size: 14px;
+color: #333;
+}
+
+.swal-modal {
+background-color: #FCDDEC !important; /* 원하는 배경색으로 변경 */
+}
+
+/* 텍스트 색상이나 크기를 조정하고 싶다면 */
+.swal-title {
+color: #333; /* 텍스트 색상 */
+font-size: 20px; /* 제목 글자 크기 */
+}
+
+.swal-text {
+color: #555; /* 본문 텍스트 색상 */
+font-size: 16px; /* 본문 글자 크기 */
+} 
+
+
+
+@media (max-width: 800px) {
+  .div-wrapper {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .div-wrapper .div {
+    background-color: #f2f2f2;
+    /* overflow-x: auto;
+    overflow-y: hidden; */
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+  
+  .div-wrapper .div-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    gap: 41px;
+    /* padding: 5px; */
+    position: absolute;
+    top: 14vh;
+    left: 0vw;
+    max-height: 78%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  
+  .div-wrapper .activity_div {
+    position: relative;
+    width: 95vw;
+    height: 21vh;
+  }
+  
+  .div-wrapper .today_activity {
+    position: absolute;
+    width: 100%;
+    height: 69%;
+    top: 45px;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 7px;
+    display: flex;
+    column-gap: 2vw;
+  }
+  
+  .div-wrapper .activity_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    top: 20%;
+    left: 0%;
+  }
+  
+  .div-wrapper .activity_item label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .div-wrapper .activity_item input {
+    display: none; /* 체크박스를 숨깁니다. */
+  }
+  
+  .div-wrapper .rest_img, .div-wrapper .health_img, .div-wrapper .study_img, .div-wrapper .work_img, .div-wrapper .shopping_img {
+    width: 49px;
+    height: 49px;
+  }
+  
+  .div-wrapper .rest_text, .div-wrapper .health_text, .div-wrapper .study_text, .div-wrapper .work_text, .div-wrapper .shopping_text {
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+    top: 8vh;
+  }
+  
+  
+  .div-wrapper .overlap-group-wrapper {
+    position: absolute;
+    width: 94px;
+    height: 37px;
+    top: 0;
+    left: 0;
+  }
+  
+  .div-wrapper .item_rectangle {
+    position: relative;
+    width: 92px;
+    height: 37px;
+    background-color: #333333;
+    border-radius: 16px;
+  }
+  
+  .div-wrapper .item_text {
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    top: 9px;
+    left: 5px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .div-wrapper .weather_div {
+    position: relative;
+    width: 95vw;
+    height: 21vh;
+    top: -5%;
+  }
+  
+  .div-wrapper .today_weather {
+    position: absolute;
+    width: 100%;
+    height: 109%;
+    top: 47px;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 7px;
+  }
+  
+  .div-wrapper .weather_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    margin-top: 10px;
+    width: 99%;
+    height: 43%;
+  }
+  
+  .div-wrapper .weather_item {
+    text-align: center;
+    width: 23%; /* Each item occupies 1/4 of the row */
+  }
+  
+  .div-wrapper .weather_item input {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .div-wrapper .weather_item img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+  }
+  
+  .div-wrapper .weather_text {
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  
+  .div-wrapper .sunny_img, .div-wrapper .cloudy_img, .div-wrapper .rainy_img, .div-wrapper .snow_img,
+  .div-wrapper .stormy_img, .div-wrapper .windy_img, .div-wrapper .hot_img, .div-wrapper .cold_img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .div-wrapper .weather_text {
+    margin-top: 5px;  /* Space between image and text */
+  }
+  
+  
+  .div-wrapper .diary_div {
+    position: relative;
+    width: 95vw;
+    height: 307.29px;
+    margin-right: 3px;
+  }
+  
+  .div-wrapper .today_diary {
+    position: absolute;
+    width: 100%;
+    height: 94%;
+    top: 46px;
+    left: 2px;
+    background-color: #ffffff;
+    border-radius: 7px;
+  }
+  
+  .div-wrapper .diary_text {
+    position: absolute;
+    width: 96%;
+    height: 90%;
+    top: 8px;
+    left: 0%;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 500;
+    color: #3e3939;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.86px;
+    line-height: normal;
+    padding: 5px;
+    overflow-y: auto;
+    /* border: solid;*/ 
+  }
+
+  .div-wrapper .view-8 {
+    position: absolute;
+    width: 95px;
+    height: 37px;
+    top: 0;
+    left: 0;
+  }
+  
+  .div-wrapper .Done_group {
+    position: absolute;
+    width: 47vw;
+    height: 3vh;
+}
+  
+.div-wrapper .Done_rectangle {
+  transform: translateX(-23%);
+  position: absolute;
+  width: 100vw;
+  height: 8vh;
+  bottom: -15%;
+  background-color: #333333;
+  border-radius: 13px;
+  border: 1px solid;
+  border-color: #000000;
+  left: 50%;
+}
+  
+.div-wrapper .Done_text {
+  position: absolute;
+  width: 57vw;
+  height: 10vh;
+  top: 12%;
+  left: 21%;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+  
+  .div-wrapper .frame {
+    display: flex;
+    flex-direction: column;
+    width: 376px;
+    align-items: flex-start;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f2f4f6;
+    backdrop-filter: blur(100px) brightness(100%);
+    -webkit-backdrop-filter: blur(100px) brightness(100%);
+  }
+  
+  .div-wrapper .status-bar {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 44px;
+    backdrop-filter: blur(4px) brightness(100%);
+    -webkit-backdrop-filter: blur(4px) brightness(100%);
+  }
+  
+  .div-wrapper .action {
+    position: absolute;
+    width: 56px;
+    height: 18px;
+    top: 14px;
+    left: 28px;
+  }
+  
+  .div-wrapper .time {
+    position: absolute;
+    width: 54px;
+    top: 0;
+    left: 0;
+    font-family: "Pretendard-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #111111;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: -0.17px;
+    line-height: normal;
+  }
+  
+  .div-wrapper .container-wrapper {
+    position: absolute;
+    width: 68px;
+    height: 14px;
+    top: 16px;
+    left: 280px;
+  }
+  
+  .div-wrapper .container {
+    position: relative;
+    width: 67px;
+    height: 12px;
+    top: 1px;
+  }
+  
+  .div-wrapper .battery {
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    top: 0;
+    left: 42px;
+    background-image: url(./img/rectangle.svg);
+    background-size: 100% 100%;
+  }
+  
+  .div-wrapper .rectangle {
+    position: relative;
+    width: 20px;
+    height: 10px;
+    top: 1px;
+    left: 1px;
+    background-color: #111111;
+    border-radius: 1.6px;
+  }
+  
+  .div-wrapper .combined-shape {
+    position: absolute;
+    width: 17px;
+    height: 11px;
+    top: 0;
+    left: 0;
+  }
+  
+  .div-wrapper .wi-fi {
+    position: absolute;
+    width: 15px;
+    height: 11px;
+    top: 0;
+    left: 22px;
+  }
+  
+  .div-wrapper .upper_icon {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    flex: 0 0 auto;
+    backdrop-filter: blur(4px) brightness(100%);
+    -webkit-backdrop-filter: blur(4px) brightness(100%);
+    top: 7%;
+}
+  
+  .div-wrapper .diary_date {
+    position: relative;
+    align-self: stretch;
+    height: 25.99px;
+    margin-top: -1.00px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0.10px;
+    line-height: 38.4px;
+    white-space: nowrap;
+  }
+  
+  .div-wrapper .line {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 1px;
+    margin-bottom: -0.13px;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  
+  .div-wrapper .back_img {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    left: 18px;
+    object-fit: cover;
+  }
+
+  label {
+    position: relative;
+  }
+  
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  input[type="checkbox"] + img {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  input + img {
+    cursor: pointer;
+  }
+  
+  input[class="activity"]:hover + img,
+  input[class="activity"]:checked + img {
+      border-radius: 100%;
+      border: 4px solid black;
+  }
+
+  input[class="weather"]:hover + img,
+  input[class="weather"]:checked + img {
+      border-radius: 100%;
+      border: 4px solid black;
+  }
+  
+  .swal-button {
+    background-color: #f2f2f2; 
+    font-size: 14px;
+  color: #333;
+}
+
+  .swal-modal {
+    background-color: #FCDDEC !important; /* 원하는 배경색으로 변경 */
+  }
+
+  /* 텍스트 색상이나 크기를 조정하고 싶다면 */
+  .swal-title {
+    color: #333; /* 텍스트 색상 */
+    font-size: 20px; /* 제목 글자 크기 */
+  }
+
+  .swal-text {
+    color: #555; /* 본문 텍스트 색상 */
+    font-size: 16px; /* 본문 글자 크기 */
+  } 
+}

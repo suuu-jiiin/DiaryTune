@@ -1,0 +1,140 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href={% static "DiaryTune/css/recommendation/recommendation_styleguide.css"%}  />
+    <link rel="stylesheet" href={% static "DiaryTune/css/recommendation/recommendation_style.css"%} />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body style="margin: 0;">
+    <div class="screen">
+      <div class="div">
+
+        <!--Scroll 불가능-->
+        <div class='non-scroll'>
+          <!--상단바-->
+          <div class="bar">
+            <div class="date" data-month="{{ month }}" data-day="{{ day }}" data-dayofweek="{{ dayofweek }}" ></div>
+            <div id="exit-url" data-url="{% url 'main_with_params' year=year month=month day=day %}"></div>
+            <img class="modify" src={% static "DiaryTune/images/modify.png" %} />
+            <img class="trash" src={% static "DiaryTune/images/trash.png" %} />
+            <img class="back" src={% static "DiaryTune/images/back.png" %} />
+            <div class="line1"></div>
+          </div>
+          <div class="line2"></div>
+
+        <!--Overview-->
+        <div class="summ">
+            <div class="hashtags">
+              {% if emotion_analysis.similar_words %}
+                #{{ emotion_analysis.similar_words|first }}  <!-- 첫 번째 감정 -->
+              {% else %}
+                #감정없음
+              {% endif %}
+            </div>
+            <div class="musics">
+                {% if music_recommendation %}
+                    #{{ music_recommendation.artist }} - {{ music_recommendation.title }}
+                {% else %}
+                    추천할 노래가 없습니다.
+                {% endif %}
+            </div>
+        </div>
+        <div class="weather_activity">
+          <div class="weather1" data-weather="{{ weather.0 }}" data-weather-img="{% static 'DiaryTune/images/' %}{{ weather.0 }}.png"></div>
+          <div class="weather2" data-weather="{{ weather.1 }}" data-weather-img="{% static 'DiaryTune/images/' %}{{ weather.1 }}.png"></div>
+          <div class="activity1" data-activity="{{ activities.0 }}" data-activity-img="{% static 'DiaryTune/images/' %}{{ activities.0 }}.png"></div>
+          <div class="activity2" data-activity="{{ activities.1 }}" data-activity-img="{% static 'DiaryTune/images/' %}{{ activities.1 }}.png"></div>
+        </div>
+
+        <!--Scroll 가능-->
+        <div class='scroll'>
+          <!--일기 부분-->
+        <div class="today-diary">
+          <div class="blackbox"><div class="text-diary">오늘의 일기</div></div>
+        </div>
+        <div class="diary">
+          <div class="diarybox">
+              <div class="text-diary-content">
+                  {% if diary_content %}
+                      {{ diary_content }}
+                  {% else %}
+                      <p>작성된 일기가 없습니다.</p>
+                  {% endif %}
+              </div>
+            </div>
+          </div>
+
+        <!--감정 부분-->
+        <div class="today-emotion">
+          <div class="blackbox"><div class="text-emotion">오늘의 감정</div></div>
+        </div>
+
+        <div class="emotion">
+            <div class="emotionbox">
+              <div class="emotions">
+                {% if emotion_analysis.similar_words %}
+                  {% for word in emotion_analysis.similar_words %}
+                    {% if forloop.first %}
+                        <div class="hashtag1">#{{ word }}</div>
+                    {% elif forloop.counter == 2 %}
+                        <div class="hashtag2">#{{ word }}</div>
+                    {% elif forloop.counter == 3 %}
+                        <div class="hashtag3">#{{ word }}</div>
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              </div>
+              <div class="musical-note"></div>
+            </div>
+        </div>
+
+        <!--음악 부분-->
+        <div class="today-music">
+            <div class="blackbox"><div class="text-music">오늘의 노래</div></div>
+        </div>
+        <div class="music">
+          <div class="musicbox"
+            data-description="{{ music_recommendation.description }}"
+            data-reason="{{ music_recommendation.reason }}"
+            data-title="{{ music_recommendation.title }}"
+            data-artist="{{ music_recommendation.artist }}">
+            
+            <img id="heart" class="heart" src="{% static 'DiaryTune/images/heart-1.png' %}" data-heart-on="{% static 'DiaryTune/images/heart-2.png' %}" data-heart-off="{% static 'DiaryTune/images/heart-1.png' %}" alt="Heart Image" />
+            <div class="music_description">
+                {% if music_recommendation %}
+                  <!-- 노래 설명 -->
+                  [노래 설명] {{ music_recommendation.description }}
+                {% else %}
+                  노래 설명을 찾을 수 없습니다.
+                {% endif %}
+            </div>
+            <div class="music_recommendation">
+              {% if music_recommendation %}
+                  [추천 이유] {{ music_recommendation.reason }}
+              {% else %}
+                  추천 이유를 찾을 수 없습니다.
+              {% endif %}
+            </div>
+            <div class="music_title">
+                {% if music_recommendation %}
+                    🎵{{ music_recommendation.title }} - {{ music_recommendation.artist }}
+                {% endif %}
+            </div>
+            <div class="PLAY">
+              <div id = 'play-btn' class="PLAY-btn">
+                <img class="polygon" src={% static "DiaryTune/images/play.png" %} />
+                <div class="text-play">PLAY</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src={% static "DiaryTune/js/recommendation/music_recommendation.js" %}></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href={% static "DiaryTune/css/tutorial/tutorial_styleguide.css" %} />
+    <link rel="stylesheet" href={% static "DiaryTune/css/tutorial/tutorial_style_4.css" %} />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <link rel="icon"  sizes="32x32" href={% static "DiaryTune/images/music.ico" %}> 
+  <body style="margin: 0;">
+    <div class="tutorial_4">
+      <div class="div">
+        <div class="tutorial_group">
+          <div class="tutorial_div"><div class="tutorial_text">Tutorial</div></div>
+        </div>
+        <div class="div-2">
+          <!-- 오늘의 활동 -->
+          <div class="activity_div">
+            <div class="item_rectangle">
+              <div class="item_text">오늘의 활동</div>
+            </div>
+            <div class="today_activity">
+              <div class="activity_item">
+                <label for="rest">
+                  <input type="checkbox" name="rating" class="activity" id="rest" value="휴식" {% if '휴식' in activities %} checked {% endif %}/>
+                  <img class="rest_img" src={% static "DiaryTune/images/휴식.png" %} />
+                  <div class="rest_text">휴식</div>
+                </label>
+              </div>
+              
+              <div class="activity_item">
+                <label for="health">
+                  <input type="checkbox" name="rating" class="activity" id="health" value="운동" {% if '운동' in activities %} checked {% endif %}/>
+                  <img class="health_img" src={% static "DiaryTune/images/운동.png" %} />
+                  <div class="health_text">운동</div>
+                </label>
+              </div>
+            
+              <div class="activity_item">
+                <label for="study">
+                  <input type="checkbox" name="rating" class="activity" id="study" value="공부" {% if '공부' in activities %} checked {% endif %} />
+                  <img class="study_img" src={% static "DiaryTune/images/공부.png" %} />
+                  <div class="study_text">공부</div>
+                </label>
+              </div>
+            
+              <div class="activity_item">
+                <label for="work">
+                  <input type="checkbox" name="rating" class="activity" id="work" value="일" {% if '일' in activities %} checked {% endif %} />
+                  <img class="work_img" src={% static "DiaryTune/images/일.png" %} />
+                  <div class="work_text">일</div>
+                </label>
+              </div>
+            
+              <div class="activity_item">
+                <label for="shopping">
+                  <input type="checkbox" name="rating" class="activity" id="shopping" value="쇼핑" {% if '쇼핑' in activities %} checked {% endif %} />
+                  <img class="shopping_img" src={% static "DiaryTune/images/쇼핑.png" %} />
+                  <div class="shopping_text">쇼핑</div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오늘의 날씨 -->
+          <div class="weather_div">
+            <div class="item_rectangle">
+              <div class="item_text">오늘의 날씨</div>
+            </div>
+            <div class="today_weather">
+              <!-- First Row -->
+              <div class="weather_row">
+                <div class="weather_item">
+                  <label for="sunny">
+                    <input type="checkbox" name="weather" class="weather" id="sunny" value="맑음" {% if '맑음' in weather %} checked {% endif %} />
+                    <img class="sunny_img" src={% static "DiaryTune/images/맑음.png" %} />
+                  </label>
+                  <div class="weather_text">맑음</div>
+                </div>
+                <div class="weather_item">
+                  <label for="흐림">
+                    <input type="checkbox" name="weather" class="weather" id="흐림" value="흐림" {% if '흐림' in weather %} checked {% endif %} />
+                    <img class="cloudy_img" src={% static "DiaryTune/images/흐림.png" %} />
+                  </label>
+                  <div class="weather_text">흐림</div>
+                </div>
+                <div class="weather_item">
+                  <label for="비">
+                    <input type="checkbox" name="weather" class="weather" id="비" value="비" {% if '비' in weather %} checked {% endif %} />
+                    <img class="rainy_img" src={% static "DiaryTune/images/비.png" %} />
+                  </label>
+                  <div class="weather_text">비</div>
+                </div>
+                <div class="weather_item">
+                  <label for="눈">
+                    <input type="checkbox" name="weather" class="weather" id="눈" value="눈" {% if '눈' in weather %} checked {% endif %} />
+                    <img class="snow_img" src={% static "DiaryTune/images/눈.png" %} />
+                  </label>
+                  <div class="weather_text">눈</div>
+                </div>
+              </div>
+          
+              <!-- Second Row -->
+              <div class="weather_row">
+                <div class="weather_item">
+                  <label for="폭풍">
+                    <input type="checkbox" name="weather" class="weather" id="폭풍" value="폭풍" {% if '폭풍' in weather %} checked {% endif %}/>
+                    <img class="stormy_img" src={% static "DiaryTune/images/폭풍.png" %} />
+                  </label>
+                  <div class="weather_text">폭풍</div>
+                </div>
+                <div class="weather_item">
+                  <label for="바람">
+                    <input type="checkbox" name="weather" class="weather" id="바람" value="바람" {% if '바람' in weather %} checked {% endif %}/>
+                    <img class="windy_img" src={% static "DiaryTune/images/바람.png" %} />
+                  </label>
+                  <div class="weather_text">바람</div>
+                </div>
+                <div class="weather_item">
+                  <label for="더움">
+                    <input type="checkbox" name="weather" class="weather" id="더움" value="더움" {% if '더움' in weather %} checked {% endif %}/>
+                    <img class="hot_img" src={% static "DiaryTune/images/더움.png" %} />
+                  </label>
+                  <div class="weather_text">더움</div>
+                </div>
+                <div class="weather_item">
+                  <label for="추움">
+                    <input type="checkbox" name="weather" class="weather" id="추움" value="추움" {% if '추움' in weather %} checked {% endif %}/>
+                    <img class="cold_img" src={% static "DiaryTune/images/추움.png" %} />
+                  </label>
+                  <div class="weather_text">추움</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 오늘의 일기 -->
+          <div class="diary_div">
+            <div class="item_rectangle">
+              <div class="item_text">오늘의 일기</div>
+            </div>
+            <div class="today_diary">
+              <div class="diary_text" contenteditable="true" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)">
+                {{ diary_content }}</div>
+            </div>
+          </div>
+
+          <div class="overlap-5">
+            <div class="rectangle-2"></div>
+            <div class="text-wrapper-14">4/7</div>
+            <div class="text-wrapper-15">오늘의 일기를 작성해 보세요</div>
+            <img class="arrow-right-circle" src={% static "DiaryTune/images/arrow-right-circle.png" %} onclick="location.href='{% url 'tutorial_5' %}'" style="cursor: pointer;" />
+        </div>
+
+        </div>
+
+        <!-- 완료 버튼 -->
+        <div class="Done_group">
+          <div class="Done_rectangle" id="saveButton" style="cursor: pointer;">
+            <div class="Done_text">완&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 료</div>
+          </div>
+        </div>
+
+        <!-- 뒤로가기 버튼 -->
+        <div class="upper_icon">
+          <div class="diary_date">10월 15일 (화) </div>
+          <img class="back_img" src={% static "DiaryTune/images/뒤로가기 버튼.png" %} style="cursor: pointer;" onclick="confirmExit()" />
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+    <script src={% static "DiaryTune/js/diary/diary.js" %}></script>
+  </body>
+</html>
