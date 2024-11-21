@@ -9,6 +9,7 @@
     <link rel="stylesheet" href={% static "DiaryTune/css/recommendation/recommendation_style.css"%} />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
+  <link rel="icon"  sizes="32x32" href={% static "DiaryTune/images/music.ico" %}>
   <body style="margin: 0;">
     <div class="screen">
       <div class="div">
@@ -27,6 +28,12 @@
           <div class="line2"></div>
 
         <!--Overview-->
+        <div class="sentiment_overview">
+          <div class="sentiment_group">
+            <img class="sentiment_img" src="{% static 'DiaryTune/images/'|add:emotion_analysis.selected_sentiment|add:'.png' %}" />
+          </div>
+        </div>
+
         <div class="summ">
             <div class="hashtags">
               {% if emotion_analysis.similar_words %}
@@ -73,6 +80,7 @@
           <div class="blackbox"><div class="text-emotion">오늘의 감정</div></div>
         </div>
 
+
         <div class="emotion">
             <div class="emotionbox">
               <div class="emotions">
@@ -88,7 +96,11 @@
                   {% endfor %}
                 {% endif %}
               </div>
-              <div class="musical-note"></div>
+              <div class="musical-note">
+                <div class="sentiment_group">
+                  <img class="sentiment_img" src="{% static 'DiaryTune/images/'|add:emotion_analysis.selected_sentiment|add:'.png' %}" />
+                </div>
+              </div>
             </div>
         </div>
 
