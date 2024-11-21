@@ -126,10 +126,15 @@ document.getElementById('saveButton').addEventListener('click', function() {
 
     // URL에서 year, month, day, diary_id 값을 추출
     const urlParts = window.location.pathname.split('/'); // URL을 '/'로 분리
-    const currentYear = urlParts[urlParts.length - 4];  // year
-    const currentMonth = urlParts[urlParts.length - 3]; // month
-    const currentDay = urlParts[urlParts.length - 2];   // day
-    const dayofweek = urlParts[urlParts.length - 1];    // dayofweek
+    const currentYear = urlParts[urlParts.length - 5];  // year
+    const currentMonth = urlParts[urlParts.length - 4]; // month
+    const currentDay = urlParts[urlParts.length - 3];   // day
+    const dayofweek = urlParts[urlParts.length - 2];    // dayofweek
+
+    console.log(currentYear);
+    console.log(currentMonth);
+    console.log(currentDay);
+    console.log(dayofweek);
 
     fetch(window.location.pathname, {
         method: 'POST',

@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'diary',          # 방금 생성한 데이터베이스 이름
-        'USER': 'beejan',           # 생성한 사용자 이름
-        'PASSWORD': '0311',           # 비밀번호
+        'USER': 'minju',           # 생성한 사용자 이름
+        'PASSWORD': '0917',           # 비밀번호
         'HOST': 'localhost',          # 서버 주소 (로컬이면 localhost)
         'PORT': '5432',               # 기본 포트
     }
