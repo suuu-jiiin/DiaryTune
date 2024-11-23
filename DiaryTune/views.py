@@ -4,7 +4,10 @@ from .models import Diary
 from .models import csv_file
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
-from .utils import analyze_emotion, recommend_music 
+from .utilsreal import analyze_emotion, recommend_reason 
+# 아래는 내가 설정한 recommend_music 함수를 Django에서 호출
+from .utilsrecommendation import recommend_music
+from sentence_transformers import SentenceTransformer
 import json
 import csv
 
@@ -86,7 +89,6 @@ def diary(request, year=None, month=None, day=None, dayofweek=None):
 
         return render(request, 'DiaryTune/diary/diary.html', context)
 
-    
 
 def delete_diary(request, year, month, day):
     # 해당 날짜의 일기를 가져옴
@@ -113,14 +115,26 @@ def recommendation(request, year=None, month=None, day=None, dayofweek=None):
         similar_words = emotion_analysis.get('similar_words')
 
         # 음악 추천 수행
-        music_recommendation = recommend_music(diary_content, similar_words[0])
-
+        
+        # CSV 파일에서 데이터 읽기
+        description_list = get_new_descriptions()
+        
+        music_recommendation = recommend_music(selected_emotion, description_list)
+        
+        # 추천 결과 관련 데이터 가져오기
+        song_data = csv_file.objects.filter(description=music_recommendation).first()
+        song_title = song_data.title if song_data else "추천 결과 없음"
+        song_artist = song_data.artist if song_data else "추천 결과 없음"
+        song_description = music_recommendation
+        
+        recommendation_reason = recommend_reason(diary_content, similar_words[0], song_data)
+        
         diary.selected_sentiment = selected_emotion
         diary.similar_words = similar_words
-        diary.song_title = music_recommendation.get('title')
-        diary.song_artist = music_recommendation.get('artist')
-        diary.song_description = music_recommendation.get('description')
-        diary.reason = music_recommendation.get('reason')
+        diary.song_title = song_title
+        diary.song_artist = song_artist
+        diary.song_description = song_description
+        diary.reason = recommendation_reason.get('reason')
         diary.save()
 
     except Diary.DoesNotExist:
@@ -145,6 +159,12 @@ def recommendation(request, year=None, month=None, day=None, dayofweek=None):
     }
     return render(request, 'DiaryTune/recommendation/music_recommendation.html', context)
 
+# DB에 있는 CSV 파일에서 new_description 데이터를 읽어오기
+def get_new_descriptions():
+    
+    # ORM을 사용하여 모든 description 필드 데이터 가져오기
+    descriptions = list(csv_file.objects.values_list('description', flat=True))
+    return descriptions
 
 def tutorial(request):
     return render(request, 'DiaryTune/tutorial/tutorial_1.html')
@@ -174,3 +194,29 @@ def check_diary(request, year, month, day):
         return JsonResponse({"exists": diary_exists})
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
+
+
+# 음악 추천 제대로 되는지 확인
+def test_recommendation(request):
+    # DB에서 모든 곡의 title, artist, description 가져오기
+    songs = csv_file.objects.all().values('title', 'artist', 'description')
+
+    # 곡 설명 리스트와 매핑 정보 준비
+    description_list = [song['description'] for song in songs]
+    song_mapping = {song['description']: (song['title'], song['artist']) for song in songs}
+
+    # 테스트할 감정 라벨
+    sentiment_label = "sentiment_3"  # 예: 부끄러움, 외로움, 지루함, 무기력함과 같은 감정
+
+    # 추천 실행
+    recommended_description = recommend_music(sentiment_label, description_list)
+
+    # 추천된 곡의 title, artist 조회
+    song_title, song_artist = song_mapping.get(recommended_description, ("알 수 없음", "알 수 없음"))
+
+    # 결과 반환
+    return JsonResponse({
+        "추천된 곡 설명": recommended_description,
+        "추천된 곡 제목": song_title,
+        "추천된 곡 아티스트": song_artist,
+    })
