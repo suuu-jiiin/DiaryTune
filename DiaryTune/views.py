@@ -4,7 +4,7 @@ from .models import Diary
 from .models import csv_file
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
-from .utilsreal import analyze_emotion, recommend_reason 
+from .utils import analyze_emotion, recommend_reason 
 # 아래는 내가 설정한 recommend_music 함수를 Django에서 호출
 from .utilsrecommendation import recommend_music
 from sentence_transformers import SentenceTransformer
@@ -153,9 +153,12 @@ def recommendation(request, year=None, month=None, day=None, dayofweek=None):
             'emotion_analysis': emotion_analysis,
             'activities': activities,
             'weather': weathers,
-            'music_recommendation': music_recommendation,
-            'artist': music_recommendation.get('artist') if music_recommendation else None,  # 가수
-            'title': music_recommendation.get('title') if music_recommendation else None   # 노래 제목
+            "music_recommendation": {
+                "description": song_description,
+                "reason": recommendation_reason.get('reason'),
+                "title": song_title,
+                "artist": song_artist,
+            },
     }
     return render(request, 'DiaryTune/recommendation/music_recommendation.html', context)
 
