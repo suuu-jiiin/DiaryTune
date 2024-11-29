@@ -1,5 +1,6 @@
 from sentence_transformers import SentenceTransformer, util
 
+
 # SBERT 모델 로드
 model = SentenceTransformer('all-MiniLM-L6-v2')
 

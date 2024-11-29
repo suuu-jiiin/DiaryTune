@@ -1,9 +1,9 @@
-// '좋아요' 기능 구현
+//'좋아요' 기능 구현
 document.getElementById('heart').addEventListener('click', function() {
     const heartImage = this;
     const heartOn = heartImage.getAttribute('data-heart-on'); // heart-2 이미지 경로
     const heartOff = heartImage.getAttribute('data-heart-off'); // heart-1 이미지 경로
-
+    
     // 현재 이미지를 heart-1에서 heart-2로 변경하고 다시 heart-1로 되돌리기
     if (heartImage.src.includes(heartOff)) {
         heartImage.src = heartOn;
@@ -11,6 +11,24 @@ document.getElementById('heart').addEventListener('click', function() {
         heartImage.src = heartOff;
     }
 });
+
+// CSRF 토큰 가져오기
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+
 
 // 'Play' 버튼 누르면 유튜브 연결
 document.getElementById('play-btn').addEventListener('click', function() {

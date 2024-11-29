@@ -143,6 +143,7 @@ document.getElementById('saveButton').addEventListener('click', function() {
     .then(data => {
         console.log(data.message);  // 서버 응답 메시지 출력
         window.location.href = `/main/${currentYear}/${currentMonth}/${currentDay}/`; // main 페이지로 리디렉션
+        //window.location.href = `/save_diary/${currentYear}/${currentMonth}/${currentDay}/`; // main 페이지로 리디렉션
     })
     .catch(error => {
         console.error('Error saving diary:', error);

@@ -11,6 +11,9 @@ class Diary(models.Model):
     activities = models.TextField(blank=True, null=True)  # 선택된 활동들
     weather = models.TextField(blank=True, null=True)      # 선택된 날씨들
     diary_content = models.TextField()  # 일기 내용
+    
+    # 좋아요 기능 필드
+    like = models.BooleanField(default=False)  # 기본값은 False
 
     # New
     selected_sentiment = models.CharField(max_length=100, blank=True, null=True)  # 감정 종류
@@ -57,3 +60,4 @@ class csv_file(models.Model):
 
     def __str__(self):
         return f"{self.artist} - {self.title}"
+    

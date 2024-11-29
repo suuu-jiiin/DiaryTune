@@ -30,21 +30,21 @@
         <!--Overview-->
         <div class="sentiment_overview">
           <div class="sentiment_group">
-            <img class="sentiment_img" src="{% static 'DiaryTune/images/'|add:emotion_analysis.selected_sentiment|add:'.png' %}" />
+            <img class="sentiment_img" src="{% static 'DiaryTune/images/'|add:emotion_analysis.sentiment|add:'.png' %}" />
           </div>
         </div>
 
         <div class="summ">
             <div class="hashtags">
-              {% if emotion_analysis.similar_words %}
-                #{{ emotion_analysis.similar_words|first }}  <!-- 첫 번째 감정 -->
+              {% if emotion_analysis.keywords %}
+                # {{ emotion_analysis.keywords|first }}  <!-- 첫 번째 감정 -->
               {% else %}
-                #감정없음
+                # 감정없음
               {% endif %}
             </div>
             <div class="musics">
                 {% if music_recommendation %}
-                    {{ music_recommendation.artist }} - {{ music_recommendation.title }}
+                    # {{ music_recommendation.artist }} - {{ music_recommendation.title }}
                 {% else %}
                     추천할 노래가 없습니다.
                 {% endif %}
@@ -84,8 +84,8 @@
         <div class="emotion">
             <div class="emotionbox">
               <div class="emotions">
-                {% if emotion_analysis.similar_words %}
-                  {% for word in emotion_analysis.similar_words %}
+                {% if emotion_analysis.keywords %}
+                  {% for word in emotion_analysis.keywords %}
                     {% if forloop.first %}
                         <div class="hashtag1">#{{ word }}</div>
                     {% elif forloop.counter == 2 %}
@@ -98,7 +98,7 @@
               </div>
               <div class="musical-note">
                 <div class="sentiment_group">
-                  <img class="sentiment_img" src="{% static 'DiaryTune/images/'|add:emotion_analysis.selected_sentiment|add:'.png' %}" />
+                  <img class="sentiment_img" src="{% static 'DiaryTune/images/'|add:emotion_analysis.sentiment|add:'.png' %}" />
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@
             data-title="{{ music_recommendation.title }}"
             data-artist="{{ music_recommendation.artist }}">
             
-            <img id="heart" class="heart" src="{% static 'DiaryTune/images/heart-1.png' %}" data-heart-on="{% static 'DiaryTune/images/heart-2.png' %}" data-heart-off="{% static 'DiaryTune/images/heart-1.png' %}" alt="Heart Image" />
+            <img id="heart" class="heart" src="{% static 'DiaryTune/images/heart-1.png' %}" data-heart-on="{% static 'DiaryTune/images/heart-2.png' %}" data-heart-off="{% static 'DiaryTune/images/heart-1.png' %}"  alt="Heart Image" />
             <div class="music_description">
               <div class="description_text">
                 {% if music_recommendation %}
