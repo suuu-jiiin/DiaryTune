@@ -1,3 +1,13 @@
+@keyframes pulse {
+  0%, 100% {
+    box-shadow:0 0 10px #fcddec;
+  }
+  50% {
+    transform: scale(1.06); /* 확대 효과 */
+    box-shadow: 0 0 20px #fcddec; /* 더 강한 반짝임 */
+  }
+}
+
 .tutorial_6 {
     background-color: #ffffff;
     display: flex;
@@ -19,6 +29,7 @@
     height: 51px;
     top: 125px;
     left: 106px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .overlap-group {
@@ -92,6 +103,7 @@
     height: 87px;
     top: 650px;
     left: 49px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .overlap {
@@ -457,6 +469,7 @@
     height: 28px;
     top: 197px;
     left: 6px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .days-of-week {
@@ -563,6 +576,7 @@
     height: 388px;
     top: 0;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .group-10 {
@@ -571,6 +585,7 @@
     height: 72px;
     top: 79px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .overlap-group-3 {
@@ -613,6 +628,7 @@
     height: 72px;
     top: 0;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .group-12 {
@@ -621,6 +637,7 @@
     height: 72px;
     top: 237px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .text-wrapper-11 {
@@ -645,6 +662,7 @@
     height: 72px;
     top: 316px;
     left: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .group-14 {
@@ -661,6 +679,7 @@
     width: 47px;
     height: 388px;
     top: 0;
+    filter: blur(1px);
   }
   
   .tutorial_6 .mon-2 {
@@ -677,6 +696,7 @@
     height: 388px;
     top: 0;
     left: 156px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .thu {
@@ -685,6 +705,7 @@
     height: 388px;
     top: 0;
     left: 208px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .fri {
@@ -693,6 +714,7 @@
     height: 388px;
     top: 0;
     left: 260px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .sat {
@@ -701,6 +723,7 @@
     height: 388px;
     top: 0;
     left: 312px;
+    filter: blur(1px);
   }
   
   .tutorial_6 .view-2 {
@@ -709,13 +732,14 @@
     height: 36px;
     top: 181px;
     left: 113px;
+    animation: pulse 1.5s infinite ease-in-out;
   }
   
   .tutorial_6 .view-3 {
     position: absolute;
     width: 244px;
     height: 95px;
-    top: 80px;
+    top: 308px;
     left: 114px;
   }
   

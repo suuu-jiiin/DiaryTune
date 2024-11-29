@@ -29,6 +29,12 @@ def diary(request, year=None, month=None, day=None, dayofweek=None):
             activities = data.get('activities', [])
             weather = data.get('weather', [])
             diary_content = data.get('diary', '')
+            
+            # 감정 분석 실행 with LLM
+            emotion_analysis = analyze_emotion(diary_content)
+            sentiment = emotion_analysis.get('sentiment')
+            keywords = emotion_analysis.get('keywords')
+            
 
             # 기존 다이어리가 있다면 업데이트, 없다면 새로 생성
             diary, created = Diary.objects.update_or_create(
@@ -39,9 +45,11 @@ def diary(request, year=None, month=None, day=None, dayofweek=None):
                     'activities': json.dumps(activities),  # 리스트를 JSON으로 저장
                     'weather': json.dumps(weather),  # 리스트를 JSON으로 저장
                     'diary_content': diary_content,
+                    'selected_sentiment': sentiment,  # 감정 결과 저장
+                    'similar_words': json.dumps(keywords),  # 키워드를 JSON으로 저장
                 }
             )
-            
+        
             if created:
                 message = "Diary created successfully!"
             else:
@@ -100,63 +108,6 @@ def delete_diary(request, year, month, day):
     # 삭제 후 main 페이지로 리디렉션
     return redirect('main')  # 여기서 'main'은 main 화면을 표시하는 URL 이름입니다
 
-# def recommendation(request, year=None, month=None, day=None, dayofweek=None):
-#     # 해당 날짜에 작성된 일기를 조회
-#     try:
-#         diary = Diary.objects.get(year=year, month=month, day=day)
-#         diary_content = diary.diary_content
-#         activities = json.loads(diary.activities) if diary.activities else []
-#         weathers = json.loads(diary.weather) if diary.weather else []
-
-#         # LLM 모델 이용
-#         llm_result = LLM(diary_content)
-#         selected_sentiment = llm_result.get('sentiment')
-#         keywords = llm_result.get('keywords')
-#         song_data = llm_result.get('song', {})
-#         song_title = song_data.get('title', "No Title")
-#         song_artist = song_data.get('artist', "No Artist")
-#         song_description = song_data.get('description', "No Description")
-#         reason = llm_result.get('reason', "No Reason")
-        
-#         # Diary 객체 업데이트
-#         diary.selected_sentiment = selected_sentiment
-#         diary.similar_words = keywords
-#         diary.song_title = song_title
-#         diary.song_artist = song_artist
-#         diary.song_description = song_description
-#         diary.reason = reason
-#         diary.save()
-
-#     except Diary.DoesNotExist:
-#         diary_content = None
-#         selected_sentiment = None
-#         activities = []
-#         weathers = []
-#         song_title = "No Title"
-#         song_artist = "No Artist"
-#         song_description = "No Description"
-#         reason = "No Reason"
-
-#     # 컨텍스트 구성
-#     context = {
-#         'year': year,
-#         'month': month,
-#         'day': day,
-#         'dayofweek': dayofweek,
-#         'diary_content': diary_content,
-#         'selected_sentiment': selected_sentiment, 
-#         'emotion_analysis': None,
-#         'activities': activities,
-#         'weather': weathers,
-#         "music_recommendation": {
-#             "description": song_description,
-#             "reason": reason,
-#             "title": song_title,
-#             "artist": song_artist,
-#         },
-#     }
-#     return render(request, 'DiaryTune/recommendation/music_recommendation.html', context)
-
 
 def recommendation(request, year=None, month=None, day=None, dayofweek=None):
     # 해당 날짜에 작성된 일기를 조회
@@ -165,21 +116,17 @@ def recommendation(request, year=None, month=None, day=None, dayofweek=None):
         diary_content = diary.diary_content
         activities = json.loads(diary.activities) if diary.activities else []
         weathers = json.loads(diary.weather) if diary.weather else []
+        sentiment = diary.selected_sentiment
+        keywords = diary.similar_words
 
-        # 음악 추천 수행
-        # CSV 파일에서 데이터 읽기
-        description_list = get_new_descriptions()
-        
-        # 감정 분석 실행 with LLM
-        emotion_analysis = analyze_emotion(diary_content)
-        sentiment = emotion_analysis.get('sentiment')
-        keywords = emotion_analysis.get('keywords')
+        # # 감정 분석 실행 with LLM
+        # emotion_analysis = analyze_emotion(diary_content)
+        # sentiment = emotion_analysis.get('sentiment')
+        # keywords = emotion_analysis.get('keywords')
         
         # 음악 추천 with BERT
+        description_list = get_new_descriptions() # csv파일에서 new_description 가져오기
         music_recommendation = recommend_music(sentiment, description_list)
-        
-        # 추천 결과 관련 데이터 가져오기
-        #song_data = csv_file.objects.filter(description=music_recommendation).first()
         random_description = random.choice(music_recommendation)
         
         # 랜덤으로 선택한 설명으로 song_data 조회
@@ -191,8 +138,12 @@ def recommendation(request, year=None, month=None, day=None, dayofweek=None):
         # 음악 추천 이유 with LLM
         recommendation_reason = recommend_reason(diary_content, keywords[0], song_data)
         
-        diary.selected_sentiment = sentiment
-        diary.similar_words = keywords
+        
+        '''
+        DB에 분석된 감정 / 추천 음악 관련 정보 / 추천 이유 저장
+        '''
+        #diary.selected_sentiment = sentiment
+        #diary.similar_words = keywords
         diary.song_title = song_title
         diary.song_artist = song_artist
         diary.song_description = song_description
@@ -260,32 +211,7 @@ def check_diary(request, year, month, day):
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
     
-    
-# 음악 추천 제대로 되는지 확인
-def test_recommendation(request):
-    # DB에서 모든 곡의 title, artist, description 가져오기
-    songs = csv_file.objects.all().values('title', 'artist', 'description')
-
-    # 곡 설명 리스트와 매핑 정보 준비
-    description_list = [song['description'] for song in songs]
-    song_mapping = {song['description']: (song['title'], song['artist']) for song in songs}
-
-    # 테스트할 감정 라벨
-    sentiment_label = "sentiment_1"  # 예: 부끄러움, 외로움, 지루함, 무기력함과 같은 감정
-
-    # 추천 실행
-    recommended_description = recommend_music(sentiment_label, description_list)
-
-    # 추천된 곡의 title, artist 조회
-    song_title, song_artist = song_mapping.get(recommended_description, ("알 수 없음", "알 수 없음"))
-
-    # 결과 반환
-    return JsonResponse({
-        "추천된 곡 설명": recommended_description,
-        "추천된 곡 제목": song_title,
-        "추천된 곡 아티스트": song_artist,
-    })
-    
+        
 def toggle_like(request, diary_id):
     if request.method == 'POST':
         try:
@@ -339,3 +265,60 @@ def save_diary(request, year, month, day):
     else:
         # GET 요청은 처리하지 않음
         return JsonResponse({'error': 'Invalid request method'}, status=405)
+    
+# def recommendation(request, year=None, month=None, day=None, dayofweek=None):
+#     # 해당 날짜에 작성된 일기를 조회
+#     try:
+#         diary = Diary.objects.get(year=year, month=month, day=day)
+#         diary_content = diary.diary_content
+#         activities = json.loads(diary.activities) if diary.activities else []
+#         weathers = json.loads(diary.weather) if diary.weather else []
+
+#         # LLM 모델 이용
+#         llm_result = LLM(diary_content)
+#         selected_sentiment = llm_result.get('sentiment')
+#         keywords = llm_result.get('keywords')
+#         song_data = llm_result.get('song', {})
+#         song_title = song_data.get('title', "No Title")
+#         song_artist = song_data.get('artist', "No Artist")
+#         song_description = song_data.get('description', "No Description")
+#         reason = llm_result.get('reason', "No Reason")
+        
+#         # Diary 객체 업데이트
+#         diary.selected_sentiment = selected_sentiment
+#         diary.similar_words = keywords
+#         diary.song_title = song_title
+#         diary.song_artist = song_artist
+#         diary.song_description = song_description
+#         diary.reason = reason
+#         diary.save()
+
+#     except Diary.DoesNotExist:
+#         diary_content = None
+#         selected_sentiment = None
+#         activities = []
+#         weathers = []
+#         song_title = "No Title"
+#         song_artist = "No Artist"
+#         song_description = "No Description"
+#         reason = "No Reason"
+
+#     # 컨텍스트 구성
+#     context = {
+#         'year': year,
+#         'month': month,
+#         'day': day,
+#         'dayofweek': dayofweek,
+#         'diary_content': diary_content,
+#         'selected_sentiment': selected_sentiment, 
+#         'emotion_analysis': None,
+#         'activities': activities,
+#         'weather': weathers,
+#         "music_recommendation": {
+#             "description": song_description,
+#             "reason": reason,
+#             "title": song_title,
+#             "artist": song_artist,
+#         },
+#     }
+#     return render(request, 'DiaryTune/recommendation/music_recommendation.html', context)

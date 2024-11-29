@@ -529,7 +529,7 @@
   background-color: #dedede;
   border: 1px solid;
   border-color: #000000;
-  transform: rotate(180deg);
+  animation: pulse 1.5s infinite ease-in-out;
 }
 
 .tutorial_1 .mon {
