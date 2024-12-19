@@ -1,1240 +1,1372 @@
 @font-face {
-  font-family: 'Agbalumo-Regular'; /* 폰트 이름 */
-  src: url('./font/Agbalumo-Regular.ttf') format('truetype'); /* 폰트 파일 경로와 형식 */
-}
-
-.screen {
-  background-color: #f2f2f2;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.screen .div {
-  background-color: #f2f2f2;
-  width: 375px;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.screen .blackbox {
-  position: relative;
-  width: 92px;
-  height: 35px;
-  background-color: #000000;
-  border-radius: 15px;
-}
-
-.screen .non-scroll {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 177px;
-  align-items: center;
-  gap: 12px;
-  position: relative;
-  z-index: 10; /* 최상단에 표시 */
-  background: #f2f2f2;
-}
-
-/*상단바*/
-.screen .bar {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 373px;
-  height: 39px;
-  top: 8px;
-  left: 0;
-}
-.screen .date {
-  width: 177px;
-  top: 0;
-  left: 101px;
-  font-family: "Manrope-Bold";
-  font-weight: 700;
-  color: #000000;
-  font-size: 26px;
-  letter-spacing: 0.10px;
-  line-height: 40px;
-  white-space: nowrap;
-  position: absolute;
-  text-align: center;
-}
-.screen .modify {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 5px;
-  left: 334px;
-  object-fit: cover;
-  cursor: pointer;
-  z-index: 10;
-}
-.screen .trash {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 5px;
-  left: 298px;
-  object-fit: cover;
-  cursor: pointer;
-  z-index: 10;
-} 
-.screen .back {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 5px;
-  left: 18px;
-  object-fit: cover;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.screen .line1 {
-  position: absolute;
-  width: 350px;
-  height: 1px;
-  top: 45px;
-  left: 12px;
-  background-color: #0000004c;
-  opacity: 0.7;
-}
-.screen .line2 {
-  position: absolute;
-  width: 350px;
-  height: 1px;
-  top: 176px;
-  left: 12px;
-  background-color: #0000004c;
-  opacity: 0.7;
-}
-
-/*Overview*/
-.screen .sentiment_overview {
-  position: absolute;
-  width: 70px;
-  height: 82px;
-  top: 55px;
-  left: 12px;
-}
-
-.screen .sentiment_group {
-  width: 71px;
-  height: 84px;
-  position: relative;
-  top: -2px;
-}
-
-.screen .sentiment_img {
-  position: absolute;
-  width: 61px;
-  height: 80px;
-  top: 20px;
-  left: 15px;
-}
-
-.screen .summ {
-  width: 124px;
-  left: 236px;
-  box-shadow: 0px 8px 20px #1d3a580d;
-  position: absolute;
-  height: 105px;
-  top: 60px;
-  background-color: #ffffff;
-  border-radius: 7px;
-}
-.screen .hashtags {
-  font-family: 'Agbalumo-Regular', sans-serif;
-  position: absolute;
-  width: 100px;
-  height: 40px;
-  font-size: 18px; /* 텍스트 크기 */
-  font-weight: bold; /* 텍스트 굵기 */
-  color: #000000; /* 텍스트 색상 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgb(0 0 0 / 12%); 
-}
-
-.screen .musics {
-  position: absolute;
-  width: 100px;
-  height: 40px;
-  font-size: 10px; /* 텍스트 크기 */
-  font-weight: bold; /* 텍스트 굵기 */
-  color: #000000; /* 텍스트 색상 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 15px; 
-  box-shadow: 0 0 10px rgb(0 0 0 / 12%);
-}
-
-.screen .hashtags {
-  top: 9px;
-  left: 12px;
-}
-.screen .musics {
-  top: 57px;
-  left: 12px;
-}
-
-.screen .weather_activity {
-  width: 105px;
-  left: 120px;
-  box-shadow: var(--drop-shadow-100);
-  position: absolute;
-  height: 105px;
-  top: 60px;
-  background-color: #ffffff;
-  border-radius: 7px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.screen .weather1 {
-  top: 7px;
-  left: 7px;
-  position: absolute;
-  width: 42px;
-  height: 42px;
-  background-color: #ffffff;
-  background-size: contain; 
-  border-radius: 21px;
-  box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
-  border: 0.5px solid rgb(0 0 0 / 10%);
-}
-
-.screen .activity2 {
-  top: 56px;
-  left: 56px;
-  position: absolute;
-  width: 42px;
-  height: 42px;
-  background-color: #ffffff;
-  background-size: contain; 
-  box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
-  border: 0.5px solid rgb(0 0 0 / 10%);
-  border-radius: 21px;
-}
-.screen .weather2 {
-  top: 7px;
-  left: 56px;
-  position: absolute;
-  width: 42px;
-  height: 42px;
-  background-color: #ffffff;
-  background-size: contain; 
-  border-radius: 21px;
-  box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
-  border: 0.5px solid rgb(0 0 0 / 10%);
-}
-
-.screen .activity1 {
-  top: 56px;
-  left: 7px;
-  position: absolute;
-  width: 42px;
-  height: 42px;
-  background-color: #ffffff;
-  background-size: contain; 
-  border-radius: 21px;
-  box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
-  border: 0.5px solid rgb(0 0 0 / 10%);
-}
-
-
-.screen .scroll {
-  display: flex;
-  flex-direction: column;
-  width: 381px;
-  height: 1000px;
-  align-items: flex-end;
-  gap: 33px;
-  position: absolute;
-  top: 183px;
-  max-height: 74vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transition: all 0.3s ease; /* 부드러운 전환 효과 */
-  opacity: 1; /* 기본 상태: 보임 */
-}
-
-  /*일기 부분*/
-.screen .diary {
-  position: absolute;
-  width: 352px;
-  height: 151px;
-  top: 44px;
-  left: 7px;
-}
-
-.screen .diarybox {
-  position: relative;
-  width: 354px;
-  height: 160px;
-  background-color: #ffffff;
-  border-radius: 7px;
-  box-shadow: 0px 8px 20px #1d3a580d;
-  overflow-y: auto;
-}
-.screen .today-diary {
-  position: absolute;
-  width: 94px;
-  height: 35px;
-  left: 7px;
-}
-.screen .text-diary {
-  width: 74px;
-  height: 20px;
-  top: 9px;
-  left: 10px;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-}
-
-.screen .text-diary-content {
-  top: 6px;
-  left: 10px;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 15px;
-  letter-spacing: 1.0px;
-  line-height: 20.0px;
-  white-space: normal;
-  position: absolute;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  overflow: hidden;
-  text-align: left;
-}
-
-/*음악 부분*/
-.screen .music {
-  position: absolute;
-  width: 354px;
-  height: 212px;
-  top: 490px;
-  left: 7px;
-}
-
-.screen .musicbox {
-  position: relative;
-  width: 354px;
-  height: 100%;
-  background-color: #ffffff;
-  border-radius: 7px;
-  box-shadow: 0px 8px 20px #1d3a580d;
-}
-
-.screen .today-music {
-  position: absolute;
-  width: 94px;
-  height: 35px;
-  top: 445px;
-  left: 7px;
-}
-.screen .text-music {
-  width: 74px;
-  height: 20px;
-  top: 8px;
-  left: 9px;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-}
-
-.screen .music_title {
-  top: 8px;
-  left: 17%;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  font-size: 13px;
-  letter-spacing: 0.36px;
-  line-height: 21.6px;
-  white-space: nowrap;
-  position: absolute;
-}
-
-.screen .music_text {
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  font-size: 12.5px;
-  letter-spacing: 0.36px;
-  line-height: 21.6px;
-  white-space: nowrap;
-}
-
-.screen .music_description {
-  width: 354px;
-  margin-top: 11%;
-  word-wrap: break-word;
-  font-family: "Manrope-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 10px;
-  letter-spacing: 0.20px;
-  line-height: 12.0px;
-  position: absolute;
-  text-align: center;
-}
-
-.screen .description_text {
-  font-family: "Manrope-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 10px;
-  letter-spacing: 0.20px;
-  line-height: 12px;
-  text-align: center;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  max-height: 150px;  /* 높이 제한 (필요에 따라 조정) */
-  overflow: auto;  /* 텍스트가 너무 길면 스크롤 생성 */
-  padding: 0 10px;  /* 텍스트 주변에 여백 추가 */
-  box-sizing: border-box;  /* 여백이 포함된 크기 계산 */
-}
-
-.screen .music_recommendation {
-  width: 354px;
-  margin-top: 120px;
-  font-family: "Manrope-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 10px;
-  letter-spacing: 0.20px;
-  line-height: 12.0px;
-  position: absolute;
-  text-align: center;
-}
-
-.screen .recommendation_text {
-  font-family: "Manrope-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 10px;
-  letter-spacing: 0.20px;
-  line-height: 12px;
-  text-align: center;
-  overflow-wrap: break-word;
-  max-height: 150px;
-  overflow: auto;
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-
-.screen .PLAY {
-  position: absolute;
-  width: 72px;
-  height: 25px;
-  bottom: 2%;
-  left: 41%;
-  cursor: pointer;
-}
-.screen .PLAY-btn{
-  position: relative;
-  width: 65px;
-  height: 20px;
-  background-color: #000000;
-  border-radius: 15px;
-}
-.screen .polygon {
-  position: absolute;
-  width: 9px;
-  height: 11px;
-  top: 5px;
-  left: 8px;
-}
-.screen .text-play {
-  position: absolute;
-  top: 2px;
-  left: 20px;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 13px;
-  text-align: center;
-  letter-spacing: 0.30px;
-  line-height: 18.0px;
-  white-space: nowrap;
-}
-
-.screen .heart {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 6px;
-  left: 325px;
-  object-fit: cover;
-  cursor:pointer;
-}
-
-/*감정 부분*/
-.screen .emotion{
-  position: absolute;
-  width: 350px;
-  height: 159px;
-  top: 262px;
-  left: 7px;
-  
-}
-.screen .emotionbox {
-  position: relative;
-  width: 354px;
-  height: 165px;
-  background-color: #ffffff;
-  border-radius: 7px;
-  box-shadow: 0px 8px 20px #1d3a580d;
-}
-.screen .today-emotion {
-  position: absolute;
-  width: 94px;
-  height: 35px;
-  top: 219px;
-  left: 7px;
-} 
-.screen .text-emotion {
-  width: 74px;
-  height: 20px;
-  top: 8px;
-  left: 10px;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-}
-
-.screen .emotions {
-  position: absolute;
-  width: 160px;
-  height: 151px;
-  top: 12px;
-  left: 194px;
-}
-.screen .hashtag1, .screen .hashtag2, .screen .hashtag3 {
-  position: absolute;
-  width: 145px;
-  height: 45px;
-  font-size: 18px; /* 텍스트 크기 */
-  font-weight: bold; /* 텍스트 굵기 */
-  color: #000000; /* 텍스트 색상 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 15px; 
-  box-shadow: 0 0 10px rgb(0 0 0 / 12%);
-}
-.screen .hashtag1 {
-  top: 0px;
-  left: 0;
-}
-.screen .hashtag2 {
-  top: 49px;
-  left: 0;
-}
-.screen .hashtag3 {
-  top: 98px;
-  left: 0;
-}
-
-.screen .musical-note {
-  position: absolute;
-  width: 85px;
-  height: 105px;
-  top: 18px;
-  left: 39px;
-  background-color: #ffffff;
-}
-/* 팝업 전체 배경색 */
-.swal-modal {
-  background-color: #FCDDEC !important; /* 원하는 배경색 */
-  border-radius: 15px; /* 팝업의 모서리를 둥글게 */
-}
-
-/* 팝업 제목 스타일 */
-.swal-title {
-  color: #333; /* 제목 텍스트 색상 */
-  font-size: 22px; /* 제목 글자 크기 */
-  font-weight: bold; /* 텍스트 굵기 */
-  margin-bottom: 10px; /* 아래 여백 */
-}
-
-/* 팝업 본문 텍스트 스타일 */
-.swal-text {
-  color: #555; /* 본문 텍스트 색상 */
-  font-size: 16px; /* 본문 글자 크기 */
-  line-height: 1.5; /* 줄 간격 */
-}
-
-/* 버튼 스타일 */
-.swal-button {
-  background-color: #f2f2f2; /* 버튼 배경색 */
-  font-size: 14px; /* 버튼 글자 크기 */
-  color: #333; /* 버튼 텍스트 색상 */
-  border-radius: 5px; /* 버튼 모서리를 둥글게 */
-  padding: 8px 16px; /* 버튼 패딩 */
-}
-
-/* 삭제 버튼의 스타일 (위험한 작업을 강조) */
-.swal-button--danger {
-  background-color: #ff4d4f; /* 빨간색 계열 */
-  color: #fff; /* 버튼 텍스트 흰색 */
-}
-
-/* 버튼에 마우스를 올렸을 때 스타일 */
-.swal-button:hover {
-  background-color: #e0e0e0; /* hover 효과 */
-}
-
-.swal-button--danger:hover {
-  background-color: #d9383e; /* hover 시 위험 버튼 색상 */
-}
-
-
-@media (max-width: 750px){
-.screen {
-  background-color: #f2f2f2;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100vw;
-  height:100vh;
-  align-items: center;
-}
-
-.screen .div {
-  background-color: #f2f2f2;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  margin: 0 auto;
-}
-
-.screen .blackbox {
-  position: relative;
-  width: 92px;
-  height: 35px;
-  background-color: #000000;
-  border-radius: 15px;
-}
-
-/* non-scroll 영역 */
-.screen .non-scroll {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 181px;
-  align-items: center;
-  gap: 12px;
-  position: relative;
-  z-index: 10;
-  background: #f2f2f2;
-}
-
-/*상단바*/
-.screen .bar {
-  position: absolute;
-  width: 100%;
-  height: 39px;
-  top: 5%;
-  left: 0;
-  align-items: center;
-}
-.screen .date {
-  width: auto; /* 필요에 따라 조정 */
-  font-family: "Manrope-Bold";
-  font-weight: 700;
-  color: #000000;
-  font-size: 26px;
-  letter-spacing: 0.10px;
-  line-height: 40px;
-  white-space: nowrap;
-  position: absolute; /* 중앙 정렬 위해 절대 위치 */
-  left: 50%; /* 부모 기준으로 50% 왼쪽 */
-  transform: translateX(-50%); /* 중앙 정렬 */
-  text-align: center;
-}
-.screen .modify {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 5px;
-  left: 90%;
-  object-fit: cover;
-  cursor: pointer;
-  z-index: 10;
-}
-.screen .trash {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 5px;
-  left: 80%;
-  object-fit: cover;
-  cursor: pointer;
-  z-index: 10;
-} 
-.screen .back {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 5px;
-  left: 18px;
-  object-fit: cover;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.screen .line1 {
-  position: absolute;
-  width: 100vw;
-  height: 1px;
-  top: 100%;
-  left: 0vh;
-  background-color: #0000004c;
-  opacity: 0.7;
-}
-.screen .line2 {
-  position: absolute;
-  width: 100vw;
-  height: 1px;
-  top: 93%;
-  left: 0vh;
-  background-color: #0000004c;
-  opacity: 0.7;
-}
-
-/*Overview*/
-.screen .sentiment_overview {
-  position: absolute;
-  width: 70px;
-  height: 82px;
-  top: 33%;
-  left: 3%;
-}
-
-.screen .sentiment_group {
-  width: 71px;
-  height: 84px;
-  position: relative;
-  top: -2px;
-}
-
-.screen .sentiment_img {
-  position: absolute;
-  width: 14vw;
-  height: 9vh;
-  top: 10%;
-  left: 15px;
-}
-
-.screen .group-3 {
-  position: absolute;
-  width: 21px;
-  height: 35px;
-  top: 0;
-  left: 50px;
-}
-
-.screen .overview-container {
-position: absolute;
-top: 12%;
-left: 0%;
-display: flex;
-justify-content: space-between;
-width: 100%;
-height: 13%;
-}
-
-/* Summ Box */
-.screen .summ {
-  width: 38%;
-  box-shadow: 0px 8px 20px #1d3a580d;
-  position: absolute;
-  height: 51.5%;
-  top: 33%;
-  left: 59%;
-  background-color: #ffffff;
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.screen .hashtags {
-width: 90%;
-height: 40%;
-font-size: 18px;
-font-weight: bold;
-color: #000000;
-display: flex;
-justify-content: center;
-border: 1px solid rgba(0, 0, 0, 0.1);
-border-radius: 15px;
-position: absolute;
-}
-
-.screen .musics {
-  width: 90%;
-  height: 40%;
-  font-size: 10px;
-  font-weight: bold;
-  color: #000000;
-  display: flex;
-  justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  position: absolute;
+    font-family: 'Agbalumo-Regular'; /* 폰트 이름 */
+    src: url('./font/Agbalumo-Regular.ttf') format('truetype'); /* 폰트 파일 경로와 형식 */
   }
-
-.screen .hashtags {
-top: 5%;
-
-}
-.screen .musics{
-top: 50%;
-}
-.screen .weather_activity {
-  width: 25%;
-  height: 26%;
-  left: -7%;
-  box-shadow: var(--drop-shadow-100);
-  position: relative;
-  height: 49.5%;
-  background-color: #ffffff;
-  border-radius: 7px;
-  top: 33%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.screen .box {
-height: 100%;
-width: 70%;
-position: relative;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
-gap: 10%;
-}
-.screen .activity1, .screen .activity2, .screen .weather1, .screen .weather2 {
-position: absolute;
-width: 30px;
-height: 30px;
-background-color: #ffffff;
-background-size: contain; 
-}
-
-.screen .weather1 {
-top: 10%;  /* 상단에 배치 */
-left: 10%;
-}
-
-.screen .weather2 {
-top: 10%;  /* 상단에 배치 */
-left: 56%;
-}
-
-.screen .activity1 {
-top: 56%;  /* 하단에 배치 */
-left: 10%;
-}
-
-.screen .activity2 {
-top: 56%;  /* 하단에 배치 */
-left: 56%;
-}
-
-/* scroll 영역 */
-.screen .scroll {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  gap: 6%;
-  transition: all 0.3s ease;
-  opacity: 1;
-}
-
-  /*일기 부분*/
-.screen .diary {
-  position: relative;
-  width: 100%;
-  height: 22%;
-  top: 7%;
-  left: 0px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.screen .diarybox {
-  position: relative;
-  width: 96%;
-  height: 160px;
-  background-color: #ffffff;
-  border-radius: 7px;
-  box-shadow: 0px 8px 20px #1d3a580d;
-  overflow-y: auto;
-}
-.screen .today-diary {
-  position: absolute;
-  width: 94px;
-  height: 35px;
-}
-
-.screen .text-diary {
-  width: 74px;
-  height: 20px;
-  top: 9px;
-  left: 10px;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-}
-
-.screen .text-diary-content {
-  top: 6px;
-  left: 10px;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 15px;
-  letter-spacing: 1.0px;
-  line-height: 20.0px;
-  white-space: normal;
-  position: absolute;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  overflow: hidden;
-  text-align: left;
-}
-
-/*음악 부분*/
-.screen .music {
-  position: relative;
-  width: 100%;
-  height: 36%;
-  top: 16.5%;
-  left: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* 위쪽으로 정렬 */
-  padding-top: 2%; /* 원하는 높이 조정을 위해 패딩 추가 */
-}
-
-.screen .musicbox {
-  position: relative;
-  width: 96%;
-  height: 100%;
-  background-color: #ffffff;
-  border-radius: 7px;
-  box-shadow: 0px 8px 20px #1d3a580d;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 15px;
-}
-
-.screen .today-music {
-  position: absolute;
-  width: 94px;
-  height: 35px;
-  top: 68%;
-}
-
-.screen .text-music {
-  width: 74px;
-  height: 20px;
-  top: 8px;
-  left: 9px;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-}
-
-.screen .music_title {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 6px;
-  left: 24.5%;
-}
-
-.screen .music_text {
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  font-size: 14.5px;
-  letter-spacing: 0.36px;
-  line-height: 21.6px;
-  white-space: nowrap;
-}
-
-.screen .music_description {
-  position: static;
-  margin-top: 36px;
-  word-wrap: break-word;
-  overflow-wrap: break-word; /* 긴 단어를 줄 바꿈 */
-}
-
-.screen .description_text {
-  font-family: "Manrope-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 10px;
-  letter-spacing: 0.20px;
-  line-height: 12px;
-  text-align: center;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  max-height: 150px;  /* 높이 제한 (필요에 따라 조정) */
-  overflow: auto;  /* 텍스트가 너무 길면 스크롤 생성 */
-  padding: 0 10px;  /* 텍스트 주변에 여백 추가 */
-  box-sizing: border-box;  /* 여백이 포함된 크기 계산 */
-}
-
-.screen .music_recommendation {
-  position: static;
-  margin-top: 15px;
-}
-
-.screen .recommendation_text {
-  font-family: "Manrope-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 10px;
-  letter-spacing: 0.20px;
-  line-height: 12px;
-  text-align: center;
-  overflow-wrap: break-word;
-  max-height: 150px;
-  overflow: auto;
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-
-.screen .PLAY {
-  display: flex;
-  justify-content: center;  /* 가로 중앙 정렬 */
-  position: absolute;
-  width: 72px;
-  height: 25px;
-  bottom: -3%;
-  left: 50%;                /* 화면 가로 중앙 */
-  transform: translate(-50%, -50%); /* 정확히 중앙에 위치하도록 이동 */
-  cursor: pointer;
-}
-
-.screen .PLAY-btn {
-  position: relative;
-  width: 65px;
-  height: 20px;
-  background-color: #000000;
-  border-radius: 15px;
-}
-
-.screen .polygon {
-  position: absolute;
-  width: 9px;
-  height: 11px;
-  top: 5px;
-  left: 8px;
-}
-
-.screen .text-play {
-  position: absolute;
-  top: 2px;
-  left: 20px;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 13px;
-  text-align: center;
-  letter-spacing: 0.30px;
-  line-height: 18.0px;
-  white-space: nowrap;
-}
-
-.screen .heart {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 6px;
-  left: 93%;
-  object-fit: cover;
-  cursor:pointer;
-}
-
-/*감정 부분*/
-.screen .emotion{
-  position: relative;
-  width: 100%;
-  height: 24%;
-  top: 11.5%;
-  left: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.screen .emotionbox {
-  position: relative;
-  width: 96%;
-  height: 106%;
-  background-color: #ffffff;
-  border-radius: 7px;
-  box-shadow: 0px 8px 20px #1d3a580d;
-}
-.screen .today-emotion {
-  position: absolute;
-  width: 94px;
-  height: 35px;
-  top: 32%;
-} 
-
-.screen .text-emotion {
-  width: 74px;
-  height: 20px;
-  top: 8px;
-  left: 10px;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-}
-
-.screen .emotions {
-  position: absolute;
-  width: 60%;
-  height: 80%;
-  top: 12px;
-  left: 50%;
-}
-.screen .hashtag1, .screen .hashtag2, .screen .hashtag3 {
-  position: absolute;
-  width: 80%;
-  height: 30%;
-  font-size: 18px; /* 텍스트 크기 */
-  font-weight: bold; /* 텍스트 굵기 */
-  color: #000000; /* 텍스트 색상 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 15px; 
-  box-shadow: 0 0 10px rgb(0 0 0 / 12%);
-}
-.screen .hashtag1 {
-  top: 0%;
-  left: 0;
-}
-.screen .hashtag2 {
-  top: 35%;
-  left: 0;
-}
-.screen .hashtag3 {
-  top: 70%;
-  left: 0;
-}
-
-.screen .musical-note {
-  position: absolute;
-  width: 26%;
-  height: 26%;
-  top: 18%;
-  left: 7%;
-  background-color: #ffffff;
-}
-/* 팝업 전체 배경색 */
-.swal-modal {
+  
+  .screen {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .screen .div {
+    background-color: #f2f2f2;
+    width: 375px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .screen .blackbox {
+    position: relative;
+    width: 92px;
+    height: 35px;
+    background-color: #000000;
+    border-radius: 15px;
+  }
+  
+  .screen .non-scroll {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 177px;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 10; /* 최상단에 표시 */
+    background: #f2f2f2;
+  }
+  
+  /*상단바*/
+  .screen .bar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 373px;
+    height: 39px;
+    top: 8px;
+    left: 0;
+  }
+  .screen .date {
+    width: 177px;
+    top: 0;
+    left: 101px;
+    font-family: "Manrope-Bold";
+    font-weight: 700;
+    color: #000000;
+    font-size: 26px;
+    letter-spacing: 0.10px;
+    line-height: 40px;
+    white-space: nowrap;
+    position: absolute;
+    text-align: center;
+  }
+  .screen .modify {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 334px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .screen .trash {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 298px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  } 
+  .screen .back {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 18px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .screen .line1 {
+    position: absolute;
+    width: 350px;
+    height: 1px;
+    top: 45px;
+    left: 12px;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  .screen .line2 {
+    position: absolute;
+    width: 350px;
+    height: 1px;
+    top: 176px;
+    left: 12px;
+    background-color: #0000004c;
+    opacity: 0.7;
+  }
+  
+  /*Overview*/
+  .screen .sentiment_overview {
+    position: absolute;
+    width: 70px;
+    height: 82px;
+    top: 55px;
+    left: 12px;
+  }
+  
+  .screen .sentiment_group {
+    width: 71px;
+    height: 84px;
+    position: relative;
+    top: -2px;
+  }
+  
+  .screen .sentiment_img {
+    position: absolute;
+    width: 61px;
+    height: 80px;
+    top: 20px;
+    left: 15px;
+  }
+  
+  .screen .summ {
+    width: 124px;
+    left: 236px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    position: absolute;
+    height: 105px;
+    top: 60px;
+    background-color: #ffffff;
+    border-radius: 7px;
+  }
+  .screen .hashtags {
+    font-family: 'Agbalumo-Regular', sans-serif;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    font-size: 18px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    color: #000000; /* 텍스트 색상 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 12%); 
+  }
+  
+  .screen .musics {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    font-size: min(10px, calc(80px / var(--text-length, 8))); /* 텍스트가 짧으면 10px, 길면 8px로 조절 */
+    font-weight: bold;
+    font-weight: bold;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgb(0 0 0 / 12%);
+    word-wrap: break-word; /* 긴 텍스트 줄바꿈 */
+    white-space: normal; /* 줄바꿈 허용 */
+  }
+  
+  /* 텍스트가 길 경우 자동으로 폰트 크기 조절 */
+  @media screen and (max-width: 400px) {
+    .screen .musics {
+      font-size: 8px; /* 더 작은 화면에서는 더 작은 폰트 */
+    }
+  }
+  
+  .screen .hashtags {
+    top: 9px;
+    left: 12px;
+  }
+  .screen .musics {
+    top: 57px;
+    left: 12px;
+  }
+  
+  .screen .weather_activity {
+    width: 105px;
+    left: 120px;
+    box-shadow: var(--drop-shadow-100);
+    position: absolute;
+    height: 105px;
+    top: 60px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .screen .weather1 {
+    top: 7px;
+    left: 7px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    background-size: contain; 
+    border-radius: 21px;
+    box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+    border: 0.5px solid rgb(0 0 0 / 10%);
+  }
+  
+  .screen .activity2 {
+    top: 56px;
+    left: 56px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    background-size: contain; 
+    box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+    border: 0.5px solid rgb(0 0 0 / 10%);
+    border-radius: 21px;
+  }
+  .screen .weather2 {
+    top: 7px;
+    left: 56px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    background-size: contain; 
+    border-radius: 21px;
+    box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+    border: 0.5px solid rgb(0 0 0 / 10%);
+  }
+  
+  .screen .activity1 {
+    top: 56px;
+    left: 7px;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    background-size: contain; 
+    border-radius: 21px;
+    box-shadow: 0 0px 10px rgb(0 0 0 / 12%);
+    border: 0.5px solid rgb(0 0 0 / 10%);
+  }
+  
+  
+  .screen .scroll {
+    display: flex;
+    flex-direction: column;
+    width: 381px;
+    height: 1000px;
+    align-items: flex-end;
+    gap: 33px;
+    position: absolute;
+    top: 183px;
+    max-height: 74vh;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    transition: all 0.3s ease; /* 부드러운 전환 효과 */
+    opacity: 1; /* 기본 상태: 보임 */
+  }
+  
+    /*일기 부분*/
+  .screen .diary {
+    position: absolute;
+    width: 352px;
+    height: 151px;
+    top: 44px;
+    left: 7px;
+  }
+  
+  .screen .diarybox {
+    position: relative;
+    width: 354px;
+    height: 160px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+    overflow-y: auto;
+  }
+  .screen .today-diary {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    left: 7px;
+  }
+  .screen .text-diary {
+    width: 74px;
+    height: 20px;
+    top: 9px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .text-diary-content {
+    top: 6px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 1.0px;
+    line-height: 20.0px;
+    white-space: normal;
+    position: absolute;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-align: left;
+  }
+  
+  /*음악 부분*/
+  .screen .music {
+    position: absolute;
+    width: 354px;
+    height: 212px;
+    top: 490px;
+    left: 7px;
+  }
+  
+  .screen .musicbox {
+    position: relative;
+    width: 354px;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+  }
+  
+  .screen .today-music {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 445px;
+    left: 7px;
+  }
+  .screen .text-music {
+    width: 74px;
+    height: 20px;
+    top: 8px;
+    left: 9px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .music_title {
+    position: absolute;
+    width: 82%;
+    height: auto;
+    top: 8px;
+    left: 1.5%;
+    text-align: left;
+    font-size: clamp(8px, 6vw, 13px);
+    line-height: 1.2;
+    white-space: normal;
+    overflow: visible;
+  }
+  
+  .screen .music_text {
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 0.36px;
+    /* white-space: nowrap 제거 */
+  }
+  
+  /* 반응형으로 텍스트 크기 조절 */
+  @media screen and (max-width: 400px) {
+    .screen .music_text {
+      font-size: 12px;  
+    }
+  }
+  
+  .screen .music_description {
+    width: 354px;
+    margin-top: 13%;
+    word-wrap: break-word;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    letter-spacing: 0.20px;
+    line-height: 12.0px;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .description_text {
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    letter-spacing: 0.20px;
+    line-height: 12px;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-height: 150px;
+    overflow: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  .screen .music_recommendation {
+    width: 354px;
+    margin-top: 128px;
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    letter-spacing: 0.20px;
+    line-height: 12.0px;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .recommendation_text {
+    font-family: "Manrope-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10px;
+    letter-spacing: 0.20px;
+    line-height: 12px;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-height: 150px;
+    overflow: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  .screen .PLAY {
+    position: absolute;
+    width: 72px;
+    height: 25px;
+    bottom: 2%;
+    left: 41%;
+    cursor: pointer;
+  }
+  .screen .PLAY-btn{
+    position: relative;
+    width: 65px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 15px;
+  }
+  .screen .polygon {
+    position: absolute;
+    width: 9px;
+    height: 11px;
+    top: 5px;
+    left: 8px;
+  }
+  .screen .text-play {
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 0.30px;
+    line-height: 18.0px;
+    white-space: nowrap;
+  }
+  
+  .screen .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 6px;
+    left: 325px;
+    object-fit: cover;
+    cursor:pointer;
+  }
+  
+  /*감정 부분*/
+  .screen .emotion{
+    position: absolute;
+    width: 350px;
+    height: 159px;
+    top: 262px;
+    left: 7px;
+    
+  }
+  .screen .emotionbox {
+    position: relative;
+    width: 354px;
+    height: 165px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px #1d3a580d;
+  }
+  .screen .today-emotion {
+    position: absolute;
+    width: 94px;
+    height: 35px;
+    top: 219px;
+    left: 7px;
+  } 
+  .screen .text-emotion {
+    width: 74px;
+    height: 20px;
+    top: 8px;
+    left: 10px;
+    font-family: "Manrope-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .screen .emotions {
+    position: absolute;
+    width: 160px;
+    height: 151px;
+    top: 12px;
+    left: 194px;
+  }
+  .screen .hashtag1, .screen .hashtag2, .screen .hashtag3 {
+    position: absolute;
+    width: 145px;
+    height: 45px;
+    font-size: 18px; /* 텍스트 크기 */
+    font-weight: bold; /* 텍스트 굵기 */
+    color: #000000; /* 텍스트 색상 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgb(0 0 0 / 12%);
+  }
+  .screen .hashtag1 {
+    top: 0px;
+    left: 0;
+  }
+  .screen .hashtag2 {
+    top: 49px;
+    left: 0;
+  }
+  .screen .hashtag3 {
+    top: 98px;
+    left: 0;
+  }
+  
+  .screen .musical-note {
+    position: absolute;
+    width: 85px;
+    height: 105px;
+    top: 18px;
+    left: 39px;
+    background-color: #ffffff;
+  }
+  /* 팝업 전체 배경색 */
+  .swal-modal {
     background-color: #FCDDEC !important; /* 원하는 배경색 */
     border-radius: 15px; /* 팝업의 모서리를 둥글게 */
-}
-
-/* 팝업 제목 스타일 */
-.swal-title {
+  }
+  
+  /* 팝업 제목 스타일 */
+  .swal-title {
     color: #333; /* 제목 텍스트 색상 */
     font-size: 22px; /* 제목 글자 크기 */
     font-weight: bold; /* 텍스트 굵기 */
     margin-bottom: 10px; /* 아래 여백 */
-}
-
-/* 팝업 본문 텍스트 스타일 */
-.swal-text {
+  }
+  
+  /* 팝업 본문 텍스트 스타일 */
+  .swal-text {
     color: #555; /* 본문 텍스트 색상 */
     font-size: 16px; /* 본문 글자 크기 */
     line-height: 1.5; /* 줄 간격 */
-}
-
-/* 버튼 스타일 */
-.swal-button {
+  }
+  
+  /* 버튼 스타일 */
+  .swal-button {
     background-color: #f2f2f2; /* 버튼 배경색 */
     font-size: 14px; /* 버튼 글자 크기 */
     color: #333; /* 버튼 텍스트 색상 */
     border-radius: 5px; /* 버튼 모서리를 둥글게 */
     padding: 8px 16px; /* 버튼 패딩 */
-}
-
-/* 삭제 버튼의 스타일 (위험한 작업을 강조) */
-.swal-button--danger {
+  }
+  
+  /* 삭제 버튼의 스타일 (위험한 작업을 강조) */
+  .swal-button--danger {
     background-color: #ff4d4f; /* 빨간색 계열 */
     color: #fff; /* 버튼 텍스트 흰색 */
-}
-
-/* 버튼에 마우스를 올렸을 때 스타일 */
-.swal-button:hover {
+  }
+  
+  /* 버튼에 마우스를 올렸을 때 스타일 */
+  .swal-button:hover {
     background-color: #e0e0e0; /* hover 효과 */
-}
-
-.swal-button--danger:hover {
+  }
+  
+  .swal-button--danger:hover {
     background-color: #d9383e; /* hover 시 위험 버튼 색상 */
-}
-
-}
+  }
+  
+  .reaction-buttons {
+    position: absolute !important;
+    top: 6px !important;
+    left: 299px !important;  /* 웹 버전에서는 왼쪽에서 299px */
+    width: auto !important;
+    display: flex !important;
+    gap: 5px !important;
+    z-index: 10 !important;
+  }
+  
+  .reaction-buttons img {
+    width: 20px;  /* 크기를 좀 더 작게 조정 */
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 750px){
+    .screen {
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100vw;
+      height:100vh;
+      align-items: center;
+    }
+  
+    .screen .div {
+      background-color: #f2f2f2;
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      margin: 0 auto;
+    }
+  
+    .screen .blackbox {
+      position: relative;
+      width: 92px;
+      height: 35px;
+      background-color: #000000;
+      border-radius: 15px;
+    }
+  
+    /* non-scroll 영역 */
+    .screen .non-scroll {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 181px;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      z-index: 10;
+      background: #f2f2f2;
+    }
+  
+    /*상단바*/
+    .screen .bar {
+      position: absolute;
+      width: 100%;
+      height: 39px;
+      top: 5%;
+      left: 0;
+      align-items: center;
+    }
+    .screen .date {
+      width: auto; /* 필요에 따라 조정 */
+      font-family: "Manrope-Bold";
+      font-weight: 700;
+      color: #000000;
+      font-size: 26px;
+      letter-spacing: 0.10px;
+      line-height: 40px;
+      white-space: nowrap;
+      position: absolute; /* 중앙 정렬 위해 절대 위치 */
+      left: 50%; /* 부모 기준으로 50% 왼쪽 */
+      transform: translateX(-50%); /* 중앙 정렬 */
+      text-align: center;
+    }
+    .screen .modify {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 5px;
+      left: 90%;
+      object-fit: cover;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .screen .trash {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 5px;
+      left: 80%;
+      object-fit: cover;
+      cursor: pointer;
+      z-index: 10;
+    } 
+    .screen .back {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 5px;
+      left: 18px;
+      object-fit: cover;
+      cursor: pointer;
+      z-index: 10;
+    }
+  
+    .screen .line1 {
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      top: 100%;
+      left: 0vh;
+      background-color: #0000004c;
+      opacity: 0.7;
+    }
+    .screen .line2 {
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      top: 93%;
+      left: 0vh;
+      background-color: #0000004c;
+      opacity: 0.7;
+    }
+  
+    /*Overview*/
+    .screen .sentiment_overview {
+      position: absolute;
+      width: 70px;
+      height: 82px;
+      top: 33%;
+      left: 3%;
+    }
+  
+    .screen .sentiment_group {
+      width: 71px;
+      height: 84px;
+      position: relative;
+      top: -2px;
+    }
+  
+    .screen .sentiment_img {
+      position: absolute;
+      width: 14vw;
+      height: 9vh;
+      top: 10%;
+      left: 15px;
+    }
+  
+    .screen .group-3 {
+      position: absolute;
+      width: 21px;
+      height: 35px;
+      top: 0;
+      left: 50px;
+    }
+  
+    .screen .overview-container {
+    position: absolute;
+    top: 12%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 13%;
+    }
+  
+    /* Summ Box */
+    .screen .summ {
+      width: 38%;
+      box-shadow: 0px 8px 20px #1d3a580d;
+      position: absolute;
+      height: 51.5%;
+      top: 33%;
+      left: 59%;
+      background-color: #ffffff;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .screen .hashtags {
+    width: 90%;
+    height: 40%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: absolute;
+    }
+  
+    .screen .musics {
+      width: 90%;
+      height: 40%;
+      font-size: 10px;
+      font-weight: bold;
+      color: #000000;
+      display: flex;
+      justify-content: center;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      position: absolute;
+      }
+  
+    .screen .hashtags {
+    top: 5%;
+  
+    }
+    .screen .musics{
+    top: 50%;
+    }
+    .screen .weather_activity {
+      width: 25%;
+      height: 26%;
+      left: -7%;
+      box-shadow: var(--drop-shadow-100);
+      position: relative;
+      height: 49.5%;
+      background-color: #ffffff;
+      border-radius: 7px;
+      top: 33%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .screen .box {
+    height: 100%;
+    width: 70%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10%;
+    }
+    .screen .activity1, .screen .activity2, .screen .weather1, .screen .weather2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    background-size: contain; 
+    }
+  
+    .screen .weather1 {
+    top: 10%;  /* 상단에 배치 */
+    left: 10%;
+    }
+  
+    .screen .weather2 {
+    top: 10%;  /* 상단에 배치 */
+    left: 56%;
+    }
+  
+    .screen .activity1 {
+    top: 56%;  /* 하단에 배치 */
+    left: 10%;
+    }
+  
+    .screen .activity2 {
+    top: 56%;  /* 하단에 배치 */
+    left: 56%;
+    }
+  
+    /* scroll 영역 */
+    .screen .scroll {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      gap: 6%;
+      transition: all 0.3s ease;
+      opacity: 1;
+    }
+  
+      /*일기 부분*/
+    .screen .diary {
+      position: relative;
+      width: 100%;
+      height: 22%;
+      top: 7%;
+      left: 0px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .screen .diarybox {
+      position: relative;
+      width: 96%;
+      height: 160px;
+      background-color: #ffffff;
+      border-radius: 7px;
+      box-shadow: 0px 8px 20px #1d3a580d;
+      overflow-y: auto;
+    }
+    .screen .today-diary {
+      position: absolute;
+      width: 94px;
+      height: 35px;
+    }
+  
+    .screen .text-diary {
+      width: 74px;
+      height: 20px;
+      top: 9px;
+      left: 10px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: normal;
+      position: absolute;
+      text-align: center;
+    }
+  
+    .screen .text-diary-content {
+      top: 6px;
+      left: 10px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 500;
+      color: #000000;
+      font-size: 15px;
+      letter-spacing: 1.0px;
+      line-height: 20.0px;
+      white-space: normal;
+      position: absolute;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      overflow: hidden;
+      text-align: left;
+    }
+  
+    /*음악 부분*/
+    .screen .music {
+      position: relative;
+      width: 100%;
+      height: 36%;
+      top: 16.5%;
+      left: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; /* 위쪽으로 정렬 */
+      padding-top: 2%; /* 원하는 높이 조정을 위해 패딩 추가 */
+    }
+  
+    .screen .musicbox {
+      position: relative;
+      width: 96%;
+      height: 100%;
+      background-color: #ffffff;
+      border-radius: 7px;
+      box-shadow: 0px 8px 20px #1d3a580d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 15px;
+    }
+  
+    .screen .today-music {
+      position: absolute;
+      width: 94px;
+      height: 35px;
+      top: 68%;
+    }
+  
+    .screen .text-music {
+      width: 74px;
+      height: 20px;
+      top: 8px;
+      left: 9px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: normal;
+      position: absolute;
+      text-align: center;
+    }
+  
+    .screen .music_title {
+      position: absolute;
+      width: 82%;  /* 웹 버전과 동일하게 조정 */
+      height: auto;
+      top: 8px;
+      left: 1.5%;  /* 웹 버전과 동일하게 조정 */
+      text-align: left;
+      font-size: clamp(8px, 6vw, 13px);
+      line-height: 1.2;
+      white-space: normal;
+      overflow: visible;
+    }
+  
+    .screen .music_text {
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 700;
+      color: #000000;
+      font-size: min(16px, calc(167px / var(--text-length, 15))); /* 15단어 이상일 때 자동으로 크기 조절 */
+      letter-spacing: 0.36px;
+      line-height: 21.6px;
+      white-space: nowrap;
+    }
+  
+    .screen .music_description {
+      position: static;
+      margin-top: 36px;
+      word-wrap: break-word;
+      overflow-wrap: break-word; /* 긴 단어를 줄 바꿈 */
+    }
+  
+    .screen .description_text {
+      font-family: "Manrope-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 10px;
+      letter-spacing: 0.20px;
+      line-height: 12px;
+      text-align: left;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-height: 150px;  /* 높이 제한 (필요에 따라 조정) */
+      overflow: auto;  /* 텍스트가 너무 길면 스크롤 생성 */
+      padding: 0 10px;  /* 텍스트 주변에 여백 추가 */
+      box-sizing: border-box;  /* 여백이 포함된 크기 계산 */
+      margin-bottom: 15px;  /* 아래 여백 추가 */
+    }
+  
+    .screen .music_recommendation {
+      position: static;
+      margin-top: 15px;
+    }
+  
+    .screen .recommendation_text {
+      font-family: "Manrope-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 10px;
+      letter-spacing: 0.20px;
+      line-height: 12px;
+      text-align: left;  /* 왼쪽 정렬로 변경 */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-height: 150px;
+      overflow: auto;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+  
+    .screen .PLAY {
+      display: flex;
+      justify-content: center;  /* 가로 중앙 정렬 */
+      position: absolute;
+      width: 72px;
+      bottom: -1%;
+      height: 25px;
+      left: 50%;                /* 화면 가로 중앙 */
+      transform: translate(-50%, -50%); /* 정확히 중앙에 위치하도록 이동 */
+      cursor: pointer;
+    }
+  
+    .screen .PLAY-btn {
+      position: relative;
+      width: 65px;
+      height: 20px;
+      background-color: #000000;
+      border-radius: 15px;
+    }
+  
+    .screen .polygon {
+      position: absolute;
+      width: 9px;
+      height: 11px;
+      top: 5px;
+      left: 8px;
+    }
+  
+    .screen .text-play {
+      position: absolute;
+      top: 2px;
+      left: 20px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 600;
+      color: #ffffff;
+      font-size: 13px;
+      text-align: center;
+      letter-spacing: 0.30px;
+      line-height: 18.0px;
+      white-space: nowrap;
+    }
+  
+    .screen .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 6px;
+      left: 93%;
+      object-fit: cover;
+      cursor:pointer;
+    }
+  
+    /*감정 부분*/
+    .screen .emotion{
+      position: relative;
+      width: 100%;
+      height: 24%;
+      top: 11.5%;
+      left: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .screen .emotionbox {
+      position: relative;
+      width: 96%;
+      height: 106%;
+      background-color: #ffffff;
+      border-radius: 7px;
+      box-shadow: 0px 8px 20px #1d3a580d;
+    }
+    .screen .today-emotion {
+      position: absolute;
+      width: 94px;
+      height: 35px;
+      top: 32%;
+    } 
+  
+    .screen .text-emotion {
+      width: 74px;
+      height: 20px;
+      top: 8px;
+      left: 10px;
+      font-family: "Manrope-Bold", Helvetica;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: normal;
+      position: absolute;
+      text-align: center;
+    }
+  
+    .screen .emotions {
+      position: absolute;
+      width: 60%;
+      height: 80%;
+      top: 12px;
+      left: 50%;
+    }
+    .screen .hashtag1, .screen .hashtag2, .screen .hashtag3 {
+      position: absolute;
+      width: 80%;
+      height: 30%;
+      font-size: 18px; /* 텍스트 크기 */
+      font-weight: bold; /* 텍스트 굵기 */
+      color: #000000; /* 텍스트 색상 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 15px; 
+      box-shadow: 0 0 10px rgb(0 0 0 / 12%);
+    }
+    .screen .hashtag1 {
+      top: 0%;
+      left: 0;
+    }
+    .screen .hashtag2 {
+      top: 35%;
+      left: 0;
+    }
+    .screen .hashtag3 {
+      top: 70%;
+      left: 0;
+    }
+  
+    .screen .musical-note {
+      position: absolute;
+      width: 26%;
+      height: 26%;
+      top: 18%;
+      left: 7%;
+      background-color: #ffffff;
+    }
+    /* 팝업 전체 배경색 */
+    .swal-modal {
+        background-color: #FCDDEC !important; /* 원하는 배경색 */
+        border-radius: 15px; /* 팝업의 모서리를 둥글게 */
+    }
+  
+    /* 팝업 제목 스타일 */
+    .swal-title {
+        color: #333; /* 제목 텍스트 색상 */
+        font-size: 22px; /* 제목 글자 크기 */
+        font-weight: bold; /* 텍스트 굵기 */
+        margin-bottom: 10px; /* 아래 여백 */
+    }
+  
+    /* 팝업 본문 텍스트 스타일 */
+    .swal-text {
+        color: #555; /* 본문 텍스트 색상 */
+        font-size: 16px; /* 본문 글자 크기 */
+        line-height: 1.5; /* 줄 간격 */
+    }
+  
+    /* 버튼 스타일 */
+    .swal-button {
+        background-color: #f2f2f2; /* 버튼 배경색 */
+        font-size: 14px; /* 버튼 글자 크기 */
+        color: #333; /* 버튼 텍스트 색상 */
+        border-radius: 5px; /* 버튼 모서리를 둥글게 */
+        padding: 8px 16px; /* 버튼 패딩 */
+    }
+  
+    /* 삭제 버튼의 스타일 (위험한 작업을 강조) */
+    .swal-button--danger {
+        background-color: #ff4d4f; /* 빨간색 계열 */
+        color: #fff; /* 버튼 텍스트 흰색 */
+    }
+  
+    /* 버튼에 마우스를 올렸을 때 스타일 */
+    .swal-button:hover {
+        background-color: #e0e0e0; /* hover 효과 */
+    }
+  
+    .swal-button--danger:hover {
+        background-color: #d9383e; /* hover 시 위험 버튼 색상 */
+    }
+  
+    .reaction-buttons {
+      position: absolute !important;
+      top: 6px !important;
+      right: 10px !important;  /* 오른쪽으로 이동 */
+      left: auto !important;  /* left 값 초기화 */
+      width: auto !important;
+      display: flex !important;
+      gap: 5px !important;
+      z-index: 10 !important;
+    }
+  
+    .reaction-buttons img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+  
+  /* 매우 작은 화면 (z-fold 등)을 위한 추가 미디어 쿼리 */
+  @media screen and (max-width: 350px) {
+    .screen .description_text,
+    .screen .recommendation_text {
+      padding: 0 15px;  /* 패딩 증가 */
+      font-size: 9px;
+      line-height: 11px;
+      width: 90%;  /* 너비 제한 */
+      margin: 0 auto;  /* 중앙 정렬 */
+    }
+  
+    .screen .music_description {
+      margin-top: 24px;
+      position: relative;
+      width: 100%;
+    }
+  
+    .screen .music_recommendation {
+      margin-top: 20px;
+      position: relative;
+      width: 100%;
+    }
+  
+    .screen .PLAY {
+      bottom: 30px;  /* 고정된 픽셀 값으로 변경 */
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .screen .music_text {
+      font-size: min(12px, calc(140px / var(--text-length, 15)));
+    }
+  
+    .screen .musicbox {
+      padding-bottom: 50px;  /* 하단 여백 증가 */
+      position: relative;
+      overflow: visible;  /* 내용이 넘치더라도 표시 */
+    }
+  }
+  
+  /* 화면 높이가 작은 기기 (iPhone SE 등)를 위한 미디어 쿼리 */
+  @media screen and (max-height: 750px) and (max-width: 750px) {
+    .screen .scroll {
+      max-height: 65vh;  /* 스크롤 영역의 최대 높이를 줄임 */
+    }
+  
+    .screen .non-scroll {
+      height: 160px;  /* 상단 고정 영역의 높이를 줄임 */
+    }
+  
+    .screen .music_description {
+      margin-top: 30px;
+    }
+  
+    .screen .music_recommendation {
+      margin-top: -3px;
+    }
+  
+    .screen .musicbox {
+      height: 180px;  /* 음악 박스의 높이를 줄임 */
+      padding-bottom: 30px;
+    }
+  
+    .screen .PLAY {
+      bottom: 10px;
+    }
+  
+    /* 텍스트 영역의 크기 조정 */
+    .screen .description_text,
+    .screen .recommendation_text {
+      font-size: 9px;
+      line-height: 11px;
+      max-height: 120px;
+    }
+  }
+  

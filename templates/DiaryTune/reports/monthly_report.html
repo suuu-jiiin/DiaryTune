@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="{% static 'DiaryTune/css/reports/report_style.css' %}" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<link rel="icon"  sizes="32x32" href={% static "DiaryTune/images/music.ico" %}>
+<body>
+    <div class="report-container">
+        <a href="{% url 'main' %}" class="close-button">X</a>
+        <h1>{{ month }}월 감정 흐름</h1>
+        <div style="position: relative;">
+            <canvas id="sentimentFlowChart"></canvas>
+            <div id="yAxisImages">
+                <img src="{% static 'DiaryTune/images/sentiment_5.png' %}" alt="sentiment_5">
+                <img src="{% static 'DiaryTune/images/sentiment_4.png' %}" alt="sentiment_4">
+                <img src="{% static 'DiaryTune/images/sentiment_3.png' %}" alt="sentiment_3">
+                <img src="{% static 'DiaryTune/images/sentiment_2.png' %}" alt="sentiment_2">
+                <img src="{% static 'DiaryTune/images/sentiment_1.png' %}" alt="sentiment_1">
+            </div>
+        </div>
+
+        <!-- 활동 랭킹 섹션 -->
+        <div class="ranking-section">
+            <h2>이번 달 활동 TOP 3</h2>
+            <div class="ranking-container">
+                {% for item in activity_ranking %}
+                <div class="ranking-item">
+                    <div class="rank">{{ forloop.counter }}</div>
+                    <div class="icon-circle">
+                        <img src="{% static 'DiaryTune/images/'|add:item.activity|add:'.png' %}" alt="{{ item.activities }}">
+                    </div>
+                    <div class="label">{{ item.activity }}</div>
+                    <div class="count">{{ item.count }}회</div>
+                </div>
+                {% endfor %}
+            </div>
+            <p class="ranking-text">이번 달에는 <strong>{{ activity_ranking.0.activity }}</strong>을/를 가장 많이 활동했어요.</p>
+        </div>
+
+        <!-- 날씨 랭킹 섹션 -->
+        <div class="ranking-section">
+            <h2>이번 달 날씨 TOP 3</h2>
+            <div class="ranking-container">
+                {% for item in weather_ranking %}
+                <div class="ranking-item">
+                    <div class="rank">{{ forloop.counter }}</div>
+                    <div class="icon-circle">
+                        <img src="{% static 'DiaryTune/images/'|add:item.weather|add:'.png' %}" alt="{{ item.weather }}">
+                    </div>
+                    <div class="label">{{ item.weather }}</div>
+                    <div class="count">{{ item.count }}회</div>
+                </div>
+                {% endfor %}
+            </div>
+            <p class="ranking-text">이번 달에는 <strong class="weather-text">{{ weather_ranking.0.weather }}</strong>을/를 가장 많이 선택했어요.</p>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('sentimentFlowChart').getContext('2d');
+        const sentimentFlowChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{ date_labels|safe }},
+                datasets: [{
+                    label: '감정 점수',
+                    data: {{ sentiment_scores|safe }},
+                    fill: false,
+                    borderColor: '#DE8DBE',
+                    backgroundColor: '#DE8DBE',
+                    tension: 0.1,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                layout: {
+                    padding: {
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 0.8,
+                        max: 5.2,
+                        ticks: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const labels = ['매우 부정', '부정', '중립', '긍정', '매우 긍정'];
+                                const value = context.parsed.y;
+                                return labels[Math.round(value) - 1] || '';
+                            }
+                        }
+                    }
+                },
+                animation: {
+                    duration: 0
+                },
+                onResize: function(chart, size) {
+                    const yScale = chart.scales.y;
+                    const yAxisImages = document.getElementById('yAxisImages');
+                    if (yAxisImages && yScale) {
+                        const images = yAxisImages.getElementsByTagName('img');
+                        for(let i = 1; i <= 5; i++) {
+                            if (images[5-i]) {
+                                const pixelY = yScale.getPixelForValue(i);
+                                images[5-i].style.top = (pixelY - 15) + 'px';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        function updateImagePositions() {
+            const yScale = sentimentFlowChart.scales.y;
+            const yAxisImages = document.getElementById('yAxisImages');
+            if (yAxisImages && yScale) {
+                const images = yAxisImages.getElementsByTagName('img');
+                for(let i = 1; i <= 5; i++) {
+                    if (images[5-i]) {
+                        const pixelY = yScale.getPixelForValue(i);
+                        images[5-i].style.top = (pixelY - 15) + 'px';
+                    }
+                }
+            }
+        }
+
+        updateImagePositions();
+    </script>
+</body>
+</html> 

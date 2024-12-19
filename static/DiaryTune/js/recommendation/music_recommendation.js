@@ -1,14 +1,90 @@
-//'좋아요' 기능 구현
-document.getElementById('heart').addEventListener('click', function() {
-    const heartImage = this;
-    const heartOn = heartImage.getAttribute('data-heart-on'); // heart-2 이미지 경로
-    const heartOff = heartImage.getAttribute('data-heart-off'); // heart-1 이미지 경로
+//'좋아요' / '싫어요' 기능 구현
+const likeBtn = document.getElementById('like-btn');
+const dislikeBtn = document.getElementById('dislike-btn');
+
+likeBtn.addEventListener('click', function() {
+    const likeEmpty = '/static/DiaryTune/images/heart-1.png';
+    const likeFill = '/static/DiaryTune/images/heart-2.png';
     
-    // 현재 이미지를 heart-1에서 heart-2로 변경하고 다시 heart-1로 되돌리기
-    if (heartImage.src.includes(heartOff)) {
-        heartImage.src = heartOn;
+    // URL에서 현재 날짜 정보 가져오기
+    const urlParts = window.location.pathname.split('/').filter(part => part);
+    const baseIndex = urlParts.indexOf('recommendation');
+    const currentYear = urlParts[baseIndex + 1];
+    const currentMonth = urlParts[baseIndex + 2];
+    const currentDay = urlParts[baseIndex + 3];
+    
+    if (this.src.includes('heart-1')) {
+        this.src = likeFill;
+        dislikeBtn.src = '/static/DiaryTune/images/dislike_empty.png';
+        
+        // 좋아요 상태를 서버에 저장
+        fetch(`/DiaryTune/like/${currentYear}/${currentMonth}/${currentDay}/`, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken'),
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                liked: true
+            })
+        });
     } else {
-        heartImage.src = heartOff;
+        this.src = likeEmpty;
+        
+        // 좋아요 취소 상태를 서버에 저장
+        fetch(`/DiaryTune/like/${currentYear}/${currentMonth}/${currentDay}/`, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken'),
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                liked: false
+            })
+        });
+    }
+});
+
+// 페이지 로드 시 좋아요 상태 확인
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParts = window.location.pathname.split('/').filter(part => part);
+    const baseIndex = urlParts.indexOf('recommendation');
+    const currentYear = urlParts[baseIndex + 1];
+    const currentMonth = urlParts[baseIndex + 2];
+    const currentDay = urlParts[baseIndex + 3];
+    
+    // 서버에서 좋아요 상태 가져오기
+    fetch(`/DiaryTune/like/${currentYear}/${currentMonth}/${currentDay}/`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.liked) {
+                likeBtn.src = '/static/DiaryTune/images/heart-2.png';
+            } else {
+                likeBtn.src = '/static/DiaryTune/images/heart-1.png';
+            }
+        });
+});
+
+dislikeBtn.addEventListener('click', function() {
+    const dislikeEmpty = this.getAttribute('data-dislike-empty');
+    const dislikeFill = this.getAttribute('data-dislike-fill');
+    
+    if (this.src.includes('empty')) {
+        this.src = dislikeFill;
+        likeBtn.src = likeBtn.getAttribute('data-like-empty');
+        
+        // URL에서 현재 날짜 정보 가져오기
+        const urlParts = window.location.pathname.split('/').filter(part => part);
+        const baseIndex = urlParts.indexOf('recommendation');
+        const currentYear = urlParts[baseIndex + 1];
+        const currentMonth = urlParts[baseIndex + 2];
+        const currentDay = urlParts[baseIndex + 3];
+        const currentDayOfWeek = urlParts[baseIndex + 4];
+        
+        const recommend_url = `/DiaryTune/recommendation/${currentYear}/${currentMonth}/${currentDay}/${currentDayOfWeek}/`;
+        window.location.href = recommend_url;
+    } else {
+        this.src = dislikeEmpty;
     }
 });
 
@@ -27,8 +103,6 @@ function getCookie(name) {
     }
     return cookieValue;
 }
-
-
 
 // 'Play' 버튼 누르면 유튜브 연결
 document.getElementById('play-btn').addEventListener('click', function() {
@@ -151,4 +225,31 @@ document.addEventListener('DOMContentLoaded', () => {
             activity2.style.backgroundImage = `url(${activity2Img})`;
         }
     }
+});
+
+document.querySelectorAll('.musics').forEach(element => {
+    const text = element.textContent.replace(/[#\s-]/g, ''); // #, 공백, - 기호 제거
+    const length = text.length;
+    
+    if (length <= 15) { // 실제 텍스트가 10자 이하일 경우
+        element.style.fontSize = '10px';
+    } else {
+        element.style.fontSize = '8px';
+    }
+});
+
+// 음악 제목 폰트 크기 조절
+document.querySelectorAll('.music_title').forEach(element => {
+    // 모바일 체크 (화면 너비가 750px 이하인 경우 모바일로 간주)
+    if (window.innerWidth > 750) {
+        const text = element.textContent.replace(/[#\s-]/g, ''); // #, 공백, - 기호 제거
+        const length = text.length;
+        
+        if (length <= 20) { // 실제 텍스트가 20자 이하일 경우
+            element.style.fontSize = '16px';
+        } else {
+            element.style.fontSize = '13px';
+        }
+    }
+    // 모바일의 경우 CSS의 설정을 따름
 });

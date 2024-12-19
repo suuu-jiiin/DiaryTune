@@ -3,7 +3,7 @@ from .models import Diary, csv_file
 
 class DiaryAdmin(admin.ModelAdmin):
     # 관리 페이지에서 보여줄 필드들 지정
-    list_display = ('year', 'month', 'day', 'diary_content', 'get_activities', 'get_weather', 'selected_sentiment', 'song_title', 'song_artist', 'song_description', 'reason', 'like', 'created_at', 'updated_at')  # 필요한 필드들
+    list_display = ('year', 'month', 'day', 'diary_content', 'get_activities', 'get_weather', 'selected_sentiment', 'song_title', 'song_artist', 'song_description', 'reason', 'similar_words', 'like', 'created_at', 'updated_at')  # 필요한 필드들
     search_fields = ('diary_content',)  # 일기 내용으로 검색할 수 있도록 설정
     fields = ('year', 'month', 'day', 'diary_content', 'selected_sentiment', 'similar_words', 'song_title', 'song_artist', 'song_description', 'like')  # 필드 순서 지정
     list_filter = ('year', 'month')  # 연도와 월로 필터링 추가

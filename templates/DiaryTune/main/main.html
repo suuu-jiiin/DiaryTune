@@ -20,7 +20,21 @@
             <div class="calendar">
               <div class="month_text" id="month-text">October</div>
               <div class="year_text" id="year-text">2024</div>
-              <div class="dates" id="dates"></div>
+              <div class="dates" id="dates">
+                {% for day in diary_data %}
+                <div class="day" id="day-{{ day.day }}">
+                    <span class="day-number">{{ day.day }}</span>
+            
+                    {% if day.sentiment %}
+                    <div class="sentiment-display">
+                      <img class="sentiment-icon" src="{% static "DiaryTune/images/"|add:day.sentiment|add:".png" %}" alt="{{ day.sentiment }}" style="width: 27px;height: 27px;margin-top: 20px;margin-left: 8px;" />
+                        <p>{{ day.sentiment }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+              </div>
+            
             </div>
         <!-- 날짜 이동 -->
         </div>
@@ -33,25 +47,25 @@
             <div class="sentiment">
               <div class="sentiment_1">
               <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_1.png" %}/></div>
+              <div class="count_text_1">{{ sentiment_totals.sentiment_1 }}</div>
               </div>
               <div class="sentiment_2">
-                <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_2.png" %}/></div> 
+                <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_2.png" %}/></div>
+                <div class="count_text_2">{{ sentiment_totals.sentiment_2 }}</div> 
               </div>
               <div class="sentiment_3">
-                  <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_3.png" %}/></div> 
+                  <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_3.png" %}/></div>
+                  <div class="count_text_3">{{ sentiment_totals.sentiment_3 }}</div> 
               </div>
               <div class="sentiment_4">
                   <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_4.png" %}/></div>
+                  <div class="count_text_4">{{ sentiment_totals.sentiment_4 }}</div>
               </div>
               <div class="sentiment_5">
                   <div><img class="sentiment_group" src={% static "DiaryTune/images/sentiment_5.png" %}/></div>
+                  <div class="count_text_5">{{ sentiment_totals.sentiment_5 }}</div>
               </div>
             </div>
-          <div class="count_text_1">0</div>
-          <div class="count_text_2">0</div>
-          <div class="count_text_3">0</div>
-          <div class="count_text_4">0</div>
-          <div class="count_text_5">0</div>
           </div>
           <div class="sentiment_text">이달의 음표들🎵</div>
         <!-- 달력 -->
@@ -74,9 +88,23 @@
                 <div class="tutorial_text">Tutorial<br>바로 가기</div>
             </div>
         </div>
+
+        <!-- 분석 보고서 버튼 추가 -->
+        <div class="report">
+          <div class="report_rectangle" onclick="location.href='{% url 'monthly_report' %}?year=' + document.getElementById('year-text').textContent + '&month=' + getMonthNumber(document.getElementById('month-text').textContent)" style="cursor: pointer;">
+            <div class="report_text"><img src="{% static 'DiaryTune/images/glass.png' %}" style="width: 35px; height: 35px; position: relative; top: 1px; left: 1px;"></div>
+          </div>
+        </div>
       </div>
     </div>
     
     <script src={% static "DiaryTune/js/main/main.js" %}></script> 
+    <script>
+    function getMonthNumber(monthName) {
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+        return monthNames.indexOf(monthName) + 1;
+    }
+    </script>
   </body>
 </html>

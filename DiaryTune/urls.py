@@ -21,4 +21,7 @@ urlpatterns = [
     path('diary/<int:diary_id>/toggle-like/', views.toggle_like, name='toggle_like'),
     path('save_diary/<int:year>/<int:month>/<int:day>/', views.save_diary, name='save_diary'),
     path('check_diary/<int:year>/<int:month>/<int:day>/', views.check_diary, name='check_diary'),
+    path('monthly_report/', views.monthly_report, name='monthly_report'),
+    path('like/<int:year>/<int:month>/<int:day>/', views.like_diary, name='like_diary'),
+    path('get_monthly_sentiments/<int:year>/<int:month>/', views.get_monthly_sentiments, name='get_monthly_sentiments'),
 ]

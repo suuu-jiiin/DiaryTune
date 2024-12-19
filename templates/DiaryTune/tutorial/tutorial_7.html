@@ -88,7 +88,16 @@
 
           <div class="music">
             <div class="musicbox">
-              <img id="heart" class="heart" src="{% static 'DiaryTune/images/heart-1.png' %}" data-heart-on="{% static 'DiaryTune/images/heart-2.png' %}" data-heart-off="{% static 'DiaryTune/images/heart-1.png' %}" alt="Heart Image" />
+              <div class="reaction-buttons" style="position: absolute; top: 6px; left: 299px;">
+                <img id="heart" class="heart" src="{% static 'DiaryTune/images/heart-1.png' %}" 
+                  data-heart-on="{% static 'DiaryTune/images/heart-2.png' %}" 
+                  data-heart-off="{% static 'DiaryTune/images/heart-1.png' %}" 
+                  alt="Heart Image" />
+                <img id="dislike" class="dislike" src="{% static 'DiaryTune/images/dislike_empty.png' %}"
+                  data-dislike-on="{% static 'DiaryTune/images/dislike_fill.png' %}"
+                  data-dislike-off="{% static 'DiaryTune/images/dislike_empty.png' %}"
+                  alt="Dislike Image" />
+              </div>
               <div class="music_description">[노래 설명] <br><br> 간단하면서 재미있고 분위기를 띄우는 데 최적화된 노래</div>
               <div class="music_recommendation">[추천 이유]<br><br>따뜻하고 감동적인 분위기가 생일파티의 소중한 순간을 떠올리게 하며, 친구들과의 특별한 시간을 더욱 의미 있게 기억하는 데 도움을 드립니다. </div>
               <div class="music_title">🎵ROSÉ - APT.</div>
@@ -105,7 +114,7 @@
             <div class="overlap-4">
               <div class="rectangle-2"></div>
               <div class="text-wrapper-3">7/7</div>
-              <p class="text-wrapper-4">추천된 음악이 적절하다면 하트를 눌러주세요</p>
+              <p class="text-wrapper-4">추천된 음악이 적절하다면 하트를 ,  다른 곡을 <br> 추천받고 싶으면 싫어요를 눌러주세요 </p>
               <img class="arrow-right-circle" src={% static "DiaryTune/images/end.png" %} onclick="location.href='{% url 'main' %}'" style="cursor: pointer;" />
             </div>
           </div>

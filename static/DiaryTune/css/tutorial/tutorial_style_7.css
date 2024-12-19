@@ -473,21 +473,28 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 6px;
-  left: 325px;
+  top: 0;
+  left: 0;
   object-fit: cover;
-  cursor:pointer;
-  animation: pulse 1.5s infinite ease-in-out;
+  cursor: pointer;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    box-shadow:0 0 10px #fcddec;
-  }
-  50% {
-    transform: scale(1.06); /* 확대 효과 */
-    box-shadow: 0 0 20px #fcddec; /* 더 강한 반짝임 */
-  }
+.tutorial_7 .dislike {
+  position: absolute;
+  width: 21px;
+  height: 20px;
+  top: 0px;
+  left: 26px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.tutorial_7 .reaction-buttons {
+  position: absolute;
+  top: 6px;
+  left: 299px;
+  display: flex;
+  gap: 6px;
 }
 
 /*감정 부분*/
@@ -661,10 +668,10 @@
 
 .tutorial_7 .rectangle-2 {
   position: absolute;
-  width: 310px;
-  height: 49px;
-  top: 0;
-  left: 0;
+  width: 331px;
+  height: 76px;
+  top: -4px;
+  left: -25px;
   background-color: #ffd8e4;
   border-radius: 7px;
   transform: rotate(179.87deg);
@@ -675,7 +682,7 @@
   width: 28px;
   height: 30px;
   top: 8%;
-  left: 6px;
+  left: -20px;
   font-family: "Manrope-Bold", Helvetica;
   font-weight: 700;
   color: #5f5f5f;
@@ -694,10 +701,10 @@
 
 .tutorial_7 .text-wrapper-4 {
   position: absolute;
-  width: 305px;
-  height: 22px;
+  width: 331px;
+  height: 26px;
   top: 5px;
-  left: 3px;
+  left: -22px;
   font-family: "Manrope-Bold", Helvetica;
   font-weight: 700;
   color: #3e3939;
@@ -710,10 +717,17 @@
   position: absolute;
   width: 33px;
   height: 33px;
-  top: 61%;
+  top: 88%;
   left: 99%;
 }
 
+.tutorial_7 .dislike {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 60px;
+  cursor: pointer;
+}
 
 @media (max-width: 750px){
 .tutorial_7 {
@@ -1200,10 +1214,28 @@ left: 56%;
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 6px;
-  left: 93%;
+  top: 0;
+  left: 0;
   object-fit: cover;
-  cursor:pointer;
+  cursor: pointer;
+}
+
+.tutorial_7 .dislike {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 26px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.tutorial_7 .reaction-buttons {
+  position: absolute;
+  top: 6px;
+  left: 299px;
+  display: flex;
+  gap: 6px;
 }
 
 /*감정 부분*/
@@ -1346,13 +1378,14 @@ left: 56%;
   position: relative;
   width: 280px;
   height: 66px;
-  top: -28%;
+  top: 2%;
+  left: 13%;
 }
 
 .tutorial_7 .rectangle-2 {
   position: absolute;
   width: 310px;
-  height: 49px;
+  height: 72px;
   top: 0;
   left: 0;
   background-color: #ffd8e4;
@@ -1400,9 +1433,10 @@ left: 56%;
   position: absolute;
   width: 33px;
   height: 33px;
-  top: 61%;
-  left: 99%;
+  top: 75%;
+  left: 94%;
 }
+
 .tutorial_7 .overlap-3 {
   width: 71px;
   height: 84px;

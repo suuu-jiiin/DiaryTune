@@ -15,3 +15,23 @@ document.getElementById('heart').addEventListener('click', function() {
         heartImage.src = heartOff;
     }
 });
+
+const dislikeButton = document.getElementById('dislike');
+if (dislikeButton) {
+    dislikeButton.addEventListener('click', function() {
+        const currentSrc = this.getAttribute('src');
+        const dislikeOn = this.getAttribute('data-dislike-on');
+        const dislikeOff = this.getAttribute('data-dislike-off');
+        
+        if (currentSrc === dislikeOff) {
+            this.setAttribute('src', dislikeOn);
+            // heart 버튼이 활성화되어 있다면 비활성화
+            const heartButton = document.getElementById('heart');
+            if (heartButton && heartButton.getAttribute('src') === heartButton.getAttribute('data-heart-on')) {
+                heartButton.setAttribute('src', heartButton.getAttribute('data-heart-off'));
+            }
+        } else {
+            this.setAttribute('src', dislikeOff);
+        }
+    });
+}
